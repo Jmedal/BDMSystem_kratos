@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67f36049-4dd2-40c7-bacb-767918e1a8e9" name="Default Changelist" comment="">
+    <list default="true" id="67f36049-4dd2-40c7-bacb-767918e1a8e9" name="Default Changelist" comment="2020-3-19">
       <change afterPath="$PROJECT_DIR$/pholcus/pholcus_lib/imooc.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pholcus" beforeDir="false" afterPath="$PROJECT_DIR$/pholcus" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pholcus/.gitattributes" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pholcus/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pholcus/example_main.go" beforeDir="false" afterPath="$PROJECT_DIR$/pholcus/example_main.go" afterDir="false" />
@@ -33,6 +36,8 @@
   <component name="ProjectId" id="1ZLt1m2K752Aj8QSNC0xLum1V9u" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="GO_FMT" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
@@ -61,11 +66,16 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
