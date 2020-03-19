@@ -64,12 +64,16 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/pholcus" />
+    </ignored-roots>
     <MESSAGE value="2020-3-19 （2）" />
     <MESSAGE value="2020-3-19 （3）" />
     <MESSAGE value="2020-3-19 （4）" />
     <MESSAGE value="2020-3-19 （5）" />
     <MESSAGE value="2020-3-19 （6）" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020-3-19 （6）" />
+    <MESSAGE value="2020-3-19 （7）" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020-3-19 （7）" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
