@@ -33,6 +33,13 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/tool/http_tool" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\tool\http_tool" />
+      <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\tool" />
+      <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\tool\grpc_tool" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
