@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67f36049-4dd2-40c7-bacb-767918e1a8e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tool/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tool/grpc_tool/check.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tool/http_tool/check.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tool/http_tool/util/DataSecurity.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +68,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2020-3-19 （2）" />
     <MESSAGE value="2020-3-19 （3）" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020-3-19 （3）" />
+    <MESSAGE value="2020-3-19 （4）" />
+    <MESSAGE value="2020-3-19 （5）" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020-3-19 （5）" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
