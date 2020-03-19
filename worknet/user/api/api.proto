@@ -1,0 +1,78 @@
+// 定义项目 API 的 proto 文件 可以同时描述 gRPC 和 HTTP API
+// protobuf 文件参考:
+//  - https://developers.google.com/protocol-buffers/
+syntax = "proto3";
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "google/protobuf/empty.proto";
+
+package service.v1;
+
+option go_package = "api";
+option (gogoproto.goproto_getters_all) = false;
+
+
+message WorknetUserNumberResp {
+    //普通用户
+    int64 commonUser = 1 [(gogoproto.jsontag) = "commonUser"];
+    //公司用户
+    int64 companyUser = 2 [(gogoproto.jsontag) = "companyUser"];
+    //老师用户
+    int64 teacherUser = 3 [(gogoproto.jsontag) = "teacherUser"];
+}
+
+message WorknetUserActivityResp {
+    //激活
+    int64 activity = 1 [(gogoproto.jsontag) = 'activity'];
+    //未激活
+    int64 inactivity = 2 [(gogoproto.jsontag) = 'inactivity'];
+}
+
+message WorknetUserSexResp {
+    //激活
+    int64 man = 1 [(gogoproto.jsontag) = 'man'];
+    //未激活
+    int64 human = 2 [(gogoproto.jsontag) = 'human'];
+}
+
+message WorknetUserChangeResp {
+    //时间
+    repeated string time = 1 [(gogoproto.jsontag) = "time"];
+    //普通用户
+    repeated int64 commonUser = 2 [(gogoproto.jsontag) = "commonUser"];
+    //公司用户
+    repeated int64 companyUser = 3 [(gogoproto.jsontag) = "companyUser"];
+    //老师用户
+    repeated int64 teacherUser = 4 [(gogoproto.jsontag) = "teacherUser"];
+}
+
+service WorknetUser {
+    rpc Ping (.google.protobuf.Empty) returns (.google.protobuf.Empty);
+
+    // `method:"POST"`
+    rpc WorknetUserNumber (.google.protobuf.Empty) returns (WorknetUserNumberResp);
+    // `method:"POST"`
+    rpc WorknetUserActivity (.google.protobuf.Empty) returns (WorknetUserActivityResp);
+    // `method:"POST"`
+    rpc WorknetUserSex (.google.protobuf.Empty) returns (WorknetUserSexResp);
+    // `method:"POST"`
+    rpc WorknetUserNumberChange (.google.protobuf.Empty) returns (WorknetUserChangeResp);
+}
+
+
+message VerifyTokenReq {
+    // 授予的 token
+    string accessToken = 1 [(gogoproto.jsontag) = 'access_token'];
+}
+message VerifyTokenResp {
+    int64 userId = 1 [(gogoproto.jsontag) = 'userId'];
+
+    string randomKey = 2 [(gogoproto.jsontag) = 'randomKey'];
+}
+
+service Token {
+    // `method:"POST" internal:"true"`
+    rpc Verify (VerifyTokenReq) returns (VerifyTokenResp);
+}
+
+

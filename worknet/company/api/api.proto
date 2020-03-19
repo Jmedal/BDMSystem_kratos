@@ -1,0 +1,140 @@
+// 定义项目 API 的 proto 文件 可以同时描述 gRPC 和 HTTP API
+// protobuf 文件参考:
+//  - https://developers.google.com/protocol-buffers/
+syntax = "proto3";
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "google/protobuf/empty.proto";
+
+package service.v1;
+
+option go_package = "api";
+option (gogoproto.goproto_getters_all) = false;
+
+message WorknetLocationListResp {
+
+    repeated LocationInfo locationList = 1 [(gogoproto.jsontag ) = "locationList"];
+
+    message LocationInfo {
+        string cityName = 1 [(gogoproto.jsontag) = "name"];
+
+        int64 companyNumber = 2 [(gogoproto.jsontag) = "value"];
+    }
+}
+
+message WorknetCompanyListResp {
+    //公司
+    repeated WorknetCompany companyList = 1 [(gogoproto.jsontag) = "companyList"];
+
+    //公司信息
+    message WorknetCompany {
+        int64 companyId = 1 [(gogoproto.jsontag) = "companyId"];
+
+        string companyName = 2 [(gogoproto.jsontag) = "companyName"];
+    }
+}
+
+message WorknetProfessionChangeReq {
+    //公司Id
+    repeated int64 companyId = 1 [(gogoproto.moretags) = 'form:"companyId" validate:"required"'];
+    //时间
+    repeated int64 time = 2 [(gogoproto.moretags) = 'form:"time" validate:"required"'];
+}
+
+message WorknetProfessionChangeResp {
+    //时间
+    repeated string time = 1 [(gogoproto.jsontag) = "time"];
+    //公司招聘新增
+    repeated WorknetProfession profession = 2 [(gogoproto.jsontag) = "profession"];
+
+    message WorknetProfession {
+        //公司名
+        string companyName = 1 [(gogoproto.jsontag) = "companyName"];
+        //新增招聘数量
+        repeated int64 professionChange = 2 [(gogoproto.jsontag) = "professionChange"];
+    }
+}
+
+message WorknetCompanyRankResp {
+    //公司名
+    repeated string companyName = 1 [(gogoproto.jsontag) = "companyName"];
+    //数量
+    repeated int64 number = 2 [(gogoproto.jsontag) = "number"];
+}
+
+message WorknetCvStatusNumberResp {
+    //公司简历状态数量
+    repeated int64 statusNumber = 1 [(gogoproto.jsontag) = "statusNumber"];
+}
+
+message WorknetContestChangeReq {
+    //公司Id
+    repeated int64 companyId = 1 [(gogoproto.moretags) = 'form:"companyId" validate:"required"'];
+    //时间
+    repeated int64 time = 2 [(gogoproto.moretags) = 'form:"time" validate:"required"'];
+}
+
+message WorknetContestChangeResp {
+    //时间
+    repeated string time = 1 [(gogoproto.jsontag) = "time"];
+    //公司招聘新增
+    repeated WorknetContest contest = 2 [(gogoproto.jsontag) = "contest"];
+
+    message WorknetContest {
+        //公司名
+        string companyName = 1 [(gogoproto.jsontag) = "companyName"];
+        //新增笔试数量
+        repeated int64 contestChange = 2 [(gogoproto.jsontag) = "contestChange"];
+    }
+}
+
+service WorknetCompany {
+    rpc Ping (.google.protobuf.Empty) returns (.google.protobuf.Empty);
+
+    // `method:"POST"`
+    rpc WorknetLocationList (.google.protobuf.Empty) returns (WorknetLocationListResp);
+
+    // `method:"POST"`
+    rpc WorknetCompanyList (.google.protobuf.Empty) returns (WorknetCompanyListResp);
+
+    // `method:"POST"`
+    rpc WorknetCompanyProfessionChange (WorknetProfessionChangeReq) returns (WorknetProfessionChangeResp);
+
+    // `method:"POST"`
+    rpc WorknetProfessionNumberRank (.google.protobuf.Empty) returns (WorknetCompanyRankResp);
+
+    // `method:"POST"`
+    rpc WorknetCvNumberRank (.google.protobuf.Empty) returns (WorknetCompanyRankResp);
+
+    // `method:"POST"`
+    rpc WorknetCvStatusNumber (.google.protobuf.Empty) returns (WorknetCvStatusNumberResp);
+
+    // `method:"POST"`
+    rpc WorknetCompanyContestChange (WorknetContestChangeReq) returns (WorknetContestChangeResp);
+
+    // `method:"POST"`
+    rpc WorknetContestNumberRank (.google.protobuf.Empty) returns (WorknetCompanyRankResp);
+
+    // `method:"POST"`
+    rpc WorknetContestingNumberRank (.google.protobuf.Empty) returns (WorknetCompanyRankResp);
+
+    // `method:"POST"`
+    rpc WorknetContestApplyNumberRank (.google.protobuf.Empty) returns (WorknetCompanyRankResp);
+}
+
+
+message VerifyTokenReq {
+    // 授予的 token
+    string accessToken = 1 [(gogoproto.jsontag) = 'access_token'];
+}
+message VerifyTokenResp {
+    int64 userId = 1 [(gogoproto.jsontag) = 'userId'];
+
+    string randomKey = 2 [(gogoproto.jsontag) = 'randomKey'];
+}
+service Token {
+    // `method:"POST" internal:"true"`
+    rpc Verify (VerifyTokenReq) returns (VerifyTokenResp);
+}
+
+

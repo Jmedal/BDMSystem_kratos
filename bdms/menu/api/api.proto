@@ -1,0 +1,162 @@
+// 定义项目 API 的 proto 文件 可以同时描述 gRPC 和 HTTP API
+// protobuf 文件参考:
+//  - https://developers.google.com/protocol-buffers/
+syntax = "proto3";
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "google/protobuf/empty.proto";
+
+package service.v1;
+
+option go_package = "api";
+option (gogoproto.goproto_getters_all) = false;
+
+message GetMenuListResp {
+
+    repeated Menu menuList = 1 [(gogoproto.jsontag) = 'menuList'];
+
+    message Menu {
+        int64 id = 1 [(gogoproto.jsontag) = 'id'];
+
+        int64 pid = 2 [(gogoproto.jsontag) = 'pid'];
+
+        int64 num = 3 [(gogoproto.jsontag) = 'num'];
+
+        string menuName = 4 [(gogoproto.jsontag) = 'menuName'];
+
+        string icon = 5 [(gogoproto.jsontag) = 'icon'];
+
+        string path = 6 [(gogoproto.jsontag) = 'path'];
+
+        int64 levels = 7 [(gogoproto.jsontag) = 'levels'];
+    }
+}
+
+
+message AddMenuReq {
+    int64 pid = 1 [(gogoproto.moretags) = 'form:"pid" validate:"required"'];
+
+    int64 num = 2 [(gogoproto.moretags) = 'form:"num" validate:"required"'];
+
+    string menuName = 3 [(gogoproto.moretags) = 'form:"menuName" validate:"required"'];
+
+    string icon = 4 [(gogoproto.moretags) = 'form:"icon" validate:"required"'];
+
+    string path = 5 [(gogoproto.moretags) = 'form:"path" validate:"required"'];
+
+    int64 levels = 6 [(gogoproto.moretags) = 'form:"levels" validate:"required"'];
+}
+
+message AddMenuResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+message UpdateMenuReq {
+    int64 id = 1 [(gogoproto.moretags) = 'form:"id" validate:"required"'];
+
+    int64 pid = 2 [(gogoproto.moretags) = 'form:"pid" validate:"required"'];
+
+    int64 num = 3 [(gogoproto.moretags) = 'form:"num" validate:"required"'];
+
+    string menuName = 4 [(gogoproto.moretags) = 'form:"menuName" validate:"required"'];
+
+    string icon = 5 [(gogoproto.moretags) = 'form:"icon" validate:"required"'];
+
+    string path = 6 [(gogoproto.moretags) = 'form:"path" validate:"required"'];
+
+    int64 levels = 7 [(gogoproto.moretags) = 'form:"levels" validate:"required"'];
+
+    repeated int64 childrenId = 8 [(gogoproto.moretags) = 'form:"childrenId" validate:"required"'];
+}
+
+message UpdateMenuResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+message DeleteMenuReq {
+    int64 id = 1 [(gogoproto.moretags) = 'form:"id" validate:"required"'];
+
+    repeated int64 childrenId = 2 [(gogoproto.moretags) = 'form:"childrenId" validate:"required"'];
+}
+
+message DeleteMenuResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+message GetMenusResp {
+
+    repeated Menu menus = 1 [(gogoproto.jsontag) = 'menus'];
+
+    message Menu {
+        int64 id = 1 [(gogoproto.jsontag) = 'id'];
+
+        int64 num = 2 [(gogoproto.jsontag) = 'num'];
+
+        string menuName = 3 [(gogoproto.jsontag) = 'menuName'];
+
+        string icon = 4 [(gogoproto.jsontag) = 'icon'];
+
+        string path = 5 [(gogoproto.jsontag) = 'path'];
+
+        int64 levels = 6 [(gogoproto.jsontag) = 'levels'];
+
+        repeated Menu children = 7 [(gogoproto.jsontag) = 'children'];
+    }
+}
+
+message GetMenuOptionsReq {
+    int64 minLevels = 1 [(gogoproto.moretags) = 'form:"minLevels" validate:"required"'];
+}
+
+message GetMenuOptionsResp {
+
+    repeated MenuOption menusOptions = 1 [(gogoproto.jsontag) = 'menusOptions'];
+
+    message MenuOption {
+        int64 id = 1 [(gogoproto.jsontag) = 'value'];
+
+        string menuName = 2 [(gogoproto.jsontag) = 'label'];
+
+        repeated MenuOption children = 3 [(gogoproto.jsontag) = 'children'];
+    }
+}
+
+
+service Menu {
+    rpc Ping (.google.protobuf.Empty) returns (.google.protobuf.Empty);
+
+    // `method:"POST"`
+    rpc GetMenuList (.google.protobuf.Empty) returns (GetMenuListResp);
+
+    // `method:"POST"`
+    rpc AddMenu (AddMenuReq) returns (AddMenuResp);
+
+    // `method:"POST"`
+    rpc UpdateMenu (UpdateMenuReq) returns (UpdateMenuResp);
+
+    // `method:"POST"`
+    rpc DeleteMenu (DeleteMenuReq) returns (DeleteMenuResp);
+
+    // `method:"POST"`
+    rpc GetMenus (.google.protobuf.Empty) returns (GetMenusResp);
+
+    // `method:"POST"`
+    rpc GetMenuOptions (GetMenuOptionsReq) returns (GetMenuOptionsResp);
+}
+
+
+message VerifyTokenReq {
+    // 授予的 token
+    string accessToken = 1 [(gogoproto.jsontag) = 'access_token'];
+}
+message VerifyTokenResp {
+    int64 userId = 1 [(gogoproto.jsontag) = 'userId'];
+
+    string randomKey = 2 [(gogoproto.jsontag) = 'randomKey'];
+}
+service Token {
+    // `method:"POST" internal:"true"`
+    rpc Verify (VerifyTokenReq) returns (VerifyTokenResp);
+}
+
+

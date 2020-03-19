@@ -1,0 +1,38 @@
+// 定义项目 API 的 proto 文件 可以同时描述 gRPC 和 HTTP API
+// protobuf 文件参考:
+//  - https://developers.google.com/protocol-buffers/
+syntax = "proto3";
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "google/protobuf/empty.proto";
+
+package service.v1;
+
+option go_package = "api";
+option (gogoproto.goproto_getters_all) = false;
+
+
+service GrpcTest {
+  rpc Ping(.google.protobuf.Empty) returns (.google.protobuf.Empty);
+
+  // `method:"POST"`
+  rpc GrpcUserInfoTest(.google.protobuf.Empty) returns (.google.protobuf.Empty);
+}
+
+
+
+message VerifyTokenReq {
+ // 授予的 token
+    string accessToken = 1 [(gogoproto.jsontag) = 'access_token'];
+}
+message VerifyTokenResp {
+    int64 userId = 1 [(gogoproto.jsontag) = 'userId'];
+
+    string randomKey = 2 [(gogoproto.jsontag) = 'randomKey'];
+}
+service Token{
+  // `method:"POST" internal:"true"`
+  rpc Verify (VerifyTokenReq) returns (VerifyTokenResp);
+}
+
+

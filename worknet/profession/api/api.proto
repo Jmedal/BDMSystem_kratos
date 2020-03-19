@@ -1,0 +1,65 @@
+// 定义项目 API 的 proto 文件 可以同时描述 gRPC 和 HTTP API
+// protobuf 文件参考:
+//  - https://developers.google.com/protocol-buffers/
+syntax = "proto3";
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "google/protobuf/empty.proto";
+
+package service.v1;
+
+option go_package = "api";
+option (gogoproto.goproto_getters_all) = false;
+
+message WorknetProfessionChoiceResp {
+    //职业名
+    repeated string professionName = 1 [(gogoproto.jsontag) = "professionName"];
+
+    //数量
+    repeated string number = 2 [(gogoproto.jsontag) = "number"];
+
+}
+
+message WorknetProfessionSalaryResp {
+    //职业名
+    repeated string professionName = 1 [(gogoproto.jsontag) = "professionName"];
+
+    //薪水
+    repeated string salary = 2 [(gogoproto.jsontag) = "salary"];
+
+}
+
+service WorknetProfession {
+    rpc Ping (.google.protobuf.Empty) returns (.google.protobuf.Empty);
+
+    // `method:"POST"`
+    rpc WorknetProfessionChoice (.google.protobuf.Empty) returns (WorknetProfessionChoiceResp);
+
+    // `method:"POST"`
+    rpc WorknetProfessionSalary (.google.protobuf.Empty) returns (WorknetProfessionSalaryResp);
+
+    // `method:"POST"`
+    rpc WorknetProfessionTypeNumber (.google.protobuf.Empty) returns (WorknetProfessionChoiceResp);
+
+    // `method:"POST"`
+    rpc WorknetProfessionTypeSalary (.google.protobuf.Empty) returns (WorknetProfessionSalaryResp);
+
+}
+
+
+message VerifyTokenReq {
+    // 授予的 token
+    string accessToken = 1 [(gogoproto.jsontag) = 'access_token'];
+}
+message VerifyTokenResp {
+    int64 userId = 1 [(gogoproto.jsontag) = 'userId'];
+
+    string randomKey = 2 [(gogoproto.jsontag) = 'randomKey'];
+}
+
+service Token {
+    // `method:"POST" internal:"true"`
+    rpc Verify (VerifyTokenReq) returns (VerifyTokenResp);
+}
+
+

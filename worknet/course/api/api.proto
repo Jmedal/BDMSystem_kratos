@@ -1,0 +1,158 @@
+// 定义项目 API 的 proto 文件 可以同时描述 gRPC 和 HTTP API
+// protobuf 文件参考:
+//  - https://developers.google.com/protocol-buffers/
+syntax = "proto3";
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "google/protobuf/empty.proto";
+
+package service.v1;
+
+option go_package = "api";
+option (gogoproto.goproto_getters_all) = false;
+
+message WorknetCourseActivityResp {
+    //激活
+    int64 activity = 1 [(gogoproto.jsontag) = 'activity'];
+    //未激活
+    int64 inactivity = 2 [(gogoproto.jsontag) = 'inactivity'];
+}
+
+message WorknetCourseChangeReq {
+    //时间
+    repeated int64 time = 1 [(gogoproto.moretags) = 'form:"time" validate:"required"'];
+}
+
+message WorknetCourseChangeResp {
+    //时间
+    repeated string time = 1 [(gogoproto.jsontag) = "time"];
+    //课程数量
+    repeated int64 course = 2 [(gogoproto.jsontag) = "course"];
+}
+
+
+message WorknetCourseListResp {
+    //课程
+    repeated WorknetCourse courseList = 1 [(gogoproto.jsontag) = "courseList"];
+
+    //课程信息
+    message WorknetCourse {
+        int64 courseId = 1 [(gogoproto.jsontag) = "courseId"];
+
+        string courseName = 2 [(gogoproto.jsontag) = "courseName"];
+    }
+}
+
+message WorknetStudentChangeReq {
+    //课程Id
+    repeated int64 courseId = 1 [(gogoproto.moretags) = 'form:"courseId" validate:"required"'];
+    //时间
+    repeated int64 time = 2 [(gogoproto.moretags) = 'form:"time" validate:"required"'];
+}
+
+message WorknetStudentChangeResp {
+    //时间
+    repeated string time = 1 [(gogoproto.jsontag) = "time"];
+    //课程学员新增
+    repeated WorknetCourse student = 2 [(gogoproto.jsontag) = "student"];
+
+    message WorknetCourse {
+        //课程名
+        string courseName = 1 [(gogoproto.jsontag) = "courseName"];
+        //新增用户数量
+        repeated int64 studentChange = 2 [(gogoproto.jsontag) = "studentChange"];
+    }
+}
+
+message WorknetStudentFinishReq {
+    //课程Id
+    repeated int64 courseId = 1 [(gogoproto.moretags) = 'form:"courseId" validate:"required"'];
+    //时间
+    repeated int64 time = 2 [(gogoproto.moretags) = 'form:"time" validate:"required"'];
+}
+
+message WorknetStudentFinishResp {
+    //课程
+    repeated string courseName = 2 [(gogoproto.jsontag) = "courseName"];
+    //完成
+    repeated int64 finish = 3 [(gogoproto.jsontag) = "finish"];
+    //未完成
+    repeated int64 unFinish = 4 [(gogoproto.jsontag) = "unFinish"];
+}
+
+message WorknetAverageScoreListResp {
+    //课程名
+    repeated string courseName = 1 [(gogoproto.jsontag) = "courseName"];
+    //平均分
+    repeated string averageScore = 2 [(gogoproto.jsontag) = "averageScore"];
+}
+
+message WorknetAverageScoreSectionResp {
+    //不同分数区间课程数量
+    repeated int64 courseNumber = 1 [(gogoproto.jsontag) = "courseNumber"];
+}
+
+
+message WorknetCourseRankReq {
+    //排行榜位数范围 如 1~15
+    repeated int64 location = 1 [(gogoproto.moretags) = 'form:"location" validate:"required"'];
+}
+
+message WorknetCourseRankResp {
+    //课程名
+    repeated string courseName = 1 [(gogoproto.jsontag) = "courseName"];
+    //数量
+    repeated string number = 2 [(gogoproto.jsontag) = "number"];
+}
+
+service WorknetCourse {
+    rpc Ping (.google.protobuf.Empty) returns (.google.protobuf.Empty);
+
+    // `method:"POST"`
+    rpc WorknetCourseActivity (.google.protobuf.Empty) returns (WorknetCourseActivityResp);
+
+    // `method:"POST"`
+    rpc WorknetCourseNumberChange (WorknetCourseChangeReq) returns (WorknetCourseChangeResp);
+
+    // `method:"POST"`
+    rpc WorknetCourseList (.google.protobuf.Empty) returns (WorknetCourseListResp);
+
+    // `method:"POST"`
+    rpc WorknetStudentChange (WorknetStudentChangeReq) returns (WorknetStudentChangeResp);
+
+    // `method:"POST"`
+    rpc WorknetStudentFinish (WorknetStudentFinishReq) returns (WorknetStudentFinishResp);
+
+    // `method:"POST"`
+    rpc WorknetAverageScoreList (.google.protobuf.Empty) returns (WorknetAverageScoreListResp);
+
+    // `method:"POST"`
+    rpc WorknetAverageScoreSection (.google.protobuf.Empty) returns (WorknetAverageScoreSectionResp);
+
+    // `method:"POST"`
+    rpc WorknetCourseStarsRank (WorknetCourseRankReq) returns (WorknetCourseRankResp);
+
+    // `method:"POST"`
+    rpc WorknetCourseClickRank (WorknetCourseRankReq) returns (WorknetCourseRankResp);
+
+    // `method:"POST"`
+    rpc WorknetCourseVideoRank (WorknetCourseRankReq) returns (WorknetCourseRankResp);
+}
+
+
+message VerifyTokenReq {
+    // 授予的 token
+    string accessToken = 1 [(gogoproto.jsontag) = 'access_token'];
+}
+message VerifyTokenResp {
+    int64 userId = 1 [(gogoproto.jsontag) = 'userId'];
+
+    string randomKey = 2 [(gogoproto.jsontag) = 'randomKey'];
+}
+
+service Token {
+    // `method:"POST" internal:"true"`
+    rpc Verify (VerifyTokenReq) returns (VerifyTokenResp);
+}
+
+

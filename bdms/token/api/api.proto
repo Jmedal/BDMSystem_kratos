@@ -1,0 +1,55 @@
+// 定义项目 API 的 proto 文件 可以同时描述 gRPC 和 HTTP API
+// protobuf 文件参考:
+//  - https://developers.google.com/protocol-buffers/
+syntax = "proto3";
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "google/protobuf/empty.proto";
+
+// package 命名使用 {appid}.{version} 的方式, version 形如 v1, v2 ..
+package service.v1;
+
+option go_package = "api";
+option (gogoproto.goproto_getters_all) = false;
+
+
+message NewTokenReq {
+    int64 userId = 1 [(gogoproto.moretags) = 'form:"userId" validate:"required"'];
+
+    // 操作人
+    string operator = 2 [(gogoproto.moretags) = 'form:"operator" validate:"required"'];
+
+    //过期时间
+    int64 expire = 3 [(gogoproto.moretags) = 'form:"expire" validate:"required"'];
+}
+message NewTokenResp {
+    // 授予的 token
+    string accessToken = 1 [(gogoproto.jsontag) = 'access_token'];
+
+    // 授予token唯一对应的randomKey
+    string randomKey = 2 [(gogoproto.jsontag) = 'randomKey'];
+}
+
+message VerifyTokenReq {
+    // 授予的 token
+    string accessToken = 1 [(gogoproto.jsontag) = 'access_token'];
+}
+message VerifyTokenResp {
+    int64 userId = 1 [(gogoproto.jsontag) = 'userId'];
+
+    string randomKey = 2 [(gogoproto.jsontag) = 'randomKey'];
+}
+
+service Token {
+    rpc Ping (.google.protobuf.Empty) returns (.google.protobuf.Empty);
+    // Request for a token for upload.
+    // `method:"POST" internal:"true"`
+    rpc Request (NewTokenReq) returns (NewTokenResp);
+
+    // `method:"POST" internal:"true"`
+    rpc Verify (VerifyTokenReq) returns (VerifyTokenResp);
+}
+
+
+
+
