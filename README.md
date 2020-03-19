@@ -1,0 +1,2 @@
+# BDMSystem_kratos
+基于kratos微服务框架数据分析管理系统
