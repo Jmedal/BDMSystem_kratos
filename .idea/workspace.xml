@@ -2,168 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67f36049-4dd2-40c7-bacb-767918e1a8e9" name="Default Changelist" comment="2020-3-19 （8）">
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/array.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/array_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench/v0.1.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench/v0.1.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench/v0.1.1-v0.2.1-go1.1rc1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench/v0.2.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench/v0.2.0-v0.2.1-go1.1rc1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench/v0.2.1-go1.1rc1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench/v0.3.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench/v0.3.2-go1.2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench/v0.3.2-go1.2-take2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench/v0.3.2-go1.2rc1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench/v1.0.0-go1.7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench/v1.0.1a-go1.7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench/v1.0.1b-go1.7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench/v1.0.1c-go1.7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench_array_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench_example_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench_expand_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench_filter_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench_iteration_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench_property_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench_query_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench_traversal_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/doc.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/doc/tips.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/example_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/expand.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/expand_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/filter.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/filter_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/iteration.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/iteration_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/manipulation.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/manipulation_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/misc/git/pre-commit" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/property.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/property_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/query.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/query_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/testdata/gotesting.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/testdata/gowiki.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/testdata/metalreview.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/testdata/page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/testdata/page2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/testdata/page3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/traversal.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/traversal_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/type.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/type_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/utilities.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/goquery/utilities_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/8bit.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/ASCII.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/big5-data.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/big5.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/charset.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/convert_string.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/cp51932.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/entity.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/entity_data.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/euc-jp.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/euc-kr-data.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/euc-kr.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/fallback.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/gb18030-data.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/gb18030.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/gbk-data.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/gbk.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/iso2022jp.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/jis0201-data.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/jis0208-data.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/jis0212-data.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/kuten.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/mahoniconv/mahoniconv.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/mbcs.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/ms-jis-data.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/reader.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/shiftjis-data.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/shiftjis.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/tcvn3.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/translate.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/utf16.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/utf8.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mahonia/writer.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mgo/count.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mgo/find.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mgo/insert.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mgo/list.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mgo/mgo.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mgo/operator.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mgo/operator_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mgo/remove.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mgo/update.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mgo/update_all.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/mgo/upsert.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/pinyin/example_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/pinyin/initials_sort.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/pinyin/phonetic_symbol.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/pinyin/pinyin.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/pholcus/common/pinyin/pinyin_dict.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/session/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/session/sess_cookie.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/session/sess_cookie_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/session/sess_file.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/session/sess_mem.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/session/sess_mem_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/session/sess_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/session/sess_utils.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/session/session.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/websocket/client.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/websocket/hybi.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/websocket/server.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/websocket/websocket.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/xlsx/cell.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/xlsx/col.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/xlsx/date.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/xlsx/doc.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/xlsx/file.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/xlsx/hsl.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/xlsx/lib.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/xlsx/reftable.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/xlsx/row.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/xlsx/sheet.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/xlsx/style.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/xlsx/templates.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/xlsx/theme.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/xlsx/write.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/xlsx/xmlContentTypes.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/xlsx/xmlSharedStrings.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/xlsx/xmlStyle.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/xlsx/xmlTheme.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/xlsx/xmlWorkbook.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/common/xlsx/xmlWorksheet.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/cache/js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/config.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/history/history__y__Imooc__0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/history/history__y__中关村手机__0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/history/history__y__中国新闻网__0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/history/history__y__经典示例-赶集网企业名录__0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/history/history__y__羁绊动漫__0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/logs/pholcus.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/proxy.lib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-08 114330/经典示例-赶集网企业名录__0__输出结果/0-93.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-08 152258/中国新闻网__0__新闻内容/0-392.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-09 195502/中关村手机__0__获取结果/0-1000.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-09 195502/中关村手机__0__获取结果/1000-2000.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-09 195502/中关村手机__0__获取结果/2000-3000.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-09 195502/中关村手机__0__获取结果/3000-4000.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-09 195502/中关村手机__0__获取结果/4000-5000.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-09 195502/中关村手机__0__获取结果/5000-6000.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-09 195502/中关村手机__0__获取结果/6000-7000.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-09 195502/中关村手机__0__获取结果/7000-7239.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-09 225448/羁绊动漫__0__news/0-104.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-09 235022/Imooc__0__课程详细信息/0-864.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-10 101306/中关村手机__0__获取结果/0-390.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -175,6 +14,7 @@
   <component name="GOROOT" path="$PROJECT_DIR$/../../../go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
@@ -193,7 +33,7 @@
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
