@@ -1,17 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67f36049-4dd2-40c7-bacb-767918e1a8e9" name="Default Changelist" comment="2020-3-19">
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_lib/imooc.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="67f36049-4dd2-40c7-bacb-767918e1a8e9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pholcus/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/.idea/pholcus.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/pholcus.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/cache/js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/history/history__y__Imooc__0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/history/history__y__中关村手机__0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/history/history__y__中国新闻网__0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/history/history__y__经典示例-赶集网企业名录__0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/history/history__y__羁绊动漫__0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/logs/pholcus.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-08 114330/经典示例-赶集网企业名录__0__输出结果/0-93.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-08 152258/中国新闻网__0__新闻内容/0-392.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-09 195502/中关村手机__0__获取结果/0-1000.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-09 195502/中关村手机__0__获取结果/1000-2000.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-09 195502/中关村手机__0__获取结果/2000-3000.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-09 195502/中关村手机__0__获取结果/3000-4000.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-09 195502/中关村手机__0__获取结果/4000-5000.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-09 195502/中关村手机__0__获取结果/5000-6000.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-09 195502/中关村手机__0__获取结果/6000-7000.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-09 195502/中关村手机__0__获取结果/7000-7239.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-09 225448/羁绊动漫__0__news/0-104.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-09 235022/Imooc__0__课程详细信息/0-864.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-03-10 101306/中关村手机__0__获取结果/0-390.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pholcus" beforeDir="false" afterPath="$PROJECT_DIR$/pholcus" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pholcus/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pholcus/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pholcus/example_main.go" beforeDir="false" afterPath="$PROJECT_DIR$/pholcus/example_main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pholcus/go.mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pholcus/go.sum" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pholcus/pholcus_pkg/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/config.ini" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +94,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="2020-3-19 （2）" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020-3-19 （2）" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
