@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67f36049-4dd2-40c7-bacb-767918e1a8e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tool/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tool/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/menu/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/menu/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/menu/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/menu/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/grpc-test/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/grpc-test/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc-test/internal/dao/dao.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +97,8 @@
     <MESSAGE value="2020-3-19 （7）" />
     <MESSAGE value="2020-3-19 （8）" />
     <MESSAGE value="2020-3-19 （9）" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020-3-19 （9）" />
+    <MESSAGE value="2020-3-20 修改README" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020-3-20 修改README" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

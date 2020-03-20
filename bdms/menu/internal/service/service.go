@@ -29,11 +29,6 @@ func New(d dao.Dao) (s *Service, cf func(), err error) {
 	return
 }
 
-//TestService
-func (s *Service) GrpcUserInfoTest(ctx context.Context, e *empty.Empty) (*empty.Empty, error) {
-	return &empty.Empty{}, nil
-}
-
 // Ping ping the resource.
 func (s *Service) Ping(ctx context.Context, e *empty.Empty) (*empty.Empty, error) {
 	return &empty.Empty{}, s.dao.Ping(ctx)

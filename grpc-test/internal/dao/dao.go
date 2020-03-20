@@ -10,9 +10,8 @@ import (
 	"github.com/bilibili/kratos/pkg/database/sql"
 	"github.com/bilibili/kratos/pkg/sync/pipeline/fanout"
 	xtime "github.com/bilibili/kratos/pkg/time"
-	"grpc-test/internal/model"
-
 	"github.com/google/wire"
+	"grpc-test/internal/model"
 )
 
 var Provider = wire.NewSet(New, NewDB, NewRedis, NewMC)
@@ -28,11 +27,11 @@ type Dao interface {
 
 // dao dao.
 type dao struct {
-	db            *sql.DB
-	redis         *redis.Redis
-	mc            *memcache.Memcache
-	cache         *fanout.Fanout
-	demoExpire    int32
+	db         *sql.DB
+	redis      *redis.Redis
+	mc         *memcache.Memcache
+	cache      *fanout.Fanout
+	demoExpire int32
 }
 
 // New new a dao and return.
@@ -49,11 +48,11 @@ func newDao(r *redis.Redis, mc *memcache.Memcache, db *sql.DB) (d *dao, cf func(
 	}
 
 	d = &dao{
-		db:            db,
-		redis:         r,
-		mc:            mc,
-		cache:         fanout.New("cache"),
-		demoExpire:    int32(time.Duration(cfg.DemoExpire) / time.Second),
+		db:         db,
+		redis:      r,
+		mc:         mc,
+		cache:      fanout.New("cache"),
+		demoExpire: int32(time.Duration(cfg.DemoExpire) / time.Second),
 	}
 	cf = d.Close
 	return
@@ -68,4 +67,3 @@ func (d *dao) Close() {
 func (d *dao) Ping(ctx context.Context) (err error) {
 	return nil
 }
-
