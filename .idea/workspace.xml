@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67f36049-4dd2-40c7-bacb-767918e1a8e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tool/container/Set.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tool/http/security/DataSecurity.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tool/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tool/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdms/menu/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/menu/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdms/menu/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/menu/go.sum" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,18 +40,21 @@
     <property name="GO_FMT" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tool/http/security" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tool" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\tool" />
       <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\tool\http\security" />
       <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\tool\http_tool" />
-      <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\tool" />
       <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\tool\grpc_tool" />
     </key>
   </component>
