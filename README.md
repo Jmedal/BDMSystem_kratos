@@ -1,9 +1,6 @@
 # BDMSystem_kratos
 基于kratos微服务框架数据分析管理系统
 
-
-
-
 1、安装go
 下载go语言安装包；
 环境变量配置：
