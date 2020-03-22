@@ -43,11 +43,11 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	//cancel, err := initDiscovery("0.0.0.0","9000", "****.service")
-	//if err != nil {
-	//	panic(err)
-	//}
-	//defer cancel()
+	cancel, err := initDiscovery("0.0.0.0", "5504", "menu.service")
+	if err != nil {
+		panic(err)
+	}
+	defer cancel()
 	c := make(chan os.Signal, 1)
 	signal.Notify(c, syscall.SIGHUP, syscall.SIGQUIT, syscall.SIGTERM, syscall.SIGINT)
 	for {

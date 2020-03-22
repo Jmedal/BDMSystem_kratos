@@ -14,12 +14,13 @@ option (gogoproto.goproto_getters_all) = false;
 
 message LoginReq {
     //帐号
-    string account  = 1 [(gogoproto.moretags) = 'form:"account" validate:"required"'];
+    string account = 1 [(gogoproto.moretags) = 'form:"account" validate:"required"'];
     //密码
     string password = 2 [(gogoproto.moretags) = 'form:"password" validate:"required"'];
     //保存密码 保存：1，不保存：2
-    string save     = 3 [(gogoproto.moretags) = 'form:"save" validate:"required"'];
+    string save = 3 [(gogoproto.moretags) = 'form:"save" validate:"required"'];
 }
+
 message LoginResp {
     //令牌
     string accessToken = 1 [(gogoproto.jsontag) = 'access_token'];
@@ -27,49 +28,124 @@ message LoginResp {
     string randomKey = 2 [(gogoproto.jsontag) = 'randomKey'];
     //结果
     string result = 3 [(gogoproto.jsontag) = 'result'];
+
+    //int64 roleId = 4 [(gogoproto.jsontag) = 'roleId'];
 }
 
-message RegisterReq {
-
-    string account = 1 [(gogoproto.moretags) = 'form:"account" validate:"required"'];
-
-    string password = 2 [(gogoproto.moretags) = 'form:"password" validate:"required"'];
+message GetUserListReq {
+    string search = 1 [(gogoproto.moretags) = 'form:"search" default:""'];
 }
 
-message RegisterResp {
-  string result = 1 [(gogoproto.jsontag) = 'result'];
+message GetUserListResp {
+    repeated UserInfo userList = 1 [(gogoproto.jsontag) = 'userList'];
 }
 
-message UserInfoReq {
+message UserInfo {
+    int64 id = 1 [(gogoproto.jsontag) = 'id'];
+
+    string avatar = 2 [(gogoproto.jsontag) = 'avatar'];
+
+    string account = 3 [(gogoproto.jsontag) = 'account'];
+
+    string password = 4 [(gogoproto.jsontag) = 'password'];
+
+    string name = 5 [(gogoproto.jsontag) = 'name'];
+
+    int64 roleId = 6 [(gogoproto.jsontag) = 'roleId'];
+
+    string birthday = 7 [(gogoproto.jsontag) = 'birthday'];
+
+    string sex = 8 [(gogoproto.jsontag) = 'sex'];
+
+    string email = 9 [(gogoproto.jsontag) = 'email'];
+
+    string phone = 10 [(gogoproto.jsontag) = 'phone'];
+
+    int32 status = 11 [(gogoproto.jsontag) = 'status'];
+
+    string createTime = 12 [(gogoproto.jsontag) = 'createTime'];
+}
+
+message AddUserReq {
+    User user = 1  [(gogoproto.moretags) = 'form:"user" validate:"required"'];
+}
+
+message AddUserResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+message UpdateUserReq {
+    int64 id = 1 [(gogoproto.moretags) = 'form:"id" validate:"required"'];
+
+    User user = 2  [(gogoproto.moretags) = 'form:"user" validate:"required"'];
+}
+
+message UpdateUserResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+message DeleteUserReq {
+    int64 id = 1 [(gogoproto.moretags) = 'form:"id" validate:"required"'];
+}
+
+message DeleteUserResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+message SetUserRoleReq {
     int64 userId = 1 [(gogoproto.moretags) = 'form:"userId" validate:"required"'];
+
+    int64 roleId = 2 [(gogoproto.moretags) = 'form:"roleId" validate:"required"'];
 }
 
-message UserInfoResp {
-  string avatar     = 1 [(gogoproto.jsontag) = 'avatar'];
-  string account    = 2 [(gogoproto.jsontag) = 'account'];
-  string name       = 3 [(gogoproto.jsontag) = 'name'];
-  string birthday   = 4 [(gogoproto.jsontag) = 'birthday'];
-  string sex        = 5 [(gogoproto.jsontag) = 'sex'];
-  string email      = 6 [(gogoproto.jsontag) = 'email'];
-  string phone      = 7 [(gogoproto.jsontag) = 'phone'];
-  string deptId     = 8 [(gogoproto.jsontag) = 'deptId'];
-  int32  status     = 9 [(gogoproto.jsontag) = 'status'];
-  string createTime = 10[(gogoproto.jsontag) = 'createTime'];
+message SetUserRoleResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
 }
 
+message User {
+    string avatar = 1 [(gogoproto.moretags) = 'form:"avatar" validate:"required" default:"https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"'];
+
+    string account = 2 [(gogoproto.moretags) = 'form:"account" validate:"required"'];
+
+    string password = 3 [(gogoproto.moretags) = 'form:"password" validate:"required"'];
+
+    string name = 4 [(gogoproto.moretags) = 'form:"name" validate:"required"'];
+
+    string birthday = 5 [(gogoproto.moretags) = 'form:"birthday" validate:"required"'];
+
+    string sex = 6 [(gogoproto.moretags) = 'form:"sex" validate:"required"'];
+
+    string email = 7 [(gogoproto.moretags) = 'form:"email" validate:"required"'];
+
+    string phone = 8 [(gogoproto.moretags) = 'form:"phone" validate:"required"'];
+
+    int32 status = 9 [(gogoproto.moretags) = 'form:"status" validate:"required"'];
+
+    string createTime = 10 [(gogoproto.moretags) = 'form:"createTime" validate:"required"'];
+}
 
 service Account {
-  // `method:"POST"`
-  rpc Ping(.google.protobuf.Empty) returns (.google.protobuf.Empty);
-  //用户登录
-  // `method:"POST"`
-  rpc Login(LoginReq) returns (LoginResp);
-  //用户注册
-  // `method:"POST"`
-  rpc Register(RegisterReq) returns (RegisterResp);
-  //用户信息
-  // `method:"POST"`
-  rpc UserInfo(UserInfoReq) returns (UserInfoResp);
+    // `method:"POST"`
+    rpc Ping (.google.protobuf.Empty) returns (.google.protobuf.Empty);
+    //用户登录
+    // `method:"POST"`
+    rpc Login (LoginReq) returns (LoginResp);
+
+    // `method:"POST"`
+    rpc GetUserList(GetUserListReq) returns (GetUserListResp);
+
+    // `method:"POST"`
+    rpc AddUser(AddUserReq) returns (AddUserResp);
+
+    // `method:"POST"`
+    rpc UpdateUser(UpdateUserReq) returns (UpdateUserResp);
+
+    // `method:"POST"`
+    rpc DeleteUser(DeleteUserReq) returns (DeleteUserResp);
+
+    // `method:"POST"`
+    rpc SetUserRole(SetUserRoleReq) returns (SetUserRoleResp);
+
 }
 
 

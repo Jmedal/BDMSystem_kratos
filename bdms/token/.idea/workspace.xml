@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="125c1af5-3a2d-41b5-9c8c-a15a1b40b76e" name="Default Changelist" comment="" />
+    <list default="true" id="125c1af5-3a2d-41b5-9c8c-a15a1b40b76e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../menu/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../menu/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../menu/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/../menu/api/api.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../menu/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../menu/api/api.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../menu/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../menu/cmd/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../menu/internal/service/MenuService.go" beforeDir="false" afterPath="$PROJECT_DIR$/../menu/internal/service/MenuService.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/api/api.bm.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/api/api.bm.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/api/api.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../role/api/api.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../role/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../role/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/internal/dao/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/internal/server/grpc/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/internal/server/grpc/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/internal/server/http/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/internal/server/http/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/internal/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/internal/service/service.go" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,11 +25,16 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="GOROOT" path="$PROJECT_DIR$/../../../../../go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
   </component>
   <component name="ProjectId" id="1Y0cWnGN4ya7qoIQ0fAkBE8kCis" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
@@ -43,6 +64,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

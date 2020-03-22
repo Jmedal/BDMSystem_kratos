@@ -23,6 +23,11 @@ var PathMenuUpdateMenu = "/service.v1.Menu/UpdateMenu"
 var PathMenuDeleteMenu = "/service.v1.Menu/DeleteMenu"
 var PathMenuGetMenus = "/service.v1.Menu/GetMenus"
 var PathMenuGetMenuOptions = "/service.v1.Menu/GetMenuOptions"
+var PathMenuGetAllMenuOptions = "/service.v1.Menu/GetAllMenuOptions"
+var PathMenuGetChildrenMenuList = "/service.v1.Menu/GetChildrenMenuList"
+
+var PathRoleGetRoleRights = "/service.v1.Role/GetRoleRights"
+var PathRoleDeleteRoleNullRights = "/service.v1.Role/DeleteRoleNullRights"
 
 var PathTokenVerify = "/service.v1.Token/Verify"
 
@@ -43,10 +48,16 @@ type MenuBMServer interface {
 	DeleteMenu(ctx context.Context, req *DeleteMenuReq) (resp *DeleteMenuResp, err error)
 
 	// `method:"POST"`
-	GetMenus(ctx context.Context, req *google_protobuf1.Empty) (resp *GetMenusResp, err error)
+	GetMenus(ctx context.Context, req *GetMenusReq) (resp *GetMenusResp, err error)
 
 	// `method:"POST"`
 	GetMenuOptions(ctx context.Context, req *GetMenuOptionsReq) (resp *GetMenuOptionsResp, err error)
+
+	// `method:"POST"`
+	GetAllMenuOptions(ctx context.Context, req *google_protobuf1.Empty) (resp *GetMenuOptionsResp, err error)
+
+	// `method:"POST"`
+	GetChildrenMenuList(ctx context.Context, req *GetChildrenMenuListReq) (resp *GetChildrenMenuListResp, err error)
 }
 
 var MenuSvc MenuBMServer
@@ -97,7 +108,7 @@ func menuDeleteMenu(c *bm.Context) {
 }
 
 func menuGetMenus(c *bm.Context) {
-	p := new(google_protobuf1.Empty)
+	p := new(GetMenusReq)
 	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
 		return
 	}
@@ -114,6 +125,24 @@ func menuGetMenuOptions(c *bm.Context) {
 	c.JSON(resp, err)
 }
 
+func menuGetAllMenuOptions(c *bm.Context) {
+	p := new(google_protobuf1.Empty)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := MenuSvc.GetAllMenuOptions(c, p)
+	c.JSON(resp, err)
+}
+
+func menuGetChildrenMenuList(c *bm.Context) {
+	p := new(GetChildrenMenuListReq)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := MenuSvc.GetChildrenMenuList(c, p)
+	c.JSON(resp, err)
+}
+
 // RegisterMenuBMServer Register the blademaster route
 func RegisterMenuBMServer(e *bm.Engine, server MenuBMServer) {
 	MenuSvc = server
@@ -124,6 +153,44 @@ func RegisterMenuBMServer(e *bm.Engine, server MenuBMServer) {
 	e.POST("/service.v1.Menu/DeleteMenu", menuDeleteMenu)
 	e.POST("/service.v1.Menu/GetMenus", menuGetMenus)
 	e.POST("/service.v1.Menu/GetMenuOptions", menuGetMenuOptions)
+	e.POST("/service.v1.Menu/GetAllMenuOptions", menuGetAllMenuOptions)
+	e.POST("/service.v1.Menu/GetChildrenMenuList", menuGetChildrenMenuList)
+}
+
+// RoleBMServer is the server API for Role service.
+type RoleBMServer interface {
+	// `method:"POST"`
+	GetRoleRights(ctx context.Context, req *GetRoleRightsReq) (resp *GetRoleRightsResp, err error)
+
+	// `method:"POST"`
+	DeleteRoleNullRights(ctx context.Context, req *DeleteRoleNullRightsReq) (resp *DeleteRoleNullRightsResp, err error)
+}
+
+var RoleSvc RoleBMServer
+
+func roleGetRoleRights(c *bm.Context) {
+	p := new(GetRoleRightsReq)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := RoleSvc.GetRoleRights(c, p)
+	c.JSON(resp, err)
+}
+
+func roleDeleteRoleNullRights(c *bm.Context) {
+	p := new(DeleteRoleNullRightsReq)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := RoleSvc.DeleteRoleNullRights(c, p)
+	c.JSON(resp, err)
+}
+
+// RegisterRoleBMServer Register the blademaster route
+func RegisterRoleBMServer(e *bm.Engine, server RoleBMServer) {
+	RoleSvc = server
+	e.POST("/service.v1.Role/GetRoleRights", roleGetRoleRights)
+	e.POST("/service.v1.Role/DeleteRoleNullRights", roleDeleteRoleNullRights)
 }
 
 // TokenBMServer is the server API for Token service.

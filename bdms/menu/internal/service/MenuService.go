@@ -50,7 +50,11 @@ func (s *Service) DeleteMenu(ctx context.Context, req *pb.DeleteMenuReq) (resp *
 	return
 }
 
-func (s *Service) GetMenus(ctx context.Context, e *empty.Empty) (resp *pb.GetMenusResp, err error) {
+func (s *Service) GetMenus(ctx context.Context, req *pb.GetMenusReq) (resp *pb.GetMenusResp, err error) {
+	resp, err = s.dao.RawMenus(ctx, _topMenuPid, _topMenuLevels, req)
+	if err != nil {
+		log.Error("GetMenus发现错误,错误信息：", err)
+	}
 	return
 }
 
@@ -59,8 +63,21 @@ func (s *Service) GetMenuOptions(ctx context.Context, req *pb.GetMenuOptionsReq)
 	if err != nil {
 		log.Error("GetMenuOptions发现错误,错误信息：", err)
 	}
-	if req.MinLevels != 1{
-		resp.MenusOptions = resp.MenusOptions[0].Children
+	return
+}
+
+func (s *Service) GetAllMenuOptions(ctx context.Context, e *empty.Empty) (resp *pb.GetMenuOptionsResp, err error) {
+	resp, err = s.dao.RawAllMenuOptions(ctx, _topMenuPid, _topMenuLevels)
+	if err != nil {
+		log.Error("GetAllMenuOptions发现错误,错误信息：", err)
+	}
+	return
+}
+
+func (s *Service) GetChildrenMenuList(ctx context.Context, req *pb.GetChildrenMenuListReq) (resp *pb.GetChildrenMenuListResp, err error) {
+	resp, err = s.dao.RawChildrenMenuList(ctx, req)
+	if err != nil {
+		log.Error("GetChildrenMenuList发现错误,错误信息：", err)
 	}
 	return
 }

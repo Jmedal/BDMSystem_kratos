@@ -19,6 +19,8 @@ const (
 	AppKey = "root"
 
 	AppSecret = "root"
+
+	RoleServerID = "role.service"
 )
 
 func init() {
@@ -40,12 +42,23 @@ func NewClient(cfg *warden.ClientConfig, opts ...grpc.DialOption) (TokenClient, 
 	return NewTokenClient(cc), nil
 }
 
+//注册角色服务客户端
+func RegisterRoleClient(cfg *warden.ClientConfig, opts ...grpc.DialOption) (RoleClient, error) {
+	client := warden.NewClient(cfg, opts...)
+	client.Use(addToken())
+	cc, err := client.Dial(context.Background(), fmt.Sprintf("discovery://default/%s", RoleServerID))
+	if err != nil {
+		return nil, err
+	}
+	return NewRoleClient(cc), nil
+}
+
 // 生成 gRPC 代码
 //go:generate kratos tool protoc --grpc --bm api.proto
 
 //添加GRPC签名认证
 func addToken() grpc.UnaryClientInterceptor {
-	return func(ctx context.Context, method string, req, resp interface{}, cc *grpc.ClientConn, invoker grpc.UnaryInvoker, opts ...grpc.CallOption, ) error {
+	return func(ctx context.Context, method string, req, resp interface{}, cc *grpc.ClientConn, invoker grpc.UnaryInvoker, opts ...grpc.CallOption) error {
 
 		//将之前放入context中的metadata数据取出，如果没有则新建一个metadata
 		md, ok := metadata.FromOutgoingContext(ctx)

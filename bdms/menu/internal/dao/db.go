@@ -9,6 +9,7 @@ import (
 	"github.com/bilibili/kratos/pkg/log"
 	pb "menu/api"
 	"menu/internal/model"
+	con "menu/tool/container"
 )
 
 const (
@@ -21,26 +22,28 @@ const (
 	_queryMenuList = "select id, pid, num, menu_name, icon, path, levels from %s where pid = ? and levels = ? order by num"
 
 	//插入菜单
-	_insertMenu = "insert into %s (pid, num, menu_name, icon, path, levels) VALUES (?,?,?,?,?,?)"
+	_insertMenu = "insert into %s (pid, num, menu_name, icon, path, levels) values (?,?,?,?,?,?)"
 
 	//查询菜单层级
 	_queryMenuLevels = "select levels from %s where id = ?"
 
 	//更新菜单层级
-	_updateMenuLevels = "update %s set levels = levels + ? WHERE id = ?"
+	_updateMenuLevels = "update %s set levels = levels + ? where id = ?"
 
 	//更新菜单
-	_updateMenu = "update %s set pid = ?, num = ?, menu_name = ?, icon = ?, path = ?, levels = ? WHERE id = ?"
+	_updateMenu = "update %s set pid = ?, num = ?, menu_name = ?, icon = ?, path = ?, levels = ? where id = ?"
 
 	//删除菜单
 	_deleteMenu = "delete from %s where id = ?"
 
+	//查询菜单
+	_queryMenus = "select id, menu_name, icon, path from %s where pid = ? and levels = ? order by num"
+
 	//查询菜单选项
 	_queryMenuOption = "select id, menu_name from %s where pid = ? and levels = ? order by num"
 
-	//查询菜单
-	//_queryMenus = "select id, pid, num, menu_name, icon, path, levels from %s where id = ?"
-
+	//查询子菜单id列表
+	_queryChildrenMenuList = "select id from %s where pid = ? and levels = ? order by num"
 )
 
 func NewDB() (db *sql.DB, cf func(), err error) {
@@ -64,7 +67,7 @@ func (d *dao) RawArticle(ctx context.Context, id int64) (art *model.Article, err
 	return
 }
 
-//查询菜单列表
+//查询菜单列表(忽略顶级菜单)
 func (d *dao) RawMenuList(ctx context.Context, pid int64, levels int64) (resp *pb.GetMenuListResp, err error) {
 	sql := fmt.Sprintf(_queryMenuList, _sysMenuTable)
 	rows, err := d.db.Query(ctx, sql, pid, levels+1)
@@ -91,7 +94,7 @@ func (d *dao) RawMenuList(ctx context.Context, pid int64, levels int64) (resp *p
 	return
 }
 
-//添加菜单
+//插入菜单
 func (d *dao) InsertMenu(ctx context.Context, req *pb.AddMenuReq) (resp *pb.AddMenuResp, err error) {
 	sql := fmt.Sprintf(_insertMenu, _sysMenuTable)
 	var res dsql.Result
@@ -131,7 +134,7 @@ func (d *dao) UpdateMenu(ctx context.Context, req *pb.UpdateMenuReq) (resp *pb.U
 		log.Error("[dao.dao-anchor.mysql|db[sys_menu]] failed to update: (%v), error(%v)", req.Id, err)
 	}
 	resp = &pb.UpdateMenuResp{}
-	if _, err = res.RowsAffected(); err == nil{
+	if _, err = res.RowsAffected(); err == nil {
 		resp.Result = "success"
 		return
 	}
@@ -142,15 +145,18 @@ func (d *dao) UpdateMenu(ctx context.Context, req *pb.UpdateMenuReq) (resp *pb.U
 //删除菜单
 func (d *dao) DeleteMenu(ctx context.Context, req *pb.DeleteMenuReq) (resp *pb.DeleteMenuResp, err error) {
 	sql := fmt.Sprintf(_deleteMenu, _sysMenuTable)
-	for i := 0; i < len(req.ChildrenId); i++ {
-		if _, err = d.db.Exec(ctx, sql, req.ChildrenId[i]); err != nil {
-			log.Error("[dao.dao-anchor.mysql|db[sys_menu]] failed to delete: (%v), error(%v)", req.ChildrenId[i], err)
-		}
+	req.ChildrenId = append(req.ChildrenId, req.Id)
+	delRoleRights := &pb.DeleteRoleNullRightsReq{}
+	delRoleRights.MenusId = req.ChildrenId
+	if _, err = d.roleClient.DeleteRoleNullRights(ctx, delRoleRights); err != nil {
+		log.Error("dao.menuClient.GetMenus err(%v)", err)
+		return
 	}
 	var res dsql.Result
-	if res, err = d.db.Exec(ctx, sql, req.Id); err != nil {
-		log.Error("[dao.dao-anchor.mysql|db[sys_menu]] failed to delete: (%v), error(%v)", req.Id, err)
-		return
+	for _, v := range req.ChildrenId {
+		if res, err = d.db.Exec(ctx, sql, v); err != nil {
+			log.Error("[dao.dao-anchor.mysql|db[sys_menu]] failed to delete: (%v), error(%v)", v, err)
+		}
 	}
 	resp = &pb.DeleteMenuResp{}
 	var row int64
@@ -162,7 +168,56 @@ func (d *dao) DeleteMenu(ctx context.Context, req *pb.DeleteMenuReq) (resp *pb.D
 	return
 }
 
-//查询菜单选项
+//查询菜单(忽略顶级菜单)
+func (d *dao) RawMenus(ctx context.Context, pid int64, levels int64, req *pb.GetMenusReq) (resp *pb.GetMenusResp, err error) {
+	roleRightsReq := &pb.GetRoleRightsReq{}
+	roleRightsReq.RoleId = req.RoleId
+	var roleRightsResp *pb.GetRoleRightsResp
+	if roleRightsResp, err = d.roleClient.GetRoleRights(ctx, roleRightsReq); err != nil {
+		log.Error("dao.roleClient.GetRoleRights err(%v)", err)
+		return
+	}
+	set := con.New(roleRightsResp.MenusId...)
+	resp, err = d.RawMenusRec(ctx, pid, levels, set)
+	if err != nil {
+		log.Error("dao.RawMenusRec err(%v)", err)
+		return
+	}
+	//默认忽略顶级菜单（占位）
+	resp.Menus = resp.Menus[0].Children
+	return
+}
+
+//查询菜单递归操作
+func (d *dao) RawMenusRec(ctx context.Context, pid int64, levels int64, set *con.Set) (resp *pb.GetMenusResp, err error) {
+	sql := fmt.Sprintf(_queryMenus, _sysMenuTable)
+	rows, err := d.db.Query(ctx, sql, pid, levels)
+	if err != nil {
+		log.Error("select menu err(%v)", err)
+		return
+	}
+	defer rows.Close()
+	resp = &pb.GetMenusResp{}
+	for i := 0; rows.Next(); i++ {
+		menu := &pb.Menus{}
+		if err = rows.Scan(&menu.Id, &menu.MenuName, &menu.Icon, &menu.Path); err != nil {
+			log.Error("[dao.dao-anchor.mysql|db[sys_menu]] scan all record error(%v)", err)
+			return
+		}
+		if set.Has(menu.Id) {
+			children := &pb.GetMenusResp{}
+			if children, err = d.RawMenusRec(ctx, menu.Id, levels+1, set); err != nil {
+				log.Error("RawMenusRec err(%v)", err)
+				return
+			}
+			menu.Children = children.Menus
+			resp.Menus = append(resp.Menus, menu)
+		}
+	}
+	return
+}
+
+//查询菜单选项(未忽略顶级菜单)
 func (d *dao) RawMenuOptions(ctx context.Context, pid int64, levels int64, req *pb.GetMenuOptionsReq) (resp *pb.GetMenuOptionsResp, err error) {
 	if levels > req.MinLevels-1 {
 		return nil, nil
@@ -183,18 +238,87 @@ func (d *dao) RawMenuOptions(ctx context.Context, pid int64, levels int64, req *
 		}
 		children := &pb.GetMenuOptionsResp{}
 		if children, err = d.RawMenuOptions(ctx, menu.Id, levels+1, req); err != nil {
-			log.Error("recursion err(%v)", err)
+			log.Error("RawMenuOptions err(%v)", err)
 			return
 		}
 		if children == nil {
 			menu.Children = nil
 		} else {
-			if len(children.MenusOptions) <= 0 {
+			if len(children.MenuOptions) <= 0 {
 				continue
 			}
-			menu.Children = children.MenusOptions
+			menu.Children = children.MenuOptions
 		}
-		resp.MenusOptions = append(resp.MenusOptions, menu)
+		resp.MenuOptions = append(resp.MenuOptions, menu)
+	}
+	return
+}
+
+//查询菜单所有选项(未忽略顶级菜单)
+func (d *dao) RawAllMenuOptions(ctx context.Context, pid int64, levels int64) (resp *pb.GetMenuOptionsResp, err error) {
+	sql := fmt.Sprintf(_queryMenuOption, _sysMenuTable)
+	rows, err := d.db.Query(ctx, sql, pid, levels)
+	if err != nil {
+		log.Error("select menu err(%v)", err)
+		return
+	}
+	defer rows.Close()
+	resp = &pb.GetMenuOptionsResp{}
+	for i := 0; rows.Next(); i++ {
+		menu := &pb.GetMenuOptionsResp_MenuOption{}
+		if err = rows.Scan(&menu.Id, &menu.MenuName); err != nil {
+			log.Error("[dao.dao-anchor.mysql|db[sys_menu]] scan all record error(%v)", err)
+			return
+		}
+		children := &pb.GetMenuOptionsResp{}
+		if children, err = d.RawAllMenuOptions(ctx, menu.Id, levels+1); err != nil {
+			log.Error("RawAllMenuOptions err(%v)", err)
+			return
+		}
+		menu.Children = children.MenuOptions
+		resp.MenuOptions = append(resp.MenuOptions, menu)
+	}
+	return
+}
+
+//查询菜单子菜单
+func (d *dao) RawChildrenMenuList(ctx context.Context, req *pb.GetChildrenMenuListReq) (resp *pb.GetChildrenMenuListResp, err error) {
+	sql := fmt.Sprintf(_queryMenuLevels, _sysMenuTable)
+	var levels int64
+	if err = d.db.QueryRow(ctx, sql, req.MenuId).Scan(&levels); err != nil {
+		log.Error("[dao.dao-anchor.mysql|db[sys_menu]] scan short id record error(%v)", err)
+		return
+	}
+	resp, err = d.RawChildrenMenuListRec(ctx, req.MenuId, levels)
+	if err != nil {
+		log.Error("dao.RawChildrenMenuListRec err(%v)", err)
+		return
+	}
+	return
+}
+
+//查询子菜单递归操作
+func (d *dao) RawChildrenMenuListRec(ctx context.Context, pid int64, levels int64) (resp *pb.GetChildrenMenuListResp, err error) {
+	sql := fmt.Sprintf(_queryChildrenMenuList, _sysMenuTable)
+	rows, err := d.db.Query(ctx, sql, pid, levels+1)
+	if err != nil {
+		log.Error("select menu err(%v)", err)
+		return
+	}
+	defer rows.Close()
+	resp = &pb.GetChildrenMenuListResp{}
+	for i := 0; rows.Next(); i++ {
+		var id int64
+		if err = rows.Scan(&id); err != nil {
+			log.Error("[dao.dao-anchor.mysql|db[sys_menu]] scan all record error(%v)", err)
+			return
+		}
+		children := &pb.GetChildrenMenuListResp{}
+		if children, err = d.RawChildrenMenuListRec(ctx, id, levels); err != nil {
+			log.Error("RawChildrenMenuListRec err(%v)", err)
+			return
+		}
+		resp.MenusId = append(resp.MenusId, children.MenusId...)
 	}
 	return
 }

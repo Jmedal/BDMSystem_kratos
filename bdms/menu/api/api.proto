@@ -83,25 +83,24 @@ message DeleteMenuResp {
     string result = 1 [(gogoproto.jsontag) = 'result'];
 }
 
+message GetMenusReq {
+    int64 roleId = 1 [(gogoproto.moretags) = 'form:"roleId" validate:"required"'];
+}
+
 message GetMenusResp {
+    repeated Menus menus = 1 [(gogoproto.jsontag) = 'menus'];
+}
 
-    repeated Menu menus = 1 [(gogoproto.jsontag) = 'menus'];
+message Menus {
+    int64 id = 1 [(gogoproto.jsontag) = 'id'];
 
-    message Menu {
-        int64 id = 1 [(gogoproto.jsontag) = 'id'];
+    string menuName = 3 [(gogoproto.jsontag) = 'menuName'];
 
-        int64 num = 2 [(gogoproto.jsontag) = 'num'];
+    string icon = 4 [(gogoproto.jsontag) = 'icon'];
 
-        string menuName = 3 [(gogoproto.jsontag) = 'menuName'];
+    string path = 5 [(gogoproto.jsontag) = 'path'];
 
-        string icon = 4 [(gogoproto.jsontag) = 'icon'];
-
-        string path = 5 [(gogoproto.jsontag) = 'path'];
-
-        int64 levels = 6 [(gogoproto.jsontag) = 'levels'];
-
-        repeated Menu children = 7 [(gogoproto.jsontag) = 'children'];
-    }
+    repeated Menus children = 7 [(gogoproto.jsontag) = 'children'];
 }
 
 message GetMenuOptionsReq {
@@ -110,7 +109,7 @@ message GetMenuOptionsReq {
 
 message GetMenuOptionsResp {
 
-    repeated MenuOption menusOptions = 1 [(gogoproto.jsontag) = 'menusOptions'];
+    repeated MenuOption menuOptions = 1 [(gogoproto.jsontag) = 'menuOptions'];
 
     message MenuOption {
         int64 id = 1 [(gogoproto.jsontag) = 'value'];
@@ -121,6 +120,13 @@ message GetMenuOptionsResp {
     }
 }
 
+message GetChildrenMenuListReq {
+    int64 menuId = 1 [(gogoproto.moretags) = 'form:"menuId" validate:"required"'];
+}
+
+message GetChildrenMenuListResp {
+    repeated int64 menusId = 1 [(gogoproto.jsontag) = 'menusId'];
+}
 
 service Menu {
     rpc Ping (.google.protobuf.Empty) returns (.google.protobuf.Empty);
@@ -138,12 +144,42 @@ service Menu {
     rpc DeleteMenu (DeleteMenuReq) returns (DeleteMenuResp);
 
     // `method:"POST"`
-    rpc GetMenus (.google.protobuf.Empty) returns (GetMenusResp);
+    rpc GetMenus (GetMenusReq) returns (GetMenusResp);
 
     // `method:"POST"`
     rpc GetMenuOptions (GetMenuOptionsReq) returns (GetMenuOptionsResp);
+
+    // `method:"POST"`
+    rpc GetAllMenuOptions (.google.protobuf.Empty) returns (GetMenuOptionsResp);
+
+    // `method:"POST"`
+    rpc GetChildrenMenuList (GetChildrenMenuListReq) returns (GetChildrenMenuListResp);
 }
 
+
+message GetRoleRightsReq {
+    int64 roleId = 1 [(gogoproto.moretags) = 'form:"roleId" validate:"required"'];
+}
+
+message GetRoleRightsResp {
+    repeated int64 menusId = 1 [(gogoproto.jsontag) = 'menusId'];
+}
+
+message DeleteRoleNullRightsReq {
+    repeated int64 menusId = 1 [(gogoproto.moretags) = 'form:"menusId" validate:"required"'];
+}
+
+message DeleteRoleNullRightsResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+service Role {
+    // `method:"POST"`
+    rpc GetRoleRights(GetRoleRightsReq) returns (GetRoleRightsResp);
+
+    // `method:"POST"`
+    rpc DeleteRoleNullRights(DeleteRoleNullRightsReq) returns (DeleteRoleNullRightsResp);
+}
 
 message VerifyTokenReq {
     // 授予的 token

@@ -3,6 +3,7 @@ package dao
 import (
 	pb "account/api"
 	"context"
+	"github.com/bilibili/kratos/pkg/log"
 	"github.com/bilibili/kratos/pkg/net/rpc/warden"
 	"github.com/pkg/errors"
 	"time"
@@ -29,12 +30,10 @@ type Dao interface {
 	Article(c context.Context, id int64) (*model.Article, error)
 
 	RawUserAccount(ctx context.Context, account string) (u *model.User, err error)
-
-	RawUserInfo(ctx context.Context, userId int64) (u *model.User, err error)
-
 	RequestToken(ctx context.Context, userId int64, operator string, expire int64) (token string, randomKey string, err error)
-
 	VerifyToken(ctx context.Context, token string) (userId int64, randomKey string, err error)
+
+	//RawUserInfo(ctx context.Context, userId int64) (u *model.User, err error)
 }
 
 // dao dao.
@@ -59,6 +58,20 @@ func newDao(r *redis.Redis, mc *memcache.Memcache, db *sql.DB) (d *dao, cf func(
 	if err = paladin.Get("application.toml").UnmarshalTOML(&cfg); err != nil {
 		return
 	}
+	d = &dao{
+		db:         db,
+		redis:      r,
+		mc:         mc,
+		cache:      fanout.New("cache"),
+		demoExpire: int32(time.Duration(cfg.DemoExpire) / time.Second),
+	}
+	go initTokenClient(d)
+	cf = d.Close
+	return
+}
+
+//初始化token注册客户端
+func initTokenClient(d *dao) (err error) {
 	grpccfg := &warden.ClientConfig{
 		Dial:              xtime.Duration(time.Second * 10),
 		Timeout:           xtime.Duration(time.Millisecond * 250),
@@ -66,19 +79,11 @@ func newDao(r *redis.Redis, mc *memcache.Memcache, db *sql.DB) (d *dao, cf func(
 		KeepAliveInterval: xtime.Duration(time.Second * 60),
 		KeepAliveTimeout:  xtime.Duration(time.Second * 20),
 	}
-	var grpcClient pb.TokenClient
-	if grpcClient, err = pb.NewClient(grpccfg); err != nil {
-		return
+	var tokenClient pb.TokenClient
+	if tokenClient, err = pb.NewClient(grpccfg); err != nil {
+		log.Error("NewClient error:(%v)", err)
 	}
-	d = &dao{
-		db:          db,
-		redis:       r,
-		mc:          mc,
-		cache:       fanout.New("cache"),
-		demoExpire:  int32(time.Duration(cfg.DemoExpire) / time.Second),
-		tokenClient: grpcClient,
-	}
-	cf = d.Close
+	d.tokenClient = tokenClient
 	return
 }
 

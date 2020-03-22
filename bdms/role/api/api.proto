@@ -12,11 +12,156 @@ option go_package = "api";
 option (gogoproto.goproto_getters_all) = false;
 
 
+message GetRoleListResp {
+    repeated Role roleList = 1 [(gogoproto.jsontag) = 'roleList'];
+
+    message Role {
+        int64 id = 1 [(gogoproto.jsontag) = 'id'];
+
+        int64 num = 2 [(gogoproto.jsontag) = 'num'];
+
+        string roleName = 3 [(gogoproto.jsontag) = 'roleName'];
+
+        string roleDesc = 4 [(gogoproto.jsontag) = 'roleDesc'];
+
+        repeated Menus children = 5 [(gogoproto.jsontag) = 'children'];
+    }
+}
+
+message AddRoleReq {
+    int64 num = 1 [(gogoproto.moretags) = 'form:"num" validate:"required"'];
+
+    string roleName = 2 [(gogoproto.moretags) = 'form:"roleName" validate:"required"'];
+
+    string roleDesc = 3 [(gogoproto.moretags) = 'form:"roleDesc" validate:"required"'];
+}
+
+message AddRoleResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+message UpdateRoleReq {
+    int64 id = 1 [(gogoproto.moretags) = 'form:"id" validate:"required"'];
+
+    int64 num = 2 [(gogoproto.moretags) = 'form:"num" validate:"required"'];
+
+    string roleName = 3 [(gogoproto.moretags) = 'form:"roleName" validate:"required"'];
+
+    string roleDesc = 4 [(gogoproto.moretags) = 'form:"roleDesc" validate:"required"'];
+}
+
+message UpdateRoleResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+message DeleteRoleReq {
+    int64 id = 1 [(gogoproto.moretags) = 'form:"id" validate:"required"'];
+}
+
+message DeleteRoleResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+message GetRoleRightsReq {
+    int64 roleId = 1 [(gogoproto.moretags) = 'form:"roleId" validate:"required"'];
+}
+
+message GetRoleRightsResp {
+    repeated int64 menusId = 1 [(gogoproto.jsontag) = 'menusId'];
+}
+
+message SetRoleRightsReq {
+    int64 roleId = 1 [(gogoproto.moretags) = 'form:"roleId" validate:"required"'];
+
+    repeated int64 menusId = 2 [(gogoproto.moretags) = 'form:"menusId" validate:"required"'];
+}
+
+message SetRoleRightsResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+message DeleteRoleRightsReq {
+    int64 roleId = 1 [(gogoproto.moretags) = 'form:"roleId" validate:"required"'];
+
+    int64 menuId = 2 [(gogoproto.moretags) = 'form:"menuId" validate:"required"'];
+}
+
+message DeleteRoleRightsResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+message DeleteRoleNullRightsReq {
+    repeated int64 menusId = 1 [(gogoproto.moretags) = 'form:"menusId" validate:"required"'];
+}
+
+message DeleteRoleNullRightsResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+
 service Role {
   rpc Ping(.google.protobuf.Empty) returns (.google.protobuf.Empty);
 
   // `method:"POST"`
-  rpc GrpcUserInfoTest(.google.protobuf.Empty) returns (.google.protobuf.Empty);
+  rpc GetRoleList(.google.protobuf.Empty) returns (GetRoleListResp);
+
+  // `method:"POST"`
+  rpc AddRole(AddRoleReq) returns (AddRoleResp);
+
+  // `method:"POST"`
+  rpc UpdateRole(UpdateRoleReq) returns (UpdateRoleResp);
+
+  // `method:"POST"`
+  rpc DeleteRole(DeleteRoleReq) returns (DeleteRoleResp);
+
+  // `method:"POST"`
+  rpc GetRoleRights(GetRoleRightsReq) returns (GetRoleRightsResp);
+
+  // `method:"POST"`
+  rpc SetRoleRights(SetRoleRightsReq) returns (SetRoleRightsResp);
+
+  // `method:"POST"`
+  rpc DeleteRoleRights(DeleteRoleRightsReq) returns (DeleteRoleRightsResp);
+
+  // `method:"POST"`
+  rpc DeleteRoleNullRights(DeleteRoleNullRightsReq) returns (DeleteRoleNullRightsResp);
+}
+
+
+message GetMenusReq {
+   int64 roleId = 1 [(gogoproto.moretags) = 'form:"roleId" validate:"required"'];
+}
+
+message GetMenusResp {
+    repeated Menus menus = 1 [(gogoproto.jsontag) = 'menus'];
+}
+
+message Menus {
+    int64 id = 1 [(gogoproto.jsontag) = 'id'];
+
+    string menuName = 3 [(gogoproto.jsontag) = 'menuName'];
+
+    string icon = 4 [(gogoproto.jsontag) = 'icon'];
+
+    string path = 5 [(gogoproto.jsontag) = 'path'];
+
+    repeated Menus children = 7 [(gogoproto.jsontag) = 'children'];
+}
+
+message GetChildrenMenuListReq {
+    int64 menuId = 1 [(gogoproto.moretags) = 'form:"menuId" validate:"required"'];
+}
+
+message GetChildrenMenuListResp {
+    repeated int64 menusId = 1 [(gogoproto.jsontag) = 'menusId'];
+}
+
+service Menu {
+    // `method:"POST"`
+    rpc GetMenus (GetMenusReq) returns (GetMenusResp);
+
+    // `method:"POST"`
+    rpc GetChildrenMenuList (GetChildrenMenuListReq) returns (GetChildrenMenuListResp);
 }
 
 

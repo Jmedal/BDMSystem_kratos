@@ -2,15 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af7d4228-d234-43b0-bfdb-ca05fb184fb0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../role/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../role/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../account/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tool/container/Set.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../role/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../role/internal/service/roleService.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../role/tool/container/Set.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../token/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../account/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../account/api/api.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/../account/internal/dao/dao.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/service.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../grpc-test/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../../grpc-test/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../grpc-test/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../../grpc-test/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../grpc-test/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../grpc-test/internal/dao/dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/api.bm.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/api.bm.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/api.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/api/api.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/grpc.toml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/grpc.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/http.toml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/http.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/service/MenuService.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/MenuService.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/api/api.bm.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/api/api.bm.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/api/api.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../role/api/api.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/api/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/cmd/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/configs/grpc.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../role/configs/grpc.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/configs/http.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../role/configs/http.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../role/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../role/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/internal/dao/dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/internal/dao/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/internal/server/grpc/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/internal/server/grpc/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/internal/server/http/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/internal/server/http/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/internal/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/internal/service/service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../token/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../token/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,11 +68,12 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/internal/server/http" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tool" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\bdms\menu\tool" />
       <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\grpc-test\internal\server\http" />
       <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\bdms\grpc-test\internal\server\http" />
       <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\bdms\grpc-test\internal\server\grpc" />
@@ -94,7 +122,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

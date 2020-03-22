@@ -27,8 +27,11 @@ var _ binding.StructValidator
 
 var PathAccountPing = "/service.v1.Account/Ping"
 var PathAccountLogin = "/service.v1.Account/Login"
-var PathAccountRegister = "/service.v1.Account/Register"
-var PathAccountUserInfo = "/service.v1.Account/UserInfo"
+var PathAccountGetUserList = "/service.v1.Account/GetUserList"
+var PathAccountAddUser = "/service.v1.Account/AddUser"
+var PathAccountUpdateUser = "/service.v1.Account/UpdateUser"
+var PathAccountDeleteUser = "/service.v1.Account/DeleteUser"
+var PathAccountSetUserRole = "/service.v1.Account/SetUserRole"
 
 var PathTokenPing = "/service.v1.Token/Ping"
 var PathTokenRequest = "/service.v1.Token/Request"
@@ -43,13 +46,20 @@ type AccountBMServer interface {
 	// `method:"POST"`
 	Login(ctx context.Context, req *LoginReq) (resp *LoginResp, err error)
 
-	// 用户注册
 	// `method:"POST"`
-	Register(ctx context.Context, req *RegisterReq) (resp *RegisterResp, err error)
+	GetUserList(ctx context.Context, req *GetUserListReq) (resp *GetUserListResp, err error)
 
-	// 用户信息
 	// `method:"POST"`
-	UserInfo(ctx context.Context, req *UserInfoReq) (resp *UserInfoResp, err error)
+	AddUser(ctx context.Context, req *AddUserReq) (resp *AddUserResp, err error)
+
+	// `method:"POST"`
+	UpdateUser(ctx context.Context, req *UpdateUserReq) (resp *UpdateUserResp, err error)
+
+	// `method:"POST"`
+	DeleteUser(ctx context.Context, req *DeleteUserReq) (resp *DeleteUserResp, err error)
+
+	// `method:"POST"`
+	SetUserRole(ctx context.Context, req *SetUserRoleReq) (resp *SetUserRoleResp, err error)
 }
 
 var AccountSvc AccountBMServer
@@ -72,21 +82,48 @@ func accountLogin(c *bm.Context) {
 	c.JSON(resp, err)
 }
 
-func accountRegister(c *bm.Context) {
-	p := new(RegisterReq)
+func accountGetUserList(c *bm.Context) {
+	p := new(GetUserListReq)
 	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
 		return
 	}
-	resp, err := AccountSvc.Register(c, p)
+	resp, err := AccountSvc.GetUserList(c, p)
 	c.JSON(resp, err)
 }
 
-func accountUserInfo(c *bm.Context) {
-	p := new(UserInfoReq)
+func accountAddUser(c *bm.Context) {
+	p := new(AddUserReq)
 	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
 		return
 	}
-	resp, err := AccountSvc.UserInfo(c, p)
+	resp, err := AccountSvc.AddUser(c, p)
+	c.JSON(resp, err)
+}
+
+func accountUpdateUser(c *bm.Context) {
+	p := new(UpdateUserReq)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := AccountSvc.UpdateUser(c, p)
+	c.JSON(resp, err)
+}
+
+func accountDeleteUser(c *bm.Context) {
+	p := new(DeleteUserReq)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := AccountSvc.DeleteUser(c, p)
+	c.JSON(resp, err)
+}
+
+func accountSetUserRole(c *bm.Context) {
+	p := new(SetUserRoleReq)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := AccountSvc.SetUserRole(c, p)
 	c.JSON(resp, err)
 }
 
@@ -95,8 +132,11 @@ func RegisterAccountBMServer(e *bm.Engine, server AccountBMServer) {
 	AccountSvc = server
 	e.POST("/service.v1.Account/Ping", accountPing)
 	e.POST("/service.v1.Account/Login", accountLogin)
-	e.POST("/service.v1.Account/Register", accountRegister)
-	e.POST("/service.v1.Account/UserInfo", accountUserInfo)
+	e.POST("/service.v1.Account/GetUserList", accountGetUserList)
+	e.POST("/service.v1.Account/AddUser", accountAddUser)
+	e.POST("/service.v1.Account/UpdateUser", accountUpdateUser)
+	e.POST("/service.v1.Account/DeleteUser", accountDeleteUser)
+	e.POST("/service.v1.Account/SetUserRole", accountSetUserRole)
 }
 
 // TokenBMServer is the server API for Token service.

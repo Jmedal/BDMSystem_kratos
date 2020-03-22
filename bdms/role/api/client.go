@@ -19,6 +19,8 @@ const (
 	AppKey = "root"
 
 	AppSecret = "root"
+
+	MenuServerID = "menu.service"
 )
 
 func init() {
@@ -38,6 +40,17 @@ func NewClient(cfg *warden.ClientConfig, opts ...grpc.DialOption) (TokenClient, 
 		return nil, err
 	}
 	return NewTokenClient(cc), nil
+}
+
+//注册菜单服务客户端
+func RegisterMenuClient(cfg *warden.ClientConfig, opts ...grpc.DialOption) (MenuClient, error) {
+	client := warden.NewClient(cfg, opts...)
+	client.Use(addToken())
+	cc, err := client.Dial(context.Background(), fmt.Sprintf("discovery://default/%s", MenuServerID))
+	if err != nil {
+		return nil, err
+	}
+	return NewMenuClient(cc), nil
 }
 
 // 生成 gRPC 代码
