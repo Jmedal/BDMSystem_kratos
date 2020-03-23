@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50720
 File Encoding         : 65001
 
-Date: 2020-03-24 00:09:30
+Date: 2020-03-24 01:11:25
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -220,7 +220,7 @@ INSERT INTO `sys_role_menu` VALUES ('329', '2', '32');
 DROP TABLE IF EXISTS `sys_user`;
 CREATE TABLE `sys_user` (
   `id` bigint(255) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
-  `avatar` varchar(255) DEFAULT '' COMMENT '头像',
+  `avatar` varchar(255) DEFAULT 'https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png' COMMENT '头像',
   `account` varchar(45) NOT NULL DEFAULT '' COMMENT '帐号',
   `password` varchar(45) NOT NULL DEFAULT '' COMMENT '密码',
   `name` varchar(45) DEFAULT '' COMMENT '姓名',

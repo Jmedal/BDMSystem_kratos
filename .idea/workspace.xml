@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67f36049-4dd2-40c7-bacb-767918e1a8e9" name="Default Changelist" comment="" />
+    <list default="true" id="67f36049-4dd2-40c7-bacb-767918e1a8e9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdms/bdms.sql" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/bdms.sql" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,11 +48,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\bdms" />
       <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\bdms\discovery" />
       <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\tool" />
       <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\tool\http\security" />
       <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\tool\http_tool" />
-      <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\tool\grpc_tool" />
     </key>
   </component>
   <component name="RunDashboard">
