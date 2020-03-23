@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67f36049-4dd2-40c7-bacb-767918e1a8e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bdms/account/internal/service/accountService.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bdms/discovery/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/BDMSystem_kratos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BDMSystem_kratos.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bdms/account/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/account/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/account/api/api.bm.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/account/api/api.bm.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/account/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/account/api/api.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/account/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/account/api/api.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/account/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/account/internal/dao/dao.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bdms/account/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/account/internal/dao/db.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/account/internal/model/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/account/internal/model/model.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/account/internal/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/account/internal/service/service.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bdms/menu/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/menu/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/menu/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/menu/internal/dao/db.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/role/api/api.bm.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/role/api/api.bm.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/role/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/role/api/api.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/role/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/role/api/api.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/role/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/role/internal/dao/dao.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/role/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/role/internal/dao/db.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/role/internal/service/roleService.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/role/internal/service/roleService.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/token/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/token/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/token/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/token/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/token/internal/dao/redis.token_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/token/internal/dao/redis.token_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +119,8 @@
     <MESSAGE value="2020-3-20 添加Role模块" />
     <MESSAGE value="2020-3-20 更新修改" />
     <MESSAGE value="2020-3-22 添加角色、权限（完成）模块 和 用户模块（未完成）" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020-3-22 添加角色、权限（完成）模块 和 用户模块（未完成）" />
+    <MESSAGE value="2020-3-23 用户模块（完成）" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020-3-23 用户模块（完成）" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

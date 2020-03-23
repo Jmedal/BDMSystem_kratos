@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af7d4228-d234-43b0-bfdb-ca05fb184fb0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../account/internal/service/accountService.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../discovery/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/BDMSystem_kratos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/BDMSystem_kratos.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../account/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../account/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../account/api/api.bm.go" beforeDir="false" afterPath="$PROJECT_DIR$/../account/api/api.bm.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../account/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/../account/api/api.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../account/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../account/api/api.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../account/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/../account/internal/dao/dao.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../account/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/../account/internal/dao/db.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../account/internal/model/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/../account/internal/model/model.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../account/internal/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/../account/internal/service/service.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/db.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../role/api/api.bm.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/api/api.bm.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../role/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/api/api.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../role/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../role/api/api.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../role/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/internal/dao/dao.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../role/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/internal/dao/db.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../role/internal/service/roleService.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/internal/service/roleService.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../token/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../token/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../token/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../token/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../token/internal/dao/redis.token_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/../token/internal/dao/redis.token_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

@@ -90,7 +90,7 @@ func (d *dao) RawUser(ctx context.Context, req *pb.LoginReq) (resp *pb.LoginResp
 	}
 	userInfo.Birthday = birthday.Time().Unix()
 	userInfo.CreateTime = createTime.Time().Unix()
-	if err != sql.ErrNoRows {
+	if err == sql.ErrNoRows {
 		resp.Result = "Account aren't existent"
 		return
 	}
