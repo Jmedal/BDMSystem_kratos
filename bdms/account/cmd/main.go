@@ -43,7 +43,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	cancel, err := initDiscovery("0.0.0.0","5502", "account.service")
+	cancel, err := initDiscovery("47.107.116.160", "5502", "account.service")
 	if err != nil {
 		panic(err)
 	}
