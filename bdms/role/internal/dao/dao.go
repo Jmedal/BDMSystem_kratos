@@ -30,10 +30,11 @@ type Dao interface {
 	InsertRole(ctx context.Context, req *pb.AddRoleReq) (resp *pb.AddRoleResp, err error)
 	UpdateRole(ctx context.Context, req *pb.UpdateRoleReq) (resp *pb.UpdateRoleResp, err error)
 	DeleteRole(ctx context.Context, req *pb.DeleteRoleReq) (resp *pb.DeleteRoleResp, err error)
-	GetRoleMenus(ctx context.Context, req *pb.GetRoleRightsReq) (resp *pb.GetRoleRightsResp, err error)
+	RawRoleMenus(ctx context.Context, req *pb.GetRoleRightsReq) (resp *pb.GetRoleRightsResp, err error)
 	SetRoleMenus(ctx context.Context, req *pb.SetRoleRightsReq) (resp *pb.SetRoleRightsResp, err error)
 	DeleteRoleMenus(ctx context.Context, req *pb.DeleteRoleRightsReq) (resp *pb.DeleteRoleRightsResp, err error)
 	DeleteRoleNullMenus(ctx context.Context, req *pb.DeleteRoleNullRightsReq) (resp *pb.DeleteRoleNullRightsResp, err error)
+	RawRoleOptions(ctx context.Context) (resp *pb.GetRoleOptionsResp, err error)
 }
 
 // dao dao.

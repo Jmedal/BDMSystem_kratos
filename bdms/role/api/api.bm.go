@@ -25,6 +25,7 @@ var PathRoleGetRoleRights = "/service.v1.Role/GetRoleRights"
 var PathRoleSetRoleRights = "/service.v1.Role/SetRoleRights"
 var PathRoleDeleteRoleRights = "/service.v1.Role/DeleteRoleRights"
 var PathRoleDeleteRoleNullRights = "/service.v1.Role/DeleteRoleNullRights"
+var PathRoleGetRoleOptions = "/service.v1.Role/GetRoleOptions"
 
 var PathMenuGetMenus = "/service.v1.Menu/GetMenus"
 var PathMenuGetChildrenMenuList = "/service.v1.Menu/GetChildrenMenuList"
@@ -58,6 +59,9 @@ type RoleBMServer interface {
 
 	// `method:"POST"`
 	DeleteRoleNullRights(ctx context.Context, req *DeleteRoleNullRightsReq) (resp *DeleteRoleNullRightsResp, err error)
+
+	// `method:"POST"`
+	GetRoleOptions(ctx context.Context, req *google_protobuf1.Empty) (resp *GetRoleOptionsResp, err error)
 }
 
 var RoleSvc RoleBMServer
@@ -143,6 +147,15 @@ func roleDeleteRoleNullRights(c *bm.Context) {
 	c.JSON(resp, err)
 }
 
+func roleGetRoleOptions(c *bm.Context) {
+	p := new(google_protobuf1.Empty)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := RoleSvc.GetRoleOptions(c, p)
+	c.JSON(resp, err)
+}
+
 // RegisterRoleBMServer Register the blademaster route
 func RegisterRoleBMServer(e *bm.Engine, server RoleBMServer) {
 	RoleSvc = server
@@ -155,6 +168,7 @@ func RegisterRoleBMServer(e *bm.Engine, server RoleBMServer) {
 	e.POST("/service.v1.Role/SetRoleRights", roleSetRoleRights)
 	e.POST("/service.v1.Role/DeleteRoleRights", roleDeleteRoleRights)
 	e.POST("/service.v1.Role/DeleteRoleNullRights", roleDeleteRoleNullRights)
+	e.POST("/service.v1.Role/GetRoleOptions", roleGetRoleOptions)
 }
 
 // MenuBMServer is the server API for Menu service.

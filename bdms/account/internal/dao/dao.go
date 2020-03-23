@@ -28,12 +28,15 @@ type Dao interface {
 	Ping(ctx context.Context) (err error)
 	// bts: -nullcache=&model.Article{ID:-1} -check_null_code=$!=nil&&$.ID==-1
 	Article(c context.Context, id int64) (*model.Article, error)
-
-	RawUserAccount(ctx context.Context, account string) (u *model.User, err error)
-	RequestToken(ctx context.Context, userId int64, operator string, expire int64) (token string, randomKey string, err error)
+	RawUser(ctx context.Context, req *pb.LoginReq) (resp *pb.LoginResp, err error)
+	RawUserPage(ctx context.Context, req *pb.GetUserPageReq) (resp *pb.GetUserPageResp, err error)
+	InsertUser(ctx context.Context, req *pb.AddUserReq) (resp *pb.AddUserResp, err error)
+	UpdateUser(ctx context.Context, req *pb.UpdateUserReq) (resp *pb.UpdateUserResp, err error)
+	DeleteUser(ctx context.Context, req *pb.DeleteUserReq) (resp *pb.DeleteUserResp, err error)
+	SetUserStatus(ctx context.Context, req *pb.SetUserStatusReq) (resp *pb.SetUserStatusResp, err error)
+	SetUserRole(ctx context.Context, req *pb.SetUserRoleReq) (resp *pb.SetUserRoleResp, err error)
+	RawAccount(ctx context.Context, req *pb.CheckAccountReq) (resp *pb.CheckAccountResp, err error)
 	VerifyToken(ctx context.Context, token string) (userId int64, randomKey string, err error)
-
-	//RawUserInfo(ctx context.Context, userId int64) (u *model.User, err error)
 }
 
 // dao dao.
@@ -95,21 +98,6 @@ func (d *dao) Close() {
 // Ping ping the resource.
 func (d *dao) Ping(ctx context.Context) (err error) {
 	return nil
-}
-
-func (d *dao) RequestToken(ctx context.Context, userId int64, operator string, expire int64) (token string, randomKey string, err error) {
-	req := &pb.NewTokenReq{
-		UserId:   userId,
-		Operator: operator,
-		Expire:   expire,
-	}
-	var resp = &pb.NewTokenResp{}
-	if resp, err = d.tokenClient.Request(ctx, req); err != nil {
-		err = errors.Wrapf(err, "%d:%s", req.UserId, req.Operator, req.Expire)
-	}
-	token = resp.AccessToken
-	randomKey = resp.RandomKey
-	return
 }
 
 func (d *dao) VerifyToken(ctx context.Context, token string) (userId int64, randomKey string, err error) {

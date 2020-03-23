@@ -198,7 +198,7 @@ func (d *dao) RawMenusRec(ctx context.Context, pid int64, levels int64, set *con
 	}
 	defer rows.Close()
 	resp = &pb.GetMenusResp{}
-	for i := 0; rows.Next(); i++ {
+	for rows.Next() {
 		menu := &pb.Menus{}
 		if err = rows.Scan(&menu.Id, &menu.MenuName, &menu.Icon, &menu.Path); err != nil {
 			log.Error("[dao.dao-anchor.mysql|db[sys_menu]] scan all record error(%v)", err)
@@ -230,7 +230,7 @@ func (d *dao) RawMenuOptions(ctx context.Context, pid int64, levels int64, req *
 	}
 	defer rows.Close()
 	resp = &pb.GetMenuOptionsResp{}
-	for i := 0; rows.Next(); i++ {
+	for rows.Next() {
 		menu := &pb.GetMenuOptionsResp_MenuOption{}
 		if err = rows.Scan(&menu.Id, &menu.MenuName); err != nil {
 			log.Error("[dao.dao-anchor.mysql|db[sys_menu]] scan all record error(%v)", err)
@@ -264,7 +264,7 @@ func (d *dao) RawAllMenuOptions(ctx context.Context, pid int64, levels int64) (r
 	}
 	defer rows.Close()
 	resp = &pb.GetMenuOptionsResp{}
-	for i := 0; rows.Next(); i++ {
+	for rows.Next() {
 		menu := &pb.GetMenuOptionsResp_MenuOption{}
 		if err = rows.Scan(&menu.Id, &menu.MenuName); err != nil {
 			log.Error("[dao.dao-anchor.mysql|db[sys_menu]] scan all record error(%v)", err)
@@ -307,7 +307,7 @@ func (d *dao) RawChildrenMenuListRec(ctx context.Context, pid int64, levels int6
 	}
 	defer rows.Close()
 	resp = &pb.GetChildrenMenuListResp{}
-	for i := 0; rows.Next(); i++ {
+	for rows.Next() {
 		var id int64
 		if err = rows.Scan(&id); err != nil {
 			log.Error("[dao.dao-anchor.mysql|db[sys_menu]] scan all record error(%v)", err)

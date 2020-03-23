@@ -49,6 +49,9 @@ const (
 
 	//删除某些角色菜单(按菜单id)
 	_deleteRoleNullMenus = "delete from %s where menu_id = ?"
+
+	//查询角色菜单列表
+	_queryRoleOptions = "select id, role_name from %s"
 )
 
 func NewDB() (db *sql.DB, cf func(), err error) {
@@ -174,7 +177,7 @@ func (d *dao) DeleteRole(ctx context.Context, req *pb.DeleteRoleReq) (resp *pb.D
 }
 
 //查询角色菜单
-func (d *dao) GetRoleMenus(ctx context.Context, req *pb.GetRoleRightsReq) (resp *pb.GetRoleRightsResp, err error) {
+func (d *dao) RawRoleMenus(ctx context.Context, req *pb.GetRoleRightsReq) (resp *pb.GetRoleRightsResp, err error) {
 	sql := fmt.Sprintf(_queryRoleMenuList, _sysRoleMenuTable)
 	rows, err := d.db.Query(ctx, sql, req.RoleId)
 	if err != nil {
@@ -200,7 +203,7 @@ func (d *dao) SetRoleMenus(ctx context.Context, req *pb.SetRoleRightsReq) (resp 
 	sqlDeleteRoleMenu := fmt.Sprintf(_deleteRoleMenu, _sysRoleMenuTable)
 	roleRightReq := &pb.GetRoleRightsReq{}
 	roleRightReq.RoleId = req.RoleId
-	roleRightResp, err := d.GetRoleMenus(ctx, roleRightReq)
+	roleRightResp, err := d.RawRoleMenus(ctx, roleRightReq)
 	if err != nil {
 		log.Error("dao.GetRoleMenu err(%v)", err)
 		return
@@ -279,5 +282,26 @@ func (d *dao) DeleteRoleNullMenus(ctx context.Context, req *pb.DeleteRoleNullRig
 		return
 	}
 	resp.Result = "error"
+	return
+}
+
+//查询菜单选项
+func (d *dao) RawRoleOptions(ctx context.Context) (resp *pb.GetRoleOptionsResp, err error) {
+	sql := fmt.Sprintf(_queryRoleOptions, _sysRoleTable)
+	rows, err := d.db.Query(ctx, sql)
+	if err != nil {
+		log.Error("select role err(%v)", err)
+		return
+	}
+	defer rows.Close()
+	resp = &pb.GetRoleOptionsResp{}
+	for rows.Next() {
+		roleOption := &pb.GetRoleOptionsResp_RoleOption{}
+		if err = rows.Scan(&roleOption.Id, &roleOption.RoleName); err != nil {
+			log.Error("[dao.dao-anchor.mysql|db[sys_role]] scan all record error(%v)", err)
+			return
+		}
+		resp.RoleOptions = append(resp.RoleOptions, roleOption)
+	}
 	return
 }

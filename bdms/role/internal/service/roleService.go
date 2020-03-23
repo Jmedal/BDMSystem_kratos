@@ -40,7 +40,7 @@ func (s *Service) DeleteRole(ctx context.Context, req *pb.DeleteRoleReq) (resp *
 }
 
 func (s *Service) GetRoleRights(ctx context.Context, req *pb.GetRoleRightsReq) (resp *pb.GetRoleRightsResp, err error) {
-	resp, err = s.dao.GetRoleMenus(ctx, req)
+	resp, err = s.dao.RawRoleMenus(ctx, req)
 	if err != nil {
 		log.Error("GetRoleRights发现错误,错误信息：", err)
 	}
@@ -68,6 +68,14 @@ func (s *Service) DeleteRoleNullRights(ctx context.Context, req *pb.DeleteRoleNu
 	resp, err = s.dao.DeleteRoleNullMenus(ctx, req)
 	if err != nil {
 		log.Error("DeleteRoleNullRights发现错误,错误信息：", err)
+	}
+	return
+}
+
+func (s *Service) GetRoleOptions(ctx context.Context, e *empty.Empty) (resp *pb.GetRoleOptionsResp, err error) {
+	resp, err = s.dao.RawRoleOptions(ctx)
+	if err != nil {
+		log.Error("GetRoleOptions发现错误,错误信息：", err)
 	}
 	return
 }

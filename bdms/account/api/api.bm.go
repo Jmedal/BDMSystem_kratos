@@ -27,11 +27,13 @@ var _ binding.StructValidator
 
 var PathAccountPing = "/service.v1.Account/Ping"
 var PathAccountLogin = "/service.v1.Account/Login"
-var PathAccountGetUserList = "/service.v1.Account/GetUserList"
+var PathAccountGetUserPage = "/service.v1.Account/GetUserPage"
 var PathAccountAddUser = "/service.v1.Account/AddUser"
 var PathAccountUpdateUser = "/service.v1.Account/UpdateUser"
 var PathAccountDeleteUser = "/service.v1.Account/DeleteUser"
+var PathAccountSetUserStatus = "/service.v1.Account/SetUserStatus"
 var PathAccountSetUserRole = "/service.v1.Account/SetUserRole"
+var PathAccountCheckAccount = "/service.v1.Account/CheckAccount"
 
 var PathTokenPing = "/service.v1.Token/Ping"
 var PathTokenRequest = "/service.v1.Token/Request"
@@ -47,7 +49,7 @@ type AccountBMServer interface {
 	Login(ctx context.Context, req *LoginReq) (resp *LoginResp, err error)
 
 	// `method:"POST"`
-	GetUserList(ctx context.Context, req *GetUserListReq) (resp *GetUserListResp, err error)
+	GetUserPage(ctx context.Context, req *GetUserPageReq) (resp *GetUserPageResp, err error)
 
 	// `method:"POST"`
 	AddUser(ctx context.Context, req *AddUserReq) (resp *AddUserResp, err error)
@@ -59,7 +61,13 @@ type AccountBMServer interface {
 	DeleteUser(ctx context.Context, req *DeleteUserReq) (resp *DeleteUserResp, err error)
 
 	// `method:"POST"`
+	SetUserStatus(ctx context.Context, req *SetUserStatusReq) (resp *SetUserStatusResp, err error)
+
+	// `method:"POST"`
 	SetUserRole(ctx context.Context, req *SetUserRoleReq) (resp *SetUserRoleResp, err error)
+
+	// `method:"POST"`
+	CheckAccount(ctx context.Context, req *CheckAccountReq) (resp *CheckAccountResp, err error)
 }
 
 var AccountSvc AccountBMServer
@@ -82,12 +90,12 @@ func accountLogin(c *bm.Context) {
 	c.JSON(resp, err)
 }
 
-func accountGetUserList(c *bm.Context) {
-	p := new(GetUserListReq)
+func accountGetUserPage(c *bm.Context) {
+	p := new(GetUserPageReq)
 	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
 		return
 	}
-	resp, err := AccountSvc.GetUserList(c, p)
+	resp, err := AccountSvc.GetUserPage(c, p)
 	c.JSON(resp, err)
 }
 
@@ -118,6 +126,15 @@ func accountDeleteUser(c *bm.Context) {
 	c.JSON(resp, err)
 }
 
+func accountSetUserStatus(c *bm.Context) {
+	p := new(SetUserStatusReq)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := AccountSvc.SetUserStatus(c, p)
+	c.JSON(resp, err)
+}
+
 func accountSetUserRole(c *bm.Context) {
 	p := new(SetUserRoleReq)
 	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
@@ -127,16 +144,27 @@ func accountSetUserRole(c *bm.Context) {
 	c.JSON(resp, err)
 }
 
+func accountCheckAccount(c *bm.Context) {
+	p := new(CheckAccountReq)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := AccountSvc.CheckAccount(c, p)
+	c.JSON(resp, err)
+}
+
 // RegisterAccountBMServer Register the blademaster route
 func RegisterAccountBMServer(e *bm.Engine, server AccountBMServer) {
 	AccountSvc = server
 	e.POST("/service.v1.Account/Ping", accountPing)
 	e.POST("/service.v1.Account/Login", accountLogin)
-	e.POST("/service.v1.Account/GetUserList", accountGetUserList)
+	e.POST("/service.v1.Account/GetUserPage", accountGetUserPage)
 	e.POST("/service.v1.Account/AddUser", accountAddUser)
 	e.POST("/service.v1.Account/UpdateUser", accountUpdateUser)
 	e.POST("/service.v1.Account/DeleteUser", accountDeleteUser)
+	e.POST("/service.v1.Account/SetUserStatus", accountSetUserStatus)
 	e.POST("/service.v1.Account/SetUserRole", accountSetUserRole)
+	e.POST("/service.v1.Account/CheckAccount", accountCheckAccount)
 }
 
 // TokenBMServer is the server API for Token service.

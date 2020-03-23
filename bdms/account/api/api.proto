@@ -26,18 +26,29 @@ message LoginResp {
     string accessToken = 1 [(gogoproto.jsontag) = 'access_token'];
     //密钥
     string randomKey = 2 [(gogoproto.jsontag) = 'randomKey'];
+    //用户信息
+    UserInfo userInfo = 3 [(gogoproto.jsontag) = 'userInfo'];
     //结果
-    string result = 3 [(gogoproto.jsontag) = 'result'];
-
-    //int64 roleId = 4 [(gogoproto.jsontag) = 'roleId'];
+    string result = 4 [(gogoproto.jsontag) = 'result'];
 }
 
-message GetUserListReq {
-    string search = 1 [(gogoproto.moretags) = 'form:"search" default:""'];
+message GetUserPageReq {
+    string query = 1 [(gogoproto.moretags) = 'form:"query" default:""'];
+
+    int64 pageNum = 2 [(gogoproto.moretags) = 'form:"pageNum" validate:"required"'];
+
+    int64 pageSize = 3 [(gogoproto.moretags) = 'form:"pageSize" validate:"required"'];
 }
 
-message GetUserListResp {
-    repeated UserInfo userList = 1 [(gogoproto.jsontag) = 'userList'];
+message GetUserPageResp {
+
+    int64 pageNum = 1 [(gogoproto.jsontag) = 'pageNum'];
+
+    int64 pageSize = 2 [(gogoproto.jsontag) = 'pageSize'];
+
+    int64 total = 3 [(gogoproto.jsontag) = 'total'];
+
+    repeated UserInfo userList = 4 [(gogoproto.jsontag) = 'page'];
 }
 
 message UserInfo {
@@ -53,7 +64,7 @@ message UserInfo {
 
     int64 roleId = 6 [(gogoproto.jsontag) = 'roleId'];
 
-    string birthday = 7 [(gogoproto.jsontag) = 'birthday'];
+    int64 birthday = 7 [(gogoproto.jsontag) = 'birthday'];
 
     string sex = 8 [(gogoproto.jsontag) = 'sex'];
 
@@ -63,7 +74,7 @@ message UserInfo {
 
     int32 status = 11 [(gogoproto.jsontag) = 'status'];
 
-    string createTime = 12 [(gogoproto.jsontag) = 'createTime'];
+    int64 createTime = 12 [(gogoproto.jsontag) = 'createTime'];
 }
 
 message AddUserReq {
@@ -71,7 +82,9 @@ message AddUserReq {
 }
 
 message AddUserResp {
-    string result = 1 [(gogoproto.jsontag) = 'result'];
+    string account = 1 [(gogoproto.jsontag) = 'account'];
+
+    string result = 2 [(gogoproto.jsontag) = 'result'];
 }
 
 message UpdateUserReq {
@@ -92,8 +105,18 @@ message DeleteUserResp {
     string result = 1 [(gogoproto.jsontag) = 'result'];
 }
 
+message SetUserStatusReq {
+    int64 id = 1 [(gogoproto.moretags) = 'form:"id" validate:"required"'];
+
+    int64 status = 2 [(gogoproto.moretags) = 'form:"status" validate:"required"'];
+}
+
+message SetUserStatusResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
 message SetUserRoleReq {
-    int64 userId = 1 [(gogoproto.moretags) = 'form:"userId" validate:"required"'];
+    int64 id = 1 [(gogoproto.moretags) = 'form:"id" validate:"required"'];
 
     int64 roleId = 2 [(gogoproto.moretags) = 'form:"roleId" validate:"required"'];
 }
@@ -102,8 +125,16 @@ message SetUserRoleResp {
     string result = 1 [(gogoproto.jsontag) = 'result'];
 }
 
+message CheckAccountReq {
+    string account = 1 [(gogoproto.moretags) = 'form:"account" validate:"required"'];
+}
+
+message CheckAccountResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
 message User {
-    string avatar = 1 [(gogoproto.moretags) = 'form:"avatar" validate:"required" default:"https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"'];
+    string avatar = 1 [(gogoproto.moretags) = 'form:"avatar" validate:"required"'];
 
     string account = 2 [(gogoproto.moretags) = 'form:"account" validate:"required"'];
 
@@ -111,17 +142,13 @@ message User {
 
     string name = 4 [(gogoproto.moretags) = 'form:"name" validate:"required"'];
 
-    string birthday = 5 [(gogoproto.moretags) = 'form:"birthday" validate:"required"'];
+    int64 birthday = 5 [(gogoproto.moretags) = 'form:"birthday" validate:"required"'];
 
     string sex = 6 [(gogoproto.moretags) = 'form:"sex" validate:"required"'];
 
     string email = 7 [(gogoproto.moretags) = 'form:"email" validate:"required"'];
 
     string phone = 8 [(gogoproto.moretags) = 'form:"phone" validate:"required"'];
-
-    int32 status = 9 [(gogoproto.moretags) = 'form:"status" validate:"required"'];
-
-    string createTime = 10 [(gogoproto.moretags) = 'form:"createTime" validate:"required"'];
 }
 
 service Account {
@@ -132,7 +159,7 @@ service Account {
     rpc Login (LoginReq) returns (LoginResp);
 
     // `method:"POST"`
-    rpc GetUserList(GetUserListReq) returns (GetUserListResp);
+    rpc GetUserPage(GetUserPageReq) returns (GetUserPageResp);
 
     // `method:"POST"`
     rpc AddUser(AddUserReq) returns (AddUserResp);
@@ -144,8 +171,13 @@ service Account {
     rpc DeleteUser(DeleteUserReq) returns (DeleteUserResp);
 
     // `method:"POST"`
+    rpc SetUserStatus(SetUserStatusReq) returns (SetUserStatusResp);
+
+    // `method:"POST"`
     rpc SetUserRole(SetUserRoleReq) returns (SetUserRoleResp);
 
+    // `method:"POST"`
+    rpc CheckAccount(CheckAccountReq) returns (CheckAccountResp);
 }
 
 

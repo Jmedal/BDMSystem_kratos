@@ -2,41 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67f36049-4dd2-40c7-bacb-767918e1a8e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bdms/account/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bdms/menu/tool/container/Set.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bdms/role/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bdms/role/internal/service/roleService.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bdms/role/tool/container/Set.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bdms/token/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bdms/account/internal/service/accountService.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bdms/discovery/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/BDMSystem_kratos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BDMSystem_kratos.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bdms/account/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/account/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdms/account/api/api.bm.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/account/api/api.bm.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdms/account/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/account/api/api.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdms/account/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/account/api/api.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bdms/account/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/account/internal/dao/dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdms/account/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/account/internal/dao/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdms/account/internal/model/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/account/internal/model/model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdms/account/internal/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/account/internal/service/service.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bdms/menu/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/menu/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/menu/api/api.bm.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/menu/api/api.bm.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/menu/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/menu/api/api.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/menu/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/menu/api/api.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/menu/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/menu/api/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/menu/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/menu/cmd/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/menu/configs/grpc.toml" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/menu/configs/grpc.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/menu/configs/http.toml" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/menu/configs/http.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/menu/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/menu/internal/dao/dao.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bdms/menu/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/menu/internal/dao/db.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/menu/internal/service/MenuService.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/menu/internal/service/MenuService.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bdms/role/api/api.bm.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/role/api/api.bm.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bdms/role/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/role/api/api.pb.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bdms/role/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/role/api/api.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/role/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/role/api/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/role/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/role/cmd/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/role/configs/grpc.toml" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/role/configs/grpc.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/role/configs/http.toml" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/role/configs/http.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/role/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/role/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/role/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/role/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bdms/role/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/role/internal/dao/dao.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bdms/role/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/role/internal/dao/db.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/role/internal/server/grpc/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/role/internal/server/grpc/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/role/internal/server/http/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/role/internal/server/http/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/role/internal/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/role/internal/service/service.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/token/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/token/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdms/role/internal/service/roleService.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/role/internal/service/roleService.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdms/token/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/token/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdms/token/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/token/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdms/token/internal/dao/redis.token_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/token/internal/dao/redis.token_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,11 +64,12 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tool" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bdms/discovery" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\bdms\discovery" />
       <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\tool" />
       <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\tool\http\security" />
       <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\tool\http_tool" />
@@ -98,6 +87,24 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="TestRequestUploadToken in token/internal/dao" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="BDMSystem_kratos" />
+      <working_directory value="$PROJECT_DIR$/bdms/token/internal/dao" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="token/internal/dao" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestRequestUploadToken$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.TestRequestUploadToken in token/internal/dao" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -131,7 +138,8 @@
     <MESSAGE value="2020-3-20 修改README" />
     <MESSAGE value="2020-3-20 添加Role模块" />
     <MESSAGE value="2020-3-20 更新修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020-3-20 更新修改" />
+    <MESSAGE value="2020-3-22 添加角色、权限（完成）模块 和 用户模块（未完成）" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020-3-22 添加角色、权限（完成）模块 和 用户模块（未完成）" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

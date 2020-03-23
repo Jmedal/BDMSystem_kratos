@@ -1,24 +1,56 @@
 package dao
 
 import (
-	"context"
-	"fmt"
-	"github.com/bilibili/kratos/pkg/log"
-
+	pb "account/api"
 	"account/internal/model"
+	"context"
+	dsql "database/sql"
+	"fmt"
+	"strconv"
+	"time"
+
 	"github.com/bilibili/kratos/pkg/conf/paladin"
 	"github.com/bilibili/kratos/pkg/database/sql"
+	"github.com/bilibili/kratos/pkg/log"
+	xtime "github.com/bilibili/kratos/pkg/time"
 )
 
 const (
+	//帐号启用
+	_AccountEnable = 1
+	//帐号冻结
+	_AccountFrozen = 2
+
 	//表
-	_userTable = "sys_user"
+	_sysUserTable = "sys_user"
 
 	//SQL语句
 	//查询用户账户
-	_queryAccount = "select `id`,`account`,`password` from %s where `account` = ?"
-	//查询用户信息
-	_queryUserInfo = "select `avatar`,`account`,`name`,`birthday`,`sex`,`email`,`phone`,`deptid`,`status`,`createtime` from %s where `id` = ?"
+	_queryUser = "select account, password, id, avatar, name, role_id, birthday, sex, email, phone, status, create_time from %s where account = ?"
+
+	//查询用户信息列表
+	_queryUserList = "select id, avatar, account, password, name, role_id, birthday, sex, email, phone, status, create_time from %s where account like ? LIMIT ?, ?"
+
+	//查询用户总数
+	_queryUserCount = "select count(*) from %s where account like ?"
+
+	//插入用户
+	_insertUser = "insert into %s (avatar, account, password, name, birthday, sex, email, phone, create_time) values (?,?,?,?,?,?,?,?,?)"
+
+	//更新用户
+	_updateUser = "update %s set avatar = ?, account = ?, password = ?, name = ?, birthday = ?, sex = ?, email = ?, phone = ? where id = ?"
+
+	//删除用户
+	_deleteUser = "delete from %s where id = ?"
+
+	//更新用户角色
+	_updateUserStatus = "update %s set status = ? where id = ?"
+
+	//更新用户角色
+	_updateUserRole = "update %s set role_id = ? where id = ?"
+
+	//查询用户帐号
+	_queryAccountCount = "select count(*) from %s where account = ?"
 )
 
 func NewDB() (db *sql.DB, cf func(), err error) {
@@ -42,37 +74,194 @@ func (d *dao) RawArticle(ctx context.Context, id int64) (art *model.Article, err
 	return
 }
 
-func (d *dao) RawUserAccount(ctx context.Context, account string) (u *model.User, err error) {
-	sql := fmt.Sprintf(_queryAccount, _userTable)
-	rows, err := d.db.Query(ctx, sql, account)
+//用户登录
+func (d *dao) RawUser(ctx context.Context, req *pb.LoginReq) (resp *pb.LoginResp, err error) {
+	sqlUser := fmt.Sprintf(_queryUser, _sysUserTable)
+	resp = &pb.LoginResp{}
+	userInfo := &pb.UserInfo{}
+	var password string
+	var birthday, createTime xtime.Time
+	if err = d.db.QueryRow(ctx, sqlUser, req.Account).Scan(&userInfo.Account, &password, &userInfo.Id,
+		&userInfo.Avatar, &userInfo.Name, &userInfo.RoleId, &birthday,
+		&userInfo.Sex, &userInfo.Email, &userInfo.Phone, &userInfo.Status, &createTime); err != nil && err != sql.ErrNoRows {
+		log.Error("[dao.dao-anchor.mysql|db[sys_user]] scan short id record error(%v)", err)
+		resp.Result = "db server error"
+		return
+	}
+	userInfo.Birthday = birthday.Time().Unix()
+	userInfo.CreateTime = createTime.Time().Unix()
+	if err != sql.ErrNoRows {
+		resp.Result = "Account aren't existent"
+		return
+	}
+	if userInfo.Status != _AccountEnable {
+		resp.Result = "Account are frozen"
+		return
+	}
+	if password == req.Password {
+		var expire int64
+		//是否保存密码 保存：1，不保存：2
+		if req.Save == "1" {
+			expire = 365 * 24 * 60 * 60 //一年
+		} else {
+			expire = 24 * 60 * 60 //一天
+		}
+		req := &pb.NewTokenReq{
+			UserId:   userInfo.Id,
+			Operator: strconv.FormatInt(userInfo.RoleId, 10),
+			Expire:   expire,
+		}
+		var tokenResp = &pb.NewTokenResp{}
+		if tokenResp, err = d.tokenClient.Request(ctx, req); err != nil {
+			log.Error("d.tokenClient.Request error(%v)", err)
+			resp.Result = "Token server error"
+			return
+		}
+		resp.AccessToken = tokenResp.AccessToken
+		resp.RandomKey = tokenResp.RandomKey
+		resp.UserInfo = userInfo
+		resp.Result = "success"
+		return
+	}
+	resp.Result = "Password error"
+	return
+}
+
+//查询用户信息列表
+func (d *dao) RawUserPage(ctx context.Context, req *pb.GetUserPageReq) (resp *pb.GetUserPageResp, err error) {
+	sqlUserList := fmt.Sprintf(_queryUserList, _sysUserTable)
+	sqlAccount := fmt.Sprintf(_queryUserCount, _sysUserTable)
+	query := fmt.Sprintf("%%%s%%", req.Query)
+	resp = &pb.GetUserPageResp{}
+	resp.PageNum = req.PageNum
+	resp.PageSize = req.PageSize
+	if err = d.db.QueryRow(ctx, sqlAccount, query).Scan(&resp.Total); err != nil {
+		log.Error("[dao.dao-anchor.mysql|db[sys_user]] scan short id record error(%v)", err)
+		return
+	}
+	start := (req.PageNum - 1) * req.PageSize
+	end := start + req.PageSize
+	rows, err := d.db.Query(ctx, sqlUserList, query, start, end)
 	if err != nil {
+		log.Error("select user error(%v)", err)
 		return
 	}
 	defer rows.Close()
-	u = &model.User{}
-	rows.Next()
-	err = rows.Scan(&u.ID, &u.Account, &u.Password)
-	if err != nil {
-		log.Error("[dao.dao-anchor.mysql|dbUser] scan short id record error(%v)", err)
-		return nil, err
+	for rows.Next() {
+		var birthday, createTime xtime.Time
+		userInfo := &pb.UserInfo{}
+		if err = rows.Scan(&userInfo.Id, &userInfo.Avatar, &userInfo.Account, &userInfo.Password,
+			&userInfo.Name, &userInfo.RoleId, &birthday, &userInfo.Sex, &userInfo.Email,
+			&userInfo.Phone, &userInfo.Status, &createTime); err != nil {
+			log.Error("[dao.dao-anchor.mysql|sys_user] scan short id record error(%v)", err)
+			return
+		}
+		userInfo.Birthday = birthday.Time().Unix()
+		userInfo.CreateTime = createTime.Time().Unix()
+		resp.UserList = append(resp.UserList, userInfo)
 	}
 	return
 }
 
-func (d *dao) RawUserInfo(ctx context.Context, userId int64) (u *model.User, err error) {
-	sql := fmt.Sprintf(_queryUserInfo, _userTable)
-	rows, err := d.db.Query(ctx, sql, userId)
-	if err != nil {
+//添加用户
+func (d *dao) InsertUser(ctx context.Context, req *pb.AddUserReq) (resp *pb.AddUserResp, err error) {
+	sqlUser := fmt.Sprintf(_insertUser, _sysUserTable)
+	var res dsql.Result
+	if res, err = d.db.Exec(ctx, sqlUser, req.User.Avatar, req.User.Account,
+		req.User.Password, req.User.Name, xtime.Time(req.User.Birthday).Time(), req.User.Sex,
+		req.User.Email, req.User.Phone, time.Now()); err != nil {
+		log.Error("[dao.dao-anchor.mysql|db[sys_user]] failed to insert error(%v)", err)
 		return
 	}
-	defer rows.Close()
-	u = &model.User{}
-	rows.Next()
-	err = rows.Scan(&u.Avatar, &u.Account, &u.Name, &u.Birthday,
-		&u.Sex, &u.Email, &u.Phone, &u.DeptId, &u.Status, &u.CreateTime)
-	if err != nil {
-		log.Error("[dao.dao-anchor.mysql|dbUser] scan short id record error(%v)", err)
-		return nil, err
+	resp = &pb.AddUserResp{}
+	if _, err = res.LastInsertId(); err == nil {
+		resp.Result = "success"
+		return
+	}
+	resp.Result = "error"
+	return
+}
+
+//更新用户
+func (d *dao) UpdateUser(ctx context.Context, req *pb.UpdateUserReq) (resp *pb.UpdateUserResp, err error) {
+	sqlUser := fmt.Sprintf(_updateUser, _sysUserTable)
+	var res dsql.Result
+	if res, err = d.db.Exec(ctx, sqlUser, req.User.Avatar, req.User.Account, req.User.Password,
+		req.User.Name, xtime.Time(req.User.Birthday).Time(),
+		req.User.Sex, req.User.Email, req.User.Phone, req.Id); err != nil {
+		log.Error("[dao.dao-anchor.mysql|db[sys_user]] failed to update: (%v), error(%v)", req.Id, err)
+	}
+	resp = &pb.UpdateUserResp{}
+	if _, err = res.RowsAffected(); err == nil {
+		resp.Result = "success"
+		return
+	}
+	resp.Result = "error"
+	return
+}
+
+//删除用户
+func (d *dao) DeleteUser(ctx context.Context, req *pb.DeleteUserReq) (resp *pb.DeleteUserResp, err error) {
+	sqlUser := fmt.Sprintf(_deleteUser, _sysUserTable)
+	var res dsql.Result
+	if res, err = d.db.Exec(ctx, sqlUser, req.Id); err != nil {
+		log.Error("[dao.dao-anchor.mysql|db[sys_user]] failed to delete: (%v), error(%v)", req.Id, err)
+		return
+	}
+	resp = &pb.DeleteUserResp{}
+	if _, err = res.RowsAffected(); err == nil {
+		resp.Result = "success"
+		return
+	}
+	resp.Result = "error"
+	return
+}
+
+//设置用户状态
+func (d *dao) SetUserStatus(ctx context.Context, req *pb.SetUserStatusReq) (resp *pb.SetUserStatusResp, err error) {
+	sqlUserRole := fmt.Sprintf(_updateUserStatus, _sysUserTable)
+	var res dsql.Result
+	if res, err = d.db.Exec(ctx, sqlUserRole, req.Status, req.Id); err != nil {
+		log.Error("[dao.dao-anchor.mysql|db[sys_user]] failed to update: (%v), (%v), error(%v)", req.Status, req.Id)
+	}
+	resp = &pb.SetUserStatusResp{}
+	if _, err = res.RowsAffected(); err == nil {
+		resp.Result = "success"
+		return
+	}
+	resp.Result = "error"
+	return
+}
+
+//设置用户角色
+func (d *dao) SetUserRole(ctx context.Context, req *pb.SetUserRoleReq) (resp *pb.SetUserRoleResp, err error) {
+	sqlUserRole := fmt.Sprintf(_updateUserRole, _sysUserTable)
+	var res dsql.Result
+	if res, err = d.db.Exec(ctx, sqlUserRole, req.RoleId, req.Id); err != nil {
+		log.Error("[dao.dao-anchor.mysql|db[sys_user]] failed to update: (%v), (%v), error(%v)", req.RoleId, req.Id, err)
+	}
+	resp = &pb.SetUserRoleResp{}
+	if _, err = res.RowsAffected(); err == nil {
+		resp.Result = "success"
+		return
+	}
+	resp.Result = "error"
+	return
+}
+
+//检查帐号是否存在
+func (d *dao) RawAccount(ctx context.Context, req *pb.CheckAccountReq) (resp *pb.CheckAccountResp, err error) {
+	sqlAccount := fmt.Sprintf(_queryAccountCount, _sysUserTable)
+	var count int
+	if err = d.db.QueryRow(ctx, sqlAccount, req.Account).Scan(&count); err != nil {
+		log.Error("[dao.dao-anchor.mysql|db[sys_user]] scan short id record error(%v)", err)
+		return
+	}
+	resp = &pb.CheckAccountResp{}
+	if count == 0 {
+		resp.Result = "success"
+	} else {
+		resp.Result = "error"
 	}
 	return
 }

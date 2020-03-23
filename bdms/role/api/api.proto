@@ -98,6 +98,17 @@ message DeleteRoleNullRightsResp {
     string result = 1 [(gogoproto.jsontag) = 'result'];
 }
 
+message GetRoleOptionsResp {
+
+    repeated RoleOption RoleOptions = 1 [(gogoproto.jsontag) = 'roleOptions'];
+
+    message RoleOption {
+        int64 id = 1 [(gogoproto.jsontag) = 'value'];
+
+        string RoleName = 2 [(gogoproto.jsontag) = 'label'];
+    }
+}
+
 
 service Role {
   rpc Ping(.google.protobuf.Empty) returns (.google.protobuf.Empty);
@@ -125,6 +136,9 @@ service Role {
 
   // `method:"POST"`
   rpc DeleteRoleNullRights(DeleteRoleNullRightsReq) returns (DeleteRoleNullRightsResp);
+
+  // `method:"POST"`
+  rpc GetRoleOptions(.google.protobuf.Empty) returns (GetRoleOptionsResp);
 }
 
 

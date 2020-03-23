@@ -11,12 +11,11 @@ import (
 func TestRequestUploadToken(t *testing.T) {
 	var (
 		c        = context.Background()
-		bucket   = "exp"
 		operator = "manager"
-		now     = time.Now().Unix()
+		now      = time.Now().Unix()
 	)
 	convey.Convey("RequestUploadToken", t, func(ctx convey.C) {
-		_, err := d.RequestUploadToken(c, bucket, operator, now)
+		_, _, err := d.RequestUploadToken(c, 1, operator, now, 555)
 		//fmt.Println(token)
 		ctx.Convey("Then err should be nil.", func(ctx convey.C) {
 			ctx.So(err, convey.ShouldBeNil)
