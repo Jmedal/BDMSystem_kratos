@@ -38,7 +38,8 @@ const (
 	_insertUser = "insert into %s (avatar, account, password, name, birthday, sex, email, phone, create_time) values (?,?,?,?,?,?,?,?,?)"
 
 	//更新用户
-	_updateUser = "update %s set avatar = ?, account = ?, password = ?, name = ?, birthday = ?, sex = ?, email = ?, phone = ? where id = ?"
+	_updateUser      = "update %s set avatar = ?, account = ?, password = ?, name = ?, birthday = ?, sex = ?, email = ?, phone = ? where id = ?"
+	_updateUserNoPas = "update %s set avatar = ?, account = ?, name = ?, birthday = ?, sex = ?, email = ?, phone = ? where id = ?"
 
 	//删除用户
 	_deleteUser = "delete from %s where id = ?"
@@ -184,12 +185,21 @@ func (d *dao) InsertUser(ctx context.Context, req *pb.AddUserReq) (resp *pb.AddU
 
 //更新用户
 func (d *dao) UpdateUser(ctx context.Context, req *pb.UpdateUserReq) (resp *pb.UpdateUserResp, err error) {
-	sqlUser := fmt.Sprintf(_updateUser, _sysUserTable)
 	var res dsql.Result
-	if res, err = d.db.Exec(ctx, sqlUser, req.User.Avatar, req.User.Account, req.User.Password,
-		req.User.Name, xtime.Time(req.User.Birthday).Time(),
-		req.User.Sex, req.User.Email, req.User.Phone, req.Id); err != nil {
-		log.Error("[dao.dao-anchor.mysql|db[sys_user]] failed to update: (%v), error(%v)", req.Id, err)
+	if req.User.Password != "" {
+		sqlUser := fmt.Sprintf(_updateUser, _sysUserTable)
+		if res, err = d.db.Exec(ctx, sqlUser, req.User.Avatar, req.User.Account, req.User.Password,
+			req.User.Name, xtime.Time(req.User.Birthday).Time(),
+			req.User.Sex, req.User.Email, req.User.Phone, req.Id); err != nil {
+			log.Error("[dao.dao-anchor.mysql|db[sys_user]] failed to update: (%v), error(%v)", req.Id, err)
+		}
+	} else {
+		sqlUser := fmt.Sprintf(_updateUserNoPas, _sysUserTable)
+		if res, err = d.db.Exec(ctx, sqlUser, req.User.Avatar, req.User.Account,
+			req.User.Name, xtime.Time(req.User.Birthday).Time(),
+			req.User.Sex, req.User.Email, req.User.Phone, req.Id); err != nil {
+			log.Error("[dao.dao-anchor.mysql|db[sys_user]] failed to update: (%v), error(%v)", req.Id, err)
+		}
 	}
 	resp = &pb.UpdateUserResp{}
 	if _, err = res.RowsAffected(); err == nil {
