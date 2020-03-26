@@ -138,7 +138,7 @@ message User {
 
     string account = 2 [(gogoproto.moretags) = 'form:"account" validate:"required"'];
 
-    string password = 3 [(gogoproto.moretags) = 'form:"password" validate:"required"'];
+    string password = 3 [(gogoproto.moretags) = 'form:"password"'];
 
     string name = 4 [(gogoproto.moretags) = 'form:"name" validate:"required"'];
 

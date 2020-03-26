@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="67f36049-4dd2-40c7-bacb-767918e1a8e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/bdms.sql" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/bdms.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdms/account/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/account/api/api.proto" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +120,8 @@
     <MESSAGE value="2020-3-22 添加角色、权限（完成）模块 和 用户模块（未完成）" />
     <MESSAGE value="2020-3-23 用户模块（完成）" />
     <MESSAGE value="2020-3-24 权限管理 全部完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020-3-24 权限管理 全部完成" />
+    <MESSAGE value="2020-3-25 更新sql文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020-3-25 更新sql文件" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
