@@ -3,20 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="125c1af5-3a2d-41b5-9c8c-a15a1b40b76e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../menu/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../menu/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../menu/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/../menu/api/api.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../menu/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../menu/api/api.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../menu/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../menu/cmd/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../menu/internal/service/MenuService.go" beforeDir="false" afterPath="$PROJECT_DIR$/../menu/internal/service/MenuService.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../role/api/api.bm.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/api/api.bm.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../role/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/api/api.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../role/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../role/api/api.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../role/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../role/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../role/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../role/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../role/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/internal/dao/db.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../role/internal/server/grpc/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/internal/server/grpc/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../role/internal/server/http/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/internal/server/http/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../role/internal/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/internal/service/service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../account/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +33,7 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -70,7 +60,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -78,6 +70,6 @@
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
-    <proxy>direct</proxy>
+    <proxy>https://mirrors.aliyun.com/goproxy/</proxy>
   </component>
 </project>
