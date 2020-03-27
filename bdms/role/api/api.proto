@@ -100,12 +100,12 @@ message DeleteRoleNullRightsResp {
 
 message GetRoleOptionsResp {
 
-    repeated RoleOption RoleOptions = 1 [(gogoproto.jsontag) = 'roleOptions'];
+    repeated RoleOption roleOptions = 1 [(gogoproto.jsontag) = 'roleOptions'];
 
     message RoleOption {
         int64 id = 1 [(gogoproto.jsontag) = 'value'];
 
-        string RoleName = 2 [(gogoproto.jsontag) = 'label'];
+        string roleName = 2 [(gogoproto.jsontag) = 'label'];
     }
 }
 

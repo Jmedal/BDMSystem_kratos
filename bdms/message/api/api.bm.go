@@ -16,44 +16,167 @@ var _ *bm.Context
 var _ context.Context
 var _ binding.StructValidator
 
-var PathGrpcTestPing = "/service.v1.GrpcTest/Ping"
-var PathGrpcTestGrpcUserInfoTest = "/service.v1.GrpcTest/GrpcUserInfoTest"
+var PathMessagePing = "/service.v1.Message/Ping"
+var PathMessageGetMessagePage = "/service.v1.Message/GetMessagePage"
+var PathMessageAddMessage = "/service.v1.Message/AddMessage"
+var PathMessageUpdateMessage = "/service.v1.Message/UpdateMessage"
+var PathMessageDeleteMessage = "/service.v1.Message/DeleteMessage"
+var PathMessageGetMessageList = "/service.v1.Message/GetMessageList"
+var PathMessageGetMessage = "/service.v1.Message/GetMessage"
+var PathMessageSetMessageUserRead = "/service.v1.Message/SetMessageUserRead"
+var PathMessageDeleteMessageUser = "/service.v1.Message/DeleteMessageUser"
+
+var PathAccountGetUserName = "/service.v1.Account/GetUserName"
 
 var PathTokenVerify = "/service.v1.Token/Verify"
 
-// GrpcTestBMServer is the server API for GrpcTest service.
-type GrpcTestBMServer interface {
+// MessageBMServer is the server API for Message service.
+type MessageBMServer interface {
 	Ping(ctx context.Context, req *google_protobuf1.Empty) (resp *google_protobuf1.Empty, err error)
 
 	// `method:"POST"`
-	GrpcUserInfoTest(ctx context.Context, req *google_protobuf1.Empty) (resp *google_protobuf1.Empty, err error)
+	GetMessagePage(ctx context.Context, req *GetMessagePageReq) (resp *GetMessagePageResp, err error)
+
+	// `method:"POST"`
+	AddMessage(ctx context.Context, req *AddMessageReq) (resp *AddMessageResp, err error)
+
+	// `method:"POST"`
+	UpdateMessage(ctx context.Context, req *UpdateMessageReq) (resp *UpdateMessageResp, err error)
+
+	// `method:"POST"`
+	DeleteMessage(ctx context.Context, req *DeleteMessageReq) (resp *DeleteMessageResp, err error)
+
+	// `method:"POST"`
+	GetMessageList(ctx context.Context, req *GetMessageListReq) (resp *GetMessageListResp, err error)
+
+	// `method:"POST"`
+	GetMessage(ctx context.Context, req *GetMessageReq) (resp *GetMessageResp, err error)
+
+	// `method:"POST"`
+	SetMessageUserRead(ctx context.Context, req *SetMessageUserReadReq) (resp *SetMessageUserReadResp, err error)
+
+	// `method:"POST"`
+	DeleteMessageUser(ctx context.Context, req *DeleteMessageUserReq) (resp *DeleteMessageUserResp, err error)
 }
 
-var GrpcTestSvc GrpcTestBMServer
+var MessageSvc MessageBMServer
 
-func grpcTestPing(c *bm.Context) {
+func messagePing(c *bm.Context) {
 	p := new(google_protobuf1.Empty)
 	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
 		return
 	}
-	resp, err := GrpcTestSvc.Ping(c, p)
+	resp, err := MessageSvc.Ping(c, p)
 	c.JSON(resp, err)
 }
 
-func grpcTestGrpcUserInfoTest(c *bm.Context) {
-	p := new(google_protobuf1.Empty)
+func messageGetMessagePage(c *bm.Context) {
+	p := new(GetMessagePageReq)
 	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
 		return
 	}
-	resp, err := GrpcTestSvc.GrpcUserInfoTest(c, p)
+	resp, err := MessageSvc.GetMessagePage(c, p)
 	c.JSON(resp, err)
 }
 
-// RegisterGrpcTestBMServer Register the blademaster route
-func RegisterGrpcTestBMServer(e *bm.Engine, server GrpcTestBMServer) {
-	GrpcTestSvc = server
-	e.GET("/service.v1.GrpcTest/Ping", grpcTestPing)
-	e.POST("/service.v1.GrpcTest/GrpcUserInfoTest", grpcTestGrpcUserInfoTest)
+func messageAddMessage(c *bm.Context) {
+	p := new(AddMessageReq)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := MessageSvc.AddMessage(c, p)
+	c.JSON(resp, err)
+}
+
+func messageUpdateMessage(c *bm.Context) {
+	p := new(UpdateMessageReq)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := MessageSvc.UpdateMessage(c, p)
+	c.JSON(resp, err)
+}
+
+func messageDeleteMessage(c *bm.Context) {
+	p := new(DeleteMessageReq)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := MessageSvc.DeleteMessage(c, p)
+	c.JSON(resp, err)
+}
+
+func messageGetMessageList(c *bm.Context) {
+	p := new(GetMessageListReq)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := MessageSvc.GetMessageList(c, p)
+	c.JSON(resp, err)
+}
+
+func messageGetMessage(c *bm.Context) {
+	p := new(GetMessageReq)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := MessageSvc.GetMessage(c, p)
+	c.JSON(resp, err)
+}
+
+func messageSetMessageUserRead(c *bm.Context) {
+	p := new(SetMessageUserReadReq)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := MessageSvc.SetMessageUserRead(c, p)
+	c.JSON(resp, err)
+}
+
+func messageDeleteMessageUser(c *bm.Context) {
+	p := new(DeleteMessageUserReq)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := MessageSvc.DeleteMessageUser(c, p)
+	c.JSON(resp, err)
+}
+
+// RegisterMessageBMServer Register the blademaster route
+func RegisterMessageBMServer(e *bm.Engine, server MessageBMServer) {
+	MessageSvc = server
+	e.GET("/service.v1.Message/Ping", messagePing)
+	e.POST("/service.v1.Message/GetMessagePage", messageGetMessagePage)
+	e.POST("/service.v1.Message/AddMessage", messageAddMessage)
+	e.POST("/service.v1.Message/UpdateMessage", messageUpdateMessage)
+	e.POST("/service.v1.Message/DeleteMessage", messageDeleteMessage)
+	e.POST("/service.v1.Message/GetMessageList", messageGetMessageList)
+	e.POST("/service.v1.Message/GetMessage", messageGetMessage)
+	e.POST("/service.v1.Message/SetMessageUserRead", messageSetMessageUserRead)
+	e.POST("/service.v1.Message/DeleteMessageUser", messageDeleteMessageUser)
+}
+
+// AccountBMServer is the server API for Account service.
+type AccountBMServer interface {
+	// `method:"POST"`
+	GetUserName(ctx context.Context, req *GetUserNameReq) (resp *GetUserNameResp, err error)
+}
+
+var AccountSvc AccountBMServer
+
+func accountGetUserName(c *bm.Context) {
+	p := new(GetUserNameReq)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := AccountSvc.GetUserName(c, p)
+	c.JSON(resp, err)
+}
+
+// RegisterAccountBMServer Register the blademaster route
+func RegisterAccountBMServer(e *bm.Engine, server AccountBMServer) {
+	AccountSvc = server
+	e.POST("/service.v1.Account/GetUserName", accountGetUserName)
 }
 
 // TokenBMServer is the server API for Token service.

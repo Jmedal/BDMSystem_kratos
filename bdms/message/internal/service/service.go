@@ -10,7 +10,7 @@ import (
 	"github.com/google/wire"
 )
 
-var Provider = wire.NewSet(New, wire.Bind(new(pb.GrpcTestServer), new(*Service)))
+var Provider = wire.NewSet(New, wire.Bind(new(pb.MessageServer), new(*Service)))
 
 // Service service.
 type Service struct {

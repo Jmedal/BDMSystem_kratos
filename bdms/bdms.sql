@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50720
 File Encoding         : 65001
 
-Date: 2020-03-24 01:11:25
+Date: 2020-03-27 23:17:30
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -71,6 +71,57 @@ INSERT INTO `sys_menu` VALUES ('32', '1', '8', 'Pholcus爬虫', 'el-icon-coffee-
 INSERT INTO `sys_menu` VALUES ('33', '1', '9', '配置管理', 'el-icon-setting', '/index/config', '1', null, null, null);
 INSERT INTO `sys_menu` VALUES ('55', '1', '11', '测试菜单', 'el-icon-platform-eleme', '/vvv', '1', '', null, null);
 INSERT INTO `sys_menu` VALUES ('69', '1', '12', 'sadsad', 'asdasd', '/adssad', '1', '', null, null);
+
+-- ----------------------------
+-- Table structure for sys_message
+-- ----------------------------
+DROP TABLE IF EXISTS `sys_message`;
+CREATE TABLE `sys_message` (
+  `id` bigint(255) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `user_id` bigint(255) unsigned DEFAULT NULL COMMENT '发布者id',
+  `title` varchar(50) DEFAULT '' COMMENT '通知标题',
+  `icon` varchar(50) DEFAULT '' COMMENT '通知图标',
+  `content` varchar(15000) DEFAULT '' COMMENT '通知内容',
+  `release_time` datetime(6) DEFAULT NULL COMMENT '发布时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of sys_message
+-- ----------------------------
+INSERT INTO `sys_message` VALUES ('18', '1', 'BDMS System 1.0上线', 'el-icon-info', '<h2><span style=\"color: rgb(230, 0, 0);\">系统部分</span></h2><p>包含用户管理，角色管理，权限管理，通知管理，</p><h2><span style=\"color: rgb(194, 133, 255);\">业务部分</span></h2><p>包含用户，课程，学科（未完成），职业，公司</p><h2><span style=\"color: rgb(255, 194, 102);\">爬虫部分（待完善，敬请期待）</span></h2>', '2020-03-27 22:48:39.000000');
+INSERT INTO `sys_message` VALUES ('19', '1', '测试', 'el-icon-warning', '<h2><span style=\"color: rgb(230, 0, 0);\">系统部分</span></h2><p><br></p><p>包含用户管理，角色管理，权限管理，通知管理，</p><p><br></p><h2><span style=\"color: rgb(194, 133, 255);\">业务部分</span></h2><p><br></p><p>包含用户，课程，学科（未完成），职业，公司，</p><p><br></p><h2><span style=\"color: rgb(255, 194, 102);\">爬虫部分（待完善，敬请期待）</span></h2><p><br></p>', '2020-03-18 00:00:00.000000');
+INSERT INTO `sys_message` VALUES ('20', '1', '测试刷新', 'el-icon-info', '<p>来了来了</p>', '2020-03-26 00:00:00.000000');
+
+-- ----------------------------
+-- Table structure for sys_message_user
+-- ----------------------------
+DROP TABLE IF EXISTS `sys_message_user`;
+CREATE TABLE `sys_message_user` (
+  `id` bigint(255) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键Iid',
+  `message_id` bigint(255) unsigned DEFAULT NULL COMMENT '通知id',
+  `user_id` bigint(255) unsigned DEFAULT NULL COMMENT '接收者id',
+  `is_read` int(5) unsigned DEFAULT '1' COMMENT '阅读（1：未读，2：已读）',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of sys_message_user
+-- ----------------------------
+INSERT INTO `sys_message_user` VALUES ('70', '18', '1', '2');
+INSERT INTO `sys_message_user` VALUES ('71', '18', '2', '1');
+INSERT INTO `sys_message_user` VALUES ('72', '18', '4', '1');
+INSERT INTO `sys_message_user` VALUES ('73', '18', '5', '1');
+INSERT INTO `sys_message_user` VALUES ('74', '18', '6', '1');
+INSERT INTO `sys_message_user` VALUES ('76', '19', '2', '1');
+INSERT INTO `sys_message_user` VALUES ('77', '19', '4', '1');
+INSERT INTO `sys_message_user` VALUES ('78', '19', '5', '1');
+INSERT INTO `sys_message_user` VALUES ('79', '19', '6', '1');
+INSERT INTO `sys_message_user` VALUES ('80', '20', '1', '2');
+INSERT INTO `sys_message_user` VALUES ('81', '20', '2', '1');
+INSERT INTO `sys_message_user` VALUES ('82', '20', '4', '1');
+INSERT INTO `sys_message_user` VALUES ('83', '20', '5', '1');
+INSERT INTO `sys_message_user` VALUES ('84', '20', '6', '1');
 
 -- ----------------------------
 -- Table structure for sys_role
@@ -234,13 +285,13 @@ CREATE TABLE `sys_user` (
   `create_time` datetime(6) DEFAULT '2006-01-02 00:00:00.000000' COMMENT '创建时间',
   `version` int(11) DEFAULT NULL COMMENT '保留字段',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sys_user
 -- ----------------------------
-INSERT INTO `sys_user` VALUES ('1', '', 'root', 'root', '姜云杰', '2020-02-18 22:13:21.000000', '男', '784203082@qq.com', '18321882894', '2', '0', '1', '2020-02-18 23:52:21.000000', null);
+INSERT INTO `sys_user` VALUES ('1', '', 'root', 'root', '姜云杰', '2020-02-18 22:13:21.000000', '男', '784203082@qq.com', '18321882894', '1', '0', '1', '2020-02-18 23:52:21.000000', null);
 INSERT INTO `sys_user` VALUES ('2', 'null', 'roots', 'roots', '姜云杰', '1998-07-08 00:00:00.000000', '男', '784203082@qq.com', '18321882894', '1', '0', '1', '2020-03-23 00:00:00.000000', null);
 INSERT INTO `sys_user` VALUES ('4', 'null', 'sdadad', 'asdsadsad', 'asdasdasd', '2020-03-10 00:00:00.000000', '女', 'asdda@sd.com', '13821882894', '6', '0', '2', '2020-03-23 19:47:25.099788', null);
 INSERT INTO `sys_user` VALUES ('5', 'null', 'roots2', 'roots2', '姜云杰', '1998-07-08 00:00:00.000000', '男', '784203082@qq.ocm', '18321882894', '7', '0', '1', '2020-03-23 20:01:01.046430', null);
-INSERT INTO `sys_user` VALUES ('6', 'null', 'asdasdasd', 'sadadas', 'sadsadads', '2020-03-02 00:00:00.000000', '女', 'asdasda@asasd.com', '18321882894', '6', '0', '2', '2020-03-23 20:17:27.970052', null);
+INSERT INTO `sys_user` VALUES ('6', 'null', 'asdasdasd', 'sadadas', 'sadsa', '2020-03-02 00:00:00.000000', '女', 'asdasda@asasd.com', '18321882894', '6', '0', '2', '2020-03-23 20:17:27.970052', null);

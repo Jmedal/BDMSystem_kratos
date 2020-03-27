@@ -37,6 +37,9 @@ type Dao interface {
 	SetUserRole(ctx context.Context, req *pb.SetUserRoleReq) (resp *pb.SetUserRoleResp, err error)
 	RawAccount(ctx context.Context, req *pb.CheckAccountReq) (resp *pb.CheckAccountResp, err error)
 	VerifyToken(ctx context.Context, token string) (userId int64, randomKey string, err error)
+	RawUserName(ctx context.Context, req *pb.GetUserNameReq) (resp *pb.GetUserNameResp, err error)
+	RawUserRole(ctx context.Context, req *pb.GetUserRoleReq) (resp *pb.GetUserRoleResp, err error)
+	RawUserNameOptions(ctx context.Context) (resp *pb.GetUserNameOptionsResp, err error)
 }
 
 // dao dao.

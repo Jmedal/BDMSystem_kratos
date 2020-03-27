@@ -52,6 +52,15 @@ const (
 
 	//查询用户帐号
 	_queryAccountCount = "select count(*) from %s where account = ?"
+
+	//查询用户姓名
+	_queryUserName = "select name, account from %s where id = ?"
+
+	//查询用户角色
+	_queryUserRole = "select role_id from %s where id = ?"
+
+	//查询用户姓名
+	_queryUserNameList = "select id, name, account from %s"
 )
 
 func NewDB() (db *sql.DB, cf func(), err error) {
@@ -131,13 +140,13 @@ func (d *dao) RawUser(ctx context.Context, req *pb.LoginReq) (resp *pb.LoginResp
 //查询用户信息列表
 func (d *dao) RawUserPage(ctx context.Context, req *pb.GetUserPageReq) (resp *pb.GetUserPageResp, err error) {
 	sqlUserList := fmt.Sprintf(_queryUserList, _sysUserTable)
-	sqlAccount := fmt.Sprintf(_queryUserCount, _sysUserTable)
+	sqlAccountCount := fmt.Sprintf(_queryUserCount, _sysUserTable)
 	query := fmt.Sprintf("%%%s%%", req.Query)
 	resp = &pb.GetUserPageResp{}
 	resp.PageNum = req.PageNum
 	resp.PageSize = req.PageSize
-	if err = d.db.QueryRow(ctx, sqlAccount, query).Scan(&resp.Total); err != nil {
-		log.Error("[dao.dao-anchor.mysql|db[sys_user]] scan short id record error(%v)", err)
+	if err = d.db.QueryRow(ctx, sqlAccountCount, query).Scan(&resp.Total); err != nil {
+		log.Error("[dao.dao-anchor.mysql|db[sys_user]] scan all record error(%v)", err)
 		return
 	}
 	start := (req.PageNum - 1) * req.PageSize
@@ -259,7 +268,7 @@ func (d *dao) SetUserRole(ctx context.Context, req *pb.SetUserRoleReq) (resp *pb
 	return
 }
 
-//检查帐号是否存在
+//检查用户帐号是否存在
 func (d *dao) RawAccount(ctx context.Context, req *pb.CheckAccountReq) (resp *pb.CheckAccountResp, err error) {
 	sqlAccount := fmt.Sprintf(_queryAccountCount, _sysUserTable)
 	var count int
@@ -272,6 +281,53 @@ func (d *dao) RawAccount(ctx context.Context, req *pb.CheckAccountReq) (resp *pb
 		resp.Result = "success"
 	} else {
 		resp.Result = "error"
+	}
+	return
+}
+
+//查询用户姓名[帐号]
+func (d *dao) RawUserName(ctx context.Context, req *pb.GetUserNameReq) (resp *pb.GetUserNameResp, err error) {
+	sqlUserName := fmt.Sprintf(_queryUserName, _sysUserTable)
+	resp = &pb.GetUserNameResp{}
+	var name, account string
+	if err = d.db.QueryRow(ctx, sqlUserName, req.Id).Scan(&name, &account); err != nil {
+		log.Error("[dao.dao-anchor.mysql|db[sys_user]] scan short id record error(%v)", err)
+		return
+	}
+	resp.Name = fmt.Sprintf("%s[%s]", name, account)
+	return
+}
+
+//查询用户角色
+func (d *dao) RawUserRole(ctx context.Context, req *pb.GetUserRoleReq) (resp *pb.GetUserRoleResp, err error) {
+	sqlUserName := fmt.Sprintf(_queryUserRole, _sysUserTable)
+	resp = &pb.GetUserRoleResp{}
+	if err = d.db.QueryRow(ctx, sqlUserName, req.Id).Scan(&resp.RoleId); err != nil {
+		log.Error("[dao.dao-anchor.mysql|db[sys_user]] scan short id record error(%v)", err)
+		return
+	}
+	return
+}
+
+//查询用户姓名
+func (d *dao) RawUserNameOptions(ctx context.Context) (resp *pb.GetUserNameOptionsResp, err error) {
+	sqlUserName := fmt.Sprintf(_queryUserNameList, _sysUserTable)
+	resp = &pb.GetUserNameOptionsResp{}
+	rows, err := d.db.Query(ctx, sqlUserName)
+	if err != nil {
+		log.Error("select user error(%v)", err)
+		return
+	}
+	defer rows.Close()
+	for rows.Next() {
+		user := &pb.GetUserNameOptionsResp_UserOption{}
+		var name, account string
+		if err = rows.Scan(&user.Id, &name, &account); err != nil {
+			log.Error("[dao.dao-anchor.mysql|sys_user] scan short id record error(%v)", err)
+			return
+		}
+		user.Name = fmt.Sprintf("%s[%s]", name, account)
+		resp.UserOptions = append(resp.UserOptions, user)
 	}
 	return
 }

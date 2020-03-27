@@ -2,7 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42dd8a8d-0d2c-4f1a-ba6e-b7577f882d6c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../message/internal/service/MessageService.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../worknet/company/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/api.bm.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/api.bm.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/api.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/api/api.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/service/accountService.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/accountService.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../menu/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../menu/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../menu/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/../menu/internal/dao/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message/api/api.bm.go" beforeDir="false" afterPath="$PROJECT_DIR$/../message/api/api.bm.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/../message/api/api.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../message/api/api.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/../message/api/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../message/cmd/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message/configs/grpc.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../message/configs/grpc.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message/configs/http.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../message/configs/http.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../message/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../message/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/../message/internal/dao/dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/../message/internal/dao/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message/internal/server/grpc/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/../message/internal/server/grpc/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message/internal/server/http/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/../message/internal/server/http/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message/internal/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/../message/internal/service/service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/api/api.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../role/api/api.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../worknet/company/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../worknet/company/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

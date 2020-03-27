@@ -177,6 +177,10 @@ func (d *dao) RawMenus(ctx context.Context, pid int64, levels int64, req *pb.Get
 		log.Error("dao.roleClient.GetRoleRights err(%v)", err)
 		return
 	}
+	if roleRightsResp.MenusId == nil {
+		resp = &pb.GetMenusResp{}
+		return
+	}
 	set := con.New(roleRightsResp.MenusId...)
 	resp, err = d.RawMenusRec(ctx, pid, levels, set)
 	if err != nil {

@@ -11,15 +11,175 @@ package service.v1;
 option go_package = "api";
 option (gogoproto.goproto_getters_all) = false;
 
+message GetMessagePageReq {
+    string query = 1 [(gogoproto.moretags) = 'form:"query" default:""'];
 
-service GrpcTest {
+    int64 pageNum = 2 [(gogoproto.moretags) = 'form:"pageNum" validate:"required"'];
+
+    int64 pageSize = 3 [(gogoproto.moretags) = 'form:"pageSize" validate:"required"'];
+}
+
+message GetMessagePageResp {
+    int64 pageNum = 1 [(gogoproto.jsontag) = 'pageNum'];
+
+    int64 pageSize = 2 [(gogoproto.jsontag) = 'pageSize'];
+
+    int64 total = 3 [(gogoproto.jsontag) = 'total'];
+
+    repeated MessageInfo messageList = 4 [(gogoproto.jsontag) = 'page'];
+}
+
+message AddMessageReq {
+    int64 userId = 1 [(gogoproto.moretags) = 'form:"userId" validate:"required"'];
+
+    MessageData message = 2  [(gogoproto.moretags) = 'form:"message" validate:"required"'];
+
+    repeated int64 userList = 3  [(gogoproto.moretags) = 'form:"userList" validate:"required"'];
+}
+
+message AddMessageResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+message UpdateMessageReq {
+    int64 id = 1 [(gogoproto.moretags) = 'form:"id" validate:"required"'];
+
+    MessageData message = 2  [(gogoproto.moretags) = 'form:"message" validate:"required"'];
+}
+
+message UpdateMessageResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+message DeleteMessageReq {
+    //通知id
+    int64 id = 1 [(gogoproto.moretags) = 'form:"id" validate:"required"'];
+}
+
+message DeleteMessageResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+message GetMessageListReq {
+    //用户id
+    int64 userId = 1 [(gogoproto.moretags) = 'form:"userId" validate:"required"'];
+}
+
+message GetMessageListResp {
+    repeated MessageSum messageList = 1 [(gogoproto.jsontag) = 'messageList'];
+}
+
+message GetMessageReq {
+    //通知id
+    int64 id = 1 [(gogoproto.moretags) = 'form:"id" validate:"required"'];
+}
+
+message GetMessageResp {
+    MessageInfo messageInfo = 1 [(gogoproto.jsontag) = 'messageInfo'];
+}
+
+message SetMessageUserReadReq {
+    //用户id
+    int64 userId = 1 [(gogoproto.moretags) = 'form:"userId" validate:"required"'];
+
+    //通知id
+    int64 messageId = 2 [(gogoproto.moretags) = 'form:"messageId" validate:"required"'];
+}
+
+message SetMessageUserReadResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+message DeleteMessageUserReq {
+    //用户id
+    int64 userId = 1 [(gogoproto.moretags) = 'form:"userId" validate:"required"'];
+
+    //通知id
+    int64 messageId = 2 [(gogoproto.moretags) = 'form:"messageId"'];
+}
+
+message DeleteMessageUserResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+message MessageData {
+    string title = 1 [(gogoproto.moretags) = 'form:"title" validate:"required"'];
+
+    string icon = 2 [(gogoproto.moretags) = 'form:"icon" validate:"required"'];
+
+    string content = 3 [(gogoproto.moretags) = 'form:"content" validate:"required"'];
+
+    int64 releaseTime = 4 [(gogoproto.moretags) = 'form:"releaseTime" validate:"required"'];
+}
+
+message MessageSum {
+    int64 id = 1 [(gogoproto.jsontag) = 'id'];
+
+    string title = 2 [(gogoproto.jsontag) = 'title'];
+
+    string publisher = 3 [(gogoproto.jsontag) = 'publisher'];
+
+    string icon = 4 [(gogoproto.jsontag) = 'icon'];
+
+    int64 releaseTime = 5 [(gogoproto.jsontag) = 'releaseTime'];
+
+    int32 isRead = 6 [(gogoproto.jsontag) = 'isRead'];
+}
+
+message MessageInfo {
+    int64 id = 1 [(gogoproto.jsontag) = 'id'];
+
+    string title = 2 [(gogoproto.jsontag) = 'title'];
+
+    string publisher = 3 [(gogoproto.jsontag) = 'publisher'];
+
+    string icon = 4 [(gogoproto.jsontag) = 'icon'];
+
+    string content = 5 [(gogoproto.jsontag) = 'content'];
+
+    int64 releaseTime = 6 [(gogoproto.jsontag) = 'releaseTime'];
+}
+
+service Message {
   rpc Ping(.google.protobuf.Empty) returns (.google.protobuf.Empty);
 
   // `method:"POST"`
-  rpc GrpcUserInfoTest(.google.protobuf.Empty) returns (.google.protobuf.Empty);
+  rpc GetMessagePage(GetMessagePageReq) returns (GetMessagePageResp);
+
+  // `method:"POST"`
+  rpc AddMessage(AddMessageReq) returns (AddMessageResp);
+
+  // `method:"POST"`
+  rpc UpdateMessage(UpdateMessageReq) returns (UpdateMessageResp);
+
+  // `method:"POST"`
+  rpc DeleteMessage(DeleteMessageReq) returns (DeleteMessageResp);
+
+  // `method:"POST"`
+  rpc GetMessageList(GetMessageListReq) returns (GetMessageListResp);
+
+  // `method:"POST"`
+  rpc GetMessage(GetMessageReq) returns (GetMessageResp);
+
+  // `method:"POST"`
+  rpc SetMessageUserRead(SetMessageUserReadReq) returns (SetMessageUserReadResp);
+
+  // `method:"POST"`
+  rpc DeleteMessageUser(DeleteMessageUserReq) returns (DeleteMessageUserResp);
 }
 
+message GetUserNameReq{
+    int64 id = 1 [(gogoproto.moretags) = 'form:"id" validate:"required"'];
+}
 
+message GetUserNameResp{
+    string name = 1 [(gogoproto.jsontag) = 'name'];
+}
+
+service Account {
+    // `method:"POST"`
+    rpc GetUserName(GetUserNameReq) returns (GetUserNameResp);
+}
 
 message VerifyTokenReq {
  // 授予的 token

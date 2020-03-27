@@ -11,9 +11,9 @@ import (
 	"syscall"
 	"time"
 
-	"grpc-test/internal/di"
 	"github.com/bilibili/kratos/pkg/conf/paladin"
 	"github.com/bilibili/kratos/pkg/log"
+	"message/internal/di"
 )
 
 func initDiscovery(ip, port, appID string) (cancelFunc context.CancelFunc, err error) {
@@ -33,7 +33,6 @@ func initDiscovery(ip, port, appID string) (cancelFunc context.CancelFunc, err e
 	return dis.Register(context.Background(), ins)
 }
 
-
 func main() {
 	flag.Parse()
 	log.Init(nil) // debug flag: log.dir={path}
@@ -44,11 +43,12 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	//cancel, err := initDiscovery("0.0.0.0","9000", "****.service")
-	//if err != nil {
-	//	panic(err)
-	//}
-	//defer cancel()
+	cancel, err := initDiscovery("47.107.116.160", "5505", "message.service")
+	if err != nil {
+		panic(err)
+
+	}
+	defer cancel()
 	c := make(chan os.Signal, 1)
 	signal.Notify(c, syscall.SIGHUP, syscall.SIGQUIT, syscall.SIGTERM, syscall.SIGINT)
 	for {

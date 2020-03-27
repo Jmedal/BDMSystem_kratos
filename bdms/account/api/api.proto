@@ -78,7 +78,7 @@ message UserInfo {
 }
 
 message AddUserReq {
-    User user = 1  [(gogoproto.moretags) = 'form:"user" validate:"required"'];
+    User user = 1 [(gogoproto.moretags) = 'form:"user" validate:"required"'];
 }
 
 message AddUserResp {
@@ -90,7 +90,7 @@ message AddUserResp {
 message UpdateUserReq {
     int64 id = 1 [(gogoproto.moretags) = 'form:"id" validate:"required"'];
 
-    User user = 2  [(gogoproto.moretags) = 'form:"user" validate:"required"'];
+    User user = 2 [(gogoproto.moretags) = 'form:"user" validate:"required"'];
 }
 
 message UpdateUserResp {
@@ -133,6 +133,32 @@ message CheckAccountResp {
     string result = 1 [(gogoproto.jsontag) = 'result'];
 }
 
+message GetUserNameReq {
+    int64 id = 1 [(gogoproto.moretags) = 'form:"id" validate:"required"'];
+}
+
+message GetUserNameResp {
+    string name = 1 [(gogoproto.jsontag) = 'name'];
+}
+
+message GetUserRoleReq {
+    int64 id = 1 [(gogoproto.moretags) = 'form:"id" validate:"required"'];
+}
+
+message GetUserRoleResp {
+    int64 roleId = 1 [(gogoproto.jsontag) = 'roleId'];
+}
+
+message GetUserNameOptionsResp {
+    repeated UserOption userOptions = 1 [(gogoproto.jsontag) = 'userOptions'];
+
+    message UserOption {
+        int64 id = 1 [(gogoproto.jsontag) = 'value'];
+
+        string name = 2 [(gogoproto.jsontag) = 'label'];
+    }
+}
+
 message User {
     string avatar = 1 [(gogoproto.moretags) = 'form:"avatar" validate:"required"'];
 
@@ -159,25 +185,34 @@ service Account {
     rpc Login (LoginReq) returns (LoginResp);
 
     // `method:"POST"`
-    rpc GetUserPage(GetUserPageReq) returns (GetUserPageResp);
+    rpc GetUserPage (GetUserPageReq) returns (GetUserPageResp);
 
     // `method:"POST"`
-    rpc AddUser(AddUserReq) returns (AddUserResp);
+    rpc AddUser (AddUserReq) returns (AddUserResp);
 
     // `method:"POST"`
-    rpc UpdateUser(UpdateUserReq) returns (UpdateUserResp);
+    rpc UpdateUser (UpdateUserReq) returns (UpdateUserResp);
 
     // `method:"POST"`
-    rpc DeleteUser(DeleteUserReq) returns (DeleteUserResp);
+    rpc DeleteUser (DeleteUserReq) returns (DeleteUserResp);
 
     // `method:"POST"`
-    rpc SetUserStatus(SetUserStatusReq) returns (SetUserStatusResp);
+    rpc SetUserStatus (SetUserStatusReq) returns (SetUserStatusResp);
 
     // `method:"POST"`
-    rpc SetUserRole(SetUserRoleReq) returns (SetUserRoleResp);
+    rpc SetUserRole (SetUserRoleReq) returns (SetUserRoleResp);
 
     // `method:"POST"`
-    rpc CheckAccount(CheckAccountReq) returns (CheckAccountResp);
+    rpc CheckAccount (CheckAccountReq) returns (CheckAccountResp);
+
+    // `method:"POST"`
+    rpc GetUserName (GetUserNameReq) returns (GetUserNameResp);
+
+    // `method:"POST"`
+    rpc GetUserRole (GetUserRoleReq) returns (GetUserRoleResp);
+
+    // `method:"POST"`
+    rpc GetUserNameOptions (.google.protobuf.Empty) returns (GetUserNameOptionsResp);
 }
 
 

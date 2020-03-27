@@ -34,6 +34,9 @@ var PathAccountDeleteUser = "/service.v1.Account/DeleteUser"
 var PathAccountSetUserStatus = "/service.v1.Account/SetUserStatus"
 var PathAccountSetUserRole = "/service.v1.Account/SetUserRole"
 var PathAccountCheckAccount = "/service.v1.Account/CheckAccount"
+var PathAccountGetUserName = "/service.v1.Account/GetUserName"
+var PathAccountGetUserRole = "/service.v1.Account/GetUserRole"
+var PathAccountGetUserNameOptions = "/service.v1.Account/GetUserNameOptions"
 
 var PathTokenPing = "/service.v1.Token/Ping"
 var PathTokenRequest = "/service.v1.Token/Request"
@@ -68,6 +71,15 @@ type AccountBMServer interface {
 
 	// `method:"POST"`
 	CheckAccount(ctx context.Context, req *CheckAccountReq) (resp *CheckAccountResp, err error)
+
+	// `method:"POST"`
+	GetUserName(ctx context.Context, req *GetUserNameReq) (resp *GetUserNameResp, err error)
+
+	// `method:"POST"`
+	GetUserRole(ctx context.Context, req *GetUserRoleReq) (resp *GetUserRoleResp, err error)
+
+	// `method:"POST"`
+	GetUserNameOptions(ctx context.Context, req *google_protobuf1.Empty) (resp *GetUserNameOptionsResp, err error)
 }
 
 var AccountSvc AccountBMServer
@@ -153,6 +165,33 @@ func accountCheckAccount(c *bm.Context) {
 	c.JSON(resp, err)
 }
 
+func accountGetUserName(c *bm.Context) {
+	p := new(GetUserNameReq)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := AccountSvc.GetUserName(c, p)
+	c.JSON(resp, err)
+}
+
+func accountGetUserRole(c *bm.Context) {
+	p := new(GetUserRoleReq)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := AccountSvc.GetUserRole(c, p)
+	c.JSON(resp, err)
+}
+
+func accountGetUserNameOptions(c *bm.Context) {
+	p := new(google_protobuf1.Empty)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := AccountSvc.GetUserNameOptions(c, p)
+	c.JSON(resp, err)
+}
+
 // RegisterAccountBMServer Register the blademaster route
 func RegisterAccountBMServer(e *bm.Engine, server AccountBMServer) {
 	AccountSvc = server
@@ -165,6 +204,9 @@ func RegisterAccountBMServer(e *bm.Engine, server AccountBMServer) {
 	e.POST("/service.v1.Account/SetUserStatus", accountSetUserStatus)
 	e.POST("/service.v1.Account/SetUserRole", accountSetUserRole)
 	e.POST("/service.v1.Account/CheckAccount", accountCheckAccount)
+	e.POST("/service.v1.Account/GetUserName", accountGetUserName)
+	e.POST("/service.v1.Account/GetUserRole", accountGetUserRole)
+	e.POST("/service.v1.Account/GetUserNameOptions", accountGetUserNameOptions)
 }
 
 // TokenBMServer is the server API for Token service.

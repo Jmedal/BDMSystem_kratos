@@ -5,6 +5,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/bilibili/kratos/pkg/log"
+	"github.com/golang/protobuf/ptypes/empty"
 )
 
 //登录
@@ -71,6 +72,30 @@ func (s *Service) CheckAccount(ctx context.Context, req *pb.CheckAccountReq) (re
 	resp, err = s.dao.RawAccount(ctx, req)
 	if err != nil {
 		log.Error("CheckAccount发现错误,错误信息：", err)
+	}
+	return
+}
+
+func (s *Service) GetUserName(ctx context.Context, req *pb.GetUserNameReq) (resp *pb.GetUserNameResp, err error) {
+	resp, err = s.dao.RawUserName(ctx, req)
+	if err != nil {
+		log.Error("GetUserName发现错误,错误信息：", err)
+	}
+	return
+}
+
+func (s *Service) GetUserRole(ctx context.Context, req *pb.GetUserRoleReq) (resp *pb.GetUserRoleResp, err error) {
+	resp, err = s.dao.RawUserRole(ctx, req)
+	if err != nil {
+		log.Error("GetUserRole发现错误,错误信息：", err)
+	}
+	return
+}
+
+func (s *Service) GetUserNameOptions(ctx context.Context, e *empty.Empty) (resp *pb.GetUserNameOptionsResp, err error) {
+	resp, err = s.dao.RawUserNameOptions(ctx)
+	if err != nil {
+		log.Error("GetUserNameOptions发现错误,错误信息：", err)
 	}
 	return
 }
