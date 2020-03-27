@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 本地
+Source Server         : 本地数据库
 Source Server Version : 50720
 Source Host           : localhost:3306
 Source Database       : bdms
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50720
 File Encoding         : 65001
 
-Date: 2020-03-27 23:17:30
+Date: 2020-03-27 23:53:19
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -31,7 +31,7 @@ CREATE TABLE `sys_menu` (
   `status` bigint(15) unsigned DEFAULT NULL COMMENT '菜单状态：  1:启用   0:不启用（保留字段）',
   `is_menu` bigint(11) unsigned DEFAULT NULL COMMENT '是否是菜单（保留字段）',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sys_menu
@@ -54,9 +54,9 @@ INSERT INTO `sys_menu` VALUES ('15', '13', '2', '笔试分析', 'el-icon-edit-ou
 INSERT INTO `sys_menu` VALUES ('16', '1', '7', '管理员权限', 'el-icon-smoking', '/index7', '1', null, null, null);
 INSERT INTO `sys_menu` VALUES ('17', '16', '1', '用户管理', 'iconfont icon-users', '/index/user', '2', null, null, null);
 INSERT INTO `sys_menu` VALUES ('18', '17', '1', '添加用户', 'el-icon-plus', '/null', '3', null, null, null);
-INSERT INTO `sys_menu` VALUES ('19', '17', '2', '编辑用户', 'el-icon-edit', '/null', '3', null, null, null);
-INSERT INTO `sys_menu` VALUES ('20', '17', '3', '删除用户', 'el-icon-delete', '/null', '3', null, null, null);
-INSERT INTO `sys_menu` VALUES ('21', '17', '4', '分配角色', 'el-icon-setting', '/null', '3', null, null, null);
+INSERT INTO `sys_menu` VALUES ('19', '17', '3', '编辑用户', 'el-icon-edit', '/null', '3', null, null, null);
+INSERT INTO `sys_menu` VALUES ('20', '17', '4', '删除用户', 'el-icon-delete', '/null', '3', null, null, null);
+INSERT INTO `sys_menu` VALUES ('21', '17', '5', '分配角色', 'el-icon-setting', '/null', '3', null, null, null);
 INSERT INTO `sys_menu` VALUES ('22', '16', '2', '角色管理', 'el-icon-postcard', '/index/role', '2', null, null, null);
 INSERT INTO `sys_menu` VALUES ('23', '22', '1', '添加角色', 'el-icon-plus', '/null', '3', null, null, null);
 INSERT INTO `sys_menu` VALUES ('24', '22', '2', '编辑角色', 'el-icon-edit', '/null', '3', null, null, null);
@@ -71,6 +71,11 @@ INSERT INTO `sys_menu` VALUES ('32', '1', '8', 'Pholcus爬虫', 'el-icon-coffee-
 INSERT INTO `sys_menu` VALUES ('33', '1', '9', '配置管理', 'el-icon-setting', '/index/config', '1', null, null, null);
 INSERT INTO `sys_menu` VALUES ('55', '1', '11', '测试菜单', 'el-icon-platform-eleme', '/vvv', '1', '', null, null);
 INSERT INTO `sys_menu` VALUES ('69', '1', '12', 'sadsad', 'asdasd', '/adssad', '1', '', null, null);
+INSERT INTO `sys_menu` VALUES ('70', '16', '4', '通知管理', 'el-icon-s-promotion', '/index/message', '2', '', null, null);
+INSERT INTO `sys_menu` VALUES ('71', '70', '1', '发布通知', 'el-icon-message', '/null', '3', '', null, null);
+INSERT INTO `sys_menu` VALUES ('72', '70', '2', '修改通知', 'el-icon-edit-outline', '/null', '3', '', null, null);
+INSERT INTO `sys_menu` VALUES ('73', '70', '3', '撤回通知', 'el-icon-refresh-left', '/null', '3', '', null, null);
+INSERT INTO `sys_menu` VALUES ('74', '17', '2', '更新用户状态', 'el-icon-open', '/null', '3', '', null, null);
 
 -- ----------------------------
 -- Table structure for sys_message
@@ -156,7 +161,7 @@ CREATE TABLE `sys_role_menu` (
   `role_id` bigint(100) unsigned DEFAULT NULL COMMENT '角色id',
   `menu_id` bigint(80) unsigned DEFAULT NULL COMMENT '菜单id',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=330 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=334 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sys_role_menu
@@ -264,6 +269,10 @@ INSERT INTO `sys_role_menu` VALUES ('326', '2', '11');
 INSERT INTO `sys_role_menu` VALUES ('327', '2', '12');
 INSERT INTO `sys_role_menu` VALUES ('328', '2', '15');
 INSERT INTO `sys_role_menu` VALUES ('329', '2', '32');
+INSERT INTO `sys_role_menu` VALUES ('330', '1', '72');
+INSERT INTO `sys_role_menu` VALUES ('331', '1', '70');
+INSERT INTO `sys_role_menu` VALUES ('332', '1', '73');
+INSERT INTO `sys_role_menu` VALUES ('333', '1', '71');
 
 -- ----------------------------
 -- Table structure for sys_user
@@ -290,7 +299,7 @@ CREATE TABLE `sys_user` (
 -- ----------------------------
 -- Records of sys_user
 -- ----------------------------
-INSERT INTO `sys_user` VALUES ('1', '', 'root', 'root', '姜云杰', '2020-02-18 22:13:21.000000', '男', '784203082@qq.com', '18321882894', '1', '0', '1', '2020-02-18 23:52:21.000000', null);
+INSERT INTO `sys_user` VALUES ('1', 'null', 'root', 'root', '姜云杰', '2020-02-18 22:13:21.000000', '男', '784203082@qq.com', '18321882894', '1', '0', '1', '2020-02-18 23:52:21.000000', null);
 INSERT INTO `sys_user` VALUES ('2', 'null', 'roots', 'roots', '姜云杰', '1998-07-08 00:00:00.000000', '男', '784203082@qq.com', '18321882894', '1', '0', '1', '2020-03-23 00:00:00.000000', null);
 INSERT INTO `sys_user` VALUES ('4', 'null', 'sdadad', 'asdsadsad', 'asdasdasd', '2020-03-10 00:00:00.000000', '女', 'asdda@sd.com', '13821882894', '6', '0', '2', '2020-03-23 19:47:25.099788', null);
 INSERT INTO `sys_user` VALUES ('5', 'null', 'roots2', 'roots2', '姜云杰', '1998-07-08 00:00:00.000000', '男', '784203082@qq.ocm', '18321882894', '7', '0', '1', '2020-03-23 20:01:01.046430', null);
