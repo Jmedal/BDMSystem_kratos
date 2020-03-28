@@ -26,7 +26,7 @@ const (
 	_sysMessageUserTable = "sys_message_user"
 
 	//查询通知列表
-	_queryMessageList = "select id, user_id, title, icon, content, release_time from %s where title like ? order by id desc LIMIT ?, ?"
+	_queryMessageList = "select id, user_id, title, icon, content, release_time, is_top from %s where title like ? order by is_top, release_time desc LIMIT ?, ?"
 
 	//查询通知数目
 	_queryMessageCount = "select count(*) from %s where title like ?"
@@ -45,8 +45,11 @@ const (
 	//删除通知所有用户通知
 	_deleteMessageUserByMessage = "delete from %s where message_id = ?"
 
+	//更新通知
+	_updateMessageIsTop = "update %s set is_top = ? where id = ?"
+
 	//查询用户通知简要
-	_queryMessageSumList = "select id, user_id, title, icon, release_time from %s where id in (%s) and release_time < ? order by id desc"
+	_queryMessageSumList = "select id, user_id, title, icon, release_time, is_top from %s where id in (%s) and release_time < ? order by is_top, release_time desc"
 
 	//查询用户通知id列表
 	_queryMessageUserList = "select message_id, is_read from %s where user_id = ?"
@@ -110,7 +113,7 @@ func (d *dao) RawMessagePage(ctx context.Context, req *pb.GetMessagePageReq) (re
 		var userId int64
 		messageInfo := &pb.MessageInfo{}
 		if err = rows.Scan(&messageInfo.Id, &userId, &messageInfo.Title,
-			&messageInfo.Icon, &messageInfo.Content, &releaseTime); err != nil {
+			&messageInfo.Icon, &messageInfo.Content, &releaseTime, &messageInfo.IsTop); err != nil {
 			log.Error("[dao.dao-anchor.mysql|sys_message] scan short id record error(%v)", err)
 			return
 		}
@@ -199,6 +202,22 @@ func (d *dao) DeleteMessage(ctx context.Context, req *pb.DeleteMessageReq) (resp
 	return
 }
 
+//更新通知置顶
+func (d *dao) SetMessageIsTop(ctx context.Context, req *pb.SetMessageIsTopReq) (resp *pb.SetMessageIsTopResp, err error) {
+	sqlMessage := fmt.Sprintf(_updateMessageIsTop, _sysMessageTable)
+	var res dsql.Result
+	if res, err = d.db.Exec(ctx, sqlMessage, req.IsTop, req.Id); err != nil {
+		log.Error("[dao.dao-anchor.mysql|db[sys_message]] failed to update: (%v), error(%v)", req.Id, err)
+	}
+	resp = &pb.SetMessageIsTopResp{}
+	if _, err = res.RowsAffected(); err == nil {
+		resp.Result = "success"
+		return
+	}
+	resp.Result = "error"
+	return
+}
+
 //查询通知简要列表
 func (d *dao) RawMessageList(ctx context.Context, req *pb.GetMessageListReq) (resp *pb.GetMessageListResp, err error) {
 	sqlMessageUserList := fmt.Sprintf(_queryMessageUserList, _sysMessageUserTable)
@@ -237,7 +256,7 @@ func (d *dao) RawMessageList(ctx context.Context, req *pb.GetMessageListReq) (re
 		var userId int64
 		messageSum := &pb.MessageSum{}
 		if err = rows.Scan(&messageSum.Id, &userId, &messageSum.Title,
-			&messageSum.Icon, &releaseTime); err != nil {
+			&messageSum.Icon, &releaseTime, &messageSum.IsTop); err != nil {
 			log.Error("[dao.dao-anchor.mysql|sys_message] scan short id record error(%v)", err)
 			return
 		}

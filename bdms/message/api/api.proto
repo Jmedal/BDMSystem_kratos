@@ -60,6 +60,16 @@ message DeleteMessageResp {
     string result = 1 [(gogoproto.jsontag) = 'result'];
 }
 
+message SetMessageIsTopReq {
+    int64 id = 1 [(gogoproto.moretags) = 'form:"id" validate:"required"'];
+
+    int32 isTop = 2  [(gogoproto.moretags) = 'form:"isTop" validate:"required"'];
+}
+
+message SetMessageIsTopResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
 message GetMessageListReq {
     //用户id
     int64 userId = 1 [(gogoproto.moretags) = 'form:"userId" validate:"required"'];
@@ -123,7 +133,9 @@ message MessageSum {
 
     int64 releaseTime = 5 [(gogoproto.jsontag) = 'releaseTime'];
 
-    int32 isRead = 6 [(gogoproto.jsontag) = 'isRead'];
+    int64 isTop = 6 [(gogoproto.jsontag) = 'isTop'];
+
+    int32 isRead = 7 [(gogoproto.jsontag) = 'isRead'];
 }
 
 message MessageInfo {
@@ -138,6 +150,8 @@ message MessageInfo {
     string content = 5 [(gogoproto.jsontag) = 'content'];
 
     int64 releaseTime = 6 [(gogoproto.jsontag) = 'releaseTime'];
+
+    int64 isTop = 7 [(gogoproto.jsontag) = 'isTop'];
 }
 
 service Message {
@@ -154,6 +168,9 @@ service Message {
 
   // `method:"POST"`
   rpc DeleteMessage(DeleteMessageReq) returns (DeleteMessageResp);
+
+  // `method:"POST"`
+  rpc SetMessageIsTop(SetMessageIsTopReq) returns (SetMessageIsTopResp);
 
   // `method:"POST"`
   rpc GetMessageList(GetMessageListReq) returns (GetMessageListResp);

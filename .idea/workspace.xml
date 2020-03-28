@@ -3,6 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="67f36049-4dd2-40c7-bacb-767918e1a8e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdms/bdms.sql" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/bdms.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdms/message/api/api.bm.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/message/api/api.bm.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdms/message/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/message/api/api.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdms/message/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/message/api/api.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdms/message/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/message/internal/dao/dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdms/message/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/message/internal/dao/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdms/message/internal/service/MessageService.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/message/internal/service/MessageService.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +130,8 @@
     <MESSAGE value="2020-3-25 添加通知模块，修复菜单模块bug，更新数据库文件" />
     <MESSAGE value="2020-3-27 添加通知模块，修复菜单模块bug，更新数据库文件" />
     <MESSAGE value="2020-3-27 更新数据库文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020-3-27 更新数据库文件" />
+    <MESSAGE value="2020-3-28 一些文件更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020-3-28 一些文件更新" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

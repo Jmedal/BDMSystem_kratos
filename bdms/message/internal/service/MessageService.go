@@ -38,6 +38,14 @@ func (s *Service) DeleteMessage(ctx context.Context, req *pb.DeleteMessageReq) (
 	return
 }
 
+func (s *Service) SetMessageIsTop(ctx context.Context, req *pb.SetMessageIsTopReq) (resp *pb.SetMessageIsTopResp, err error) {
+	resp, err = s.dao.SetMessageIsTop(ctx, req)
+	if err != nil {
+		log.Error("SetMessageIsTop发现错误,错误信息：", err)
+	}
+	return
+}
+
 func (s *Service) GetMessageList(ctx context.Context, req *pb.GetMessageListReq) (resp *pb.GetMessageListResp, err error) {
 	resp, err = s.dao.RawMessageList(ctx, req)
 	if err != nil {

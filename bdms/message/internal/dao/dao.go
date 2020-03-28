@@ -30,6 +30,7 @@ type Dao interface {
 	InsertMessage(ctx context.Context, req *pb.AddMessageReq) (resp *pb.AddMessageResp, err error)
 	UpdateMessage(ctx context.Context, req *pb.UpdateMessageReq) (resp *pb.UpdateMessageResp, err error)
 	DeleteMessage(ctx context.Context, req *pb.DeleteMessageReq) (resp *pb.DeleteMessageResp, err error)
+	SetMessageIsTop(ctx context.Context, req *pb.SetMessageIsTopReq) (resp *pb.SetMessageIsTopResp, err error)
 	RawMessageList(ctx context.Context, req *pb.GetMessageListReq) (resp *pb.GetMessageListResp, err error)
 	RawMessage(ctx context.Context, req *pb.GetMessageReq) (resp *pb.GetMessageResp, err error)
 	SetMessageUserRead(ctx context.Context, req *pb.SetMessageUserReadReq) (resp *pb.SetMessageUserReadResp, err error)

@@ -21,6 +21,7 @@ var PathMessageGetMessagePage = "/service.v1.Message/GetMessagePage"
 var PathMessageAddMessage = "/service.v1.Message/AddMessage"
 var PathMessageUpdateMessage = "/service.v1.Message/UpdateMessage"
 var PathMessageDeleteMessage = "/service.v1.Message/DeleteMessage"
+var PathMessageSetMessageIsTop = "/service.v1.Message/SetMessageIsTop"
 var PathMessageGetMessageList = "/service.v1.Message/GetMessageList"
 var PathMessageGetMessage = "/service.v1.Message/GetMessage"
 var PathMessageSetMessageUserRead = "/service.v1.Message/SetMessageUserRead"
@@ -45,6 +46,9 @@ type MessageBMServer interface {
 
 	// `method:"POST"`
 	DeleteMessage(ctx context.Context, req *DeleteMessageReq) (resp *DeleteMessageResp, err error)
+
+	// `method:"POST"`
+	SetMessageIsTop(ctx context.Context, req *SetMessageIsTopReq) (resp *SetMessageIsTopResp, err error)
 
 	// `method:"POST"`
 	GetMessageList(ctx context.Context, req *GetMessageListReq) (resp *GetMessageListResp, err error)
@@ -106,6 +110,15 @@ func messageDeleteMessage(c *bm.Context) {
 	c.JSON(resp, err)
 }
 
+func messageSetMessageIsTop(c *bm.Context) {
+	p := new(SetMessageIsTopReq)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := MessageSvc.SetMessageIsTop(c, p)
+	c.JSON(resp, err)
+}
+
 func messageGetMessageList(c *bm.Context) {
 	p := new(GetMessageListReq)
 	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
@@ -150,6 +163,7 @@ func RegisterMessageBMServer(e *bm.Engine, server MessageBMServer) {
 	e.POST("/service.v1.Message/AddMessage", messageAddMessage)
 	e.POST("/service.v1.Message/UpdateMessage", messageUpdateMessage)
 	e.POST("/service.v1.Message/DeleteMessage", messageDeleteMessage)
+	e.POST("/service.v1.Message/SetMessageIsTop", messageSetMessageIsTop)
 	e.POST("/service.v1.Message/GetMessageList", messageGetMessageList)
 	e.POST("/service.v1.Message/GetMessage", messageGetMessage)
 	e.POST("/service.v1.Message/SetMessageUserRead", messageSetMessageUserRead)
