@@ -38,10 +38,7 @@ type AjaxCourseMembers struct {
 	msg    string `json:"msg"`
 }
 
-var chapterin = make(map[string]string)
 var Score = make(map[string]string)
-var chapterout = make(map[string]interface{})
-var chapterall = make(map[string]interface{})
 
 var Imooc = &Spider{
 	Name:         "Imooc",
@@ -73,33 +70,19 @@ var Imooc = &Spider{
 				},
 
 				ParseFunc: func(ctx *Context) {
-					query := ctx.GetDom().Find(".course-card-container")
+					query := ctx.GetDom().Find("div.course-card-container")
 					query.Each(func(i int, goq *goquery.Selection) {
+						//课程标题
 						CourseTitle := goq.Find(".course-card-name").Text()
-						TechStack := goq.Find(".course-card-top span").Text()
+						//技术栈
+						TechStack := goq.Find("div.course-card-top").Find(".course-label").Find("label").Text()
+						//课程简介
 						Introduction := goq.Find("p").Text()
-						Attr, ok := goq.Find(".course-card").Attr("href")
+						//
+						Attr, ok := goq.Find("a.course-card").Attr("href")
 						CourseUrlNumber := strings.Join(regexp.MustCompile("[0-9]").FindAllString(Attr, -1), "")
 						url := "http://www.imooc.com/course/AjaxCourseMembers?ids=" + CourseUrlNumber
 						resp, err := http.Get(url)
-
-						/***
-
-						  if err != nil {
-						      log.Println("ERROR:", err)
-						      return
-						  }
-						  doc1, _ := ioutil.ReadAll(resp.Body)
-						  ajaxCourseMembers := &AjaxCourseMembers{}
-						  if err:= json.Unmarshal([]byte(string(doc1)), &ajaxCourseMembers);err!=nil{
-						      log.Println("ERROR:", err)
-						      return
-						  }
-
-						  ***/
-
-						//myjson, _ := ioutil.ReadAll(resp.Body)
-						//fmt.Println(string(myjson))  //resp的body内容OK
 
 						if err != nil {
 							log.Println("ERROR:", err)
@@ -115,7 +98,7 @@ var Imooc = &Spider{
 						if ok == true {
 							ctx.AddQueue(&request.Request{
 								Url:  "http://www.imooc.com" + Attr,
-								Rule: "课程详细信息",
+								Rule: "Course_Info",
 								Temp: map[string]interface{}{
 									"CourseTitle":   CourseTitle,
 									"TechStack":     TechStack,
@@ -129,28 +112,33 @@ var Imooc = &Spider{
 
 				},
 			},
-			"课程详细信息": {
+			"Course_Info": {
 
 				ItemFields: []string{
-					"课程名称",
-					"课程分类",
-					"课程简介",
-					"学习人数",
-					"课程介绍",
-					"课程路径",
-					"难度级别",
-					"课程时长",
-					"评分",
-					"章节",
+					"name",                //课程名称
+					"class",               //课程分类
+					"introduction",        //课程简介
+					"learner_number",      //学习人数
+					"description",         //课程介绍
+					"path",                //课程路径
+					"difficulty",          //难度级别
+					"duration",            //课程时长
+					"comprehensive_score", //综合评分
+					"evaluation_number",   //评价数
+					"utility_score",       //内容实用
+					"concise_score",       //简洁易懂
+					"logic_score",         //逻辑清晰
 				},
 				ParseFunc: func(ctx *Context) {
 					dom := ctx.GetDom()
-					query := dom.Find(".mod-chapters > div")
-					Summary := cleanHTML(dom.Find("div.course-brief").Text())
-					CoursePath := cleanHTML(dom.Find(".course-infos").Find(".path").Text())
-					Difficulty := dom.Find(".course-infos").Find("div.static-item").Eq(1).Find(".meta-value").Text()
-					Duration := dom.Find(".course-infos").Find("div.static-item").Eq(2).Find(".meta-value").Text()
-					scoretmp := dom.Find(".course-infos").Find(".score-btn")
+					Summary := cleanHTML(dom.Find("div.course-description.course-wrap").Text())
+					if strings.Contains(Summary, "简介：") {
+						Summary = strings.Split(Summary, "简介：")[1]
+					}
+					CoursePath := cleanHTML(dom.Find("div.course-infos").Find("div.path").Text())
+					Difficulty := dom.Find("div.course-infos").Find("div.static-item.l").Eq(0).Find(".meta-value").Text()
+					Duration := dom.Find("div.course-infos").Find("div.static-item.l").Eq(1).Find(".meta-value").Text()
+					scoretmp := dom.Find("div.course-infos").Find("div.static-item.l.score-btn")
 					vScore0 := scoretmp.Find("span").Eq(0).Text()
 					vScore1 := scoretmp.Find("span").Eq(1).Text()
 					vScore2 := scoretmp.Find("span").Eq(2).Text()
@@ -162,38 +150,27 @@ var Imooc = &Spider{
 					vScore8 := scoretmp.Find("span").Eq(8).Text()
 					Score[vScore0] = vScore1
 					Score["评价数"] = vScore2
+					if strings.Contains(vScore2, "人评价") {
+						vScore2 = strings.Split(vScore5, "简介：")[0]
+					}
 					Score[vScore4] = vScore3
 					Score[vScore6] = vScore5
 					Score[vScore8] = vScore7
-					query.Each(func(i int, goq *goquery.Selection) {
-						ChapterH1 := cleanHTML(goq.Find("strong").After("i").Text())
-						ctx.SetTemp("ChapterH1", ChapterH1)
-						Chapter2_html := goq.Find("ul.video>li")
-						Chapter2_html.Each(func(_ int, goq1 *goquery.Selection) {
-							Chapter2_url, _ := goq1.Find("a").Attr("href")
-							Chapter2 := cleanHTML(goq1.Find("a").After("button").Text())
-							chapterin[Chapter2] = "www.imooc.com" + cleanHTML(Chapter2_url)
-							ctx.SetTemp("JsonChapterH1", chapterin)
-						})
-						chapterout[ctx.GetTemp("ChapterH1", "").(string)] = ctx.GetTemp("JsonChapterH1", "")
-						chapterall[ctx.GetTemp("CourseTitle", "").(string)] = chapterout
-						chapterin = make(map[string]string)
-
-					})
-					chapterout = make(map[string]interface{})
 					ctx.Output(map[int]interface{}{
-						0: ctx.GetTemp("CourseTitle", "").(string),
-						1: ctx.GetTemp("TechStack", "").(string),
-						2: ctx.GetTemp("Introduction", "").(string),
-						3: ctx.GetTemp("LearnerNumber", "").(string),
-						4: Summary,
-						5: CoursePath,
-						6: Difficulty,
-						7: Duration,
-						8: Score,
-						9: chapterall[ctx.GetTemp("CourseTitle", "").(string)],
+						0:  ctx.GetTemp("CourseTitle", "").(string),
+						1:  ctx.GetTemp("TechStack", "").(string),
+						2:  ctx.GetTemp("Introduction", "").(string),
+						3:  ctx.GetTemp("LearnerNumber", "").(string),
+						4:  Summary,
+						5:  CoursePath,
+						6:  Difficulty,
+						7:  Duration,
+						8:  vScore1,
+						9:  vScore2,
+						10: vScore3,
+						11: vScore5,
+						12: vScore7,
 					})
-					chapterall = make(map[string]interface{})
 					Score = make(map[string]string)
 				},
 			},

@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67f36049-4dd2-40c7-bacb-767918e1a8e9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/history/history__n__考拉海淘__0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-04-08 112457/中关村手机__0__获取结果/0-3240.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/bdms.sql" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/bdms.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/message/api/api.bm.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/message/api/api.bm.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/message/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/message/api/api.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/message/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/message/api/api.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/message/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/message/internal/dao/dao.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/message/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/message/internal/dao/db.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/message/internal/service/MessageService.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/message/internal/service/MessageService.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pholcus/pholcus_pkg/history/history__y__中关村手机__0" beforeDir="false" afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/history/history__y__中关村手机__0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pholcus/pholcus_pkg/logs/pholcus.log" beforeDir="false" afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/logs/pholcus.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -131,7 +128,8 @@
     <MESSAGE value="2020-3-27 添加通知模块，修复菜单模块bug，更新数据库文件" />
     <MESSAGE value="2020-3-27 更新数据库文件" />
     <MESSAGE value="2020-3-28 一些文件更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020-3-28 一些文件更新" />
+    <MESSAGE value="2020-3-28 新增通知置顶功能，并修复排序bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020-3-28 新增通知置顶功能，并修复排序bug" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
