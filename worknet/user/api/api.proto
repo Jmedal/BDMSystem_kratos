@@ -51,10 +51,13 @@ service WorknetUser {
 
     // `method:"POST"`
     rpc WorknetUserNumber (.google.protobuf.Empty) returns (WorknetUserNumberResp);
+
     // `method:"POST"`
     rpc WorknetUserActivity (.google.protobuf.Empty) returns (WorknetUserActivityResp);
+
     // `method:"POST"`
     rpc WorknetUserSex (.google.protobuf.Empty) returns (WorknetUserSexResp);
+
     // `method:"POST"`
     rpc WorknetUserNumberChange (.google.protobuf.Empty) returns (WorknetUserChangeResp);
 }

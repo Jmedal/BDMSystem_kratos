@@ -2,11 +2,123 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67f36049-4dd2-40c7-bacb-767918e1a8e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/history/history__n__考拉海淘__0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-04-08 112457/中关村手机__0__获取结果/0-3240.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/course/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/.idea/curriculum.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/OWNERS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/api/api.bm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/api/api.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/api/api.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/api/client.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/cmd/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/configs/application.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/configs/db.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/configs/grpc.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/configs/http.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/configs/memcache.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/configs/redis.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/internal/dao/dao.bts.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/internal/dao/dao.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/internal/dao/dao_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/internal/dao/db.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/internal/dao/mc.cache.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/internal/dao/mc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/internal/dao/redis.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/internal/dao/wire.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/internal/dao/wire_gen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/internal/di/app.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/internal/di/wire.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/internal/di/wire_gen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/internal/model/model.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/internal/server/grpc/check.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/internal/server/grpc/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/internal/server/http/check.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/internal/server/http/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/internal/server/http/util/DataSecurity.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/internal/service/curriculumService.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/internal/service/service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/test/0_db.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/test/1_data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/test/application.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/test/db.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/test/docker-compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/test/grpc.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/test/http.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/test/memcache.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/curriculum/test/redis.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worknet/profession/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pholcus/pholcus_pkg/history/history__y__中关村手机__0" beforeDir="false" afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/history/history__y__中关村手机__0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pholcus/pholcus_pkg/logs/pholcus.log" beforeDir="false" afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/logs/pholcus.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/.idea/grpc-test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/.idea/grpc-test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/OWNERS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/api/api.bm.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/api/api.bm.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/api/api.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/api/api.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/api/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/cmd/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/configs/application.toml" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/configs/application.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/configs/db.toml" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/configs/db.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/configs/grpc.toml" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/configs/grpc.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/configs/http.toml" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/configs/http.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/configs/memcache.toml" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/configs/memcache.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/configs/redis.toml" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/configs/redis.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/internal/dao/dao.bts.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/internal/dao/dao.bts.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/internal/dao/dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/internal/dao/dao_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/internal/dao/dao_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/internal/dao/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/internal/dao/mc.cache.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/internal/dao/mc.cache.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/internal/dao/mc.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/internal/dao/mc.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/internal/dao/redis.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/internal/dao/redis.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/internal/dao/wire.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/internal/dao/wire.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/internal/dao/wire_gen.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/internal/dao/wire_gen.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/internal/di/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/internal/di/app.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/internal/di/wire.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/internal/di/wire.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/internal/di/wire_gen.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/internal/di/wire_gen.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/internal/model/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/internal/model/model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/internal/server/grpc/check.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/internal/server/grpc/check.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/internal/server/grpc/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/internal/server/grpc/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/internal/server/http/check.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/internal/server/http/check.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/internal/server/http/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/internal/server/http/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/internal/server/http/util/DataSecurity.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/internal/server/http/util/DataSecurity.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/internal/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/internal/service/service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/test/0_db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/test/0_db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/test/1_data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/test/1_data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/test/application.toml" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/test/application.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/test/db.toml" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/test/db.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/test/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/test/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/test/grpc.toml" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/test/grpc.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/test/http.toml" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/test/http.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/test/memcache.toml" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/test/memcache.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-test/test/redis.toml" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dome/test/redis.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worknet/company/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/worknet/company/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worknet/company/configs/grpc.toml" beforeDir="false" afterPath="$PROJECT_DIR$/worknet/company/configs/grpc.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worknet/company/configs/http.toml" beforeDir="false" afterPath="$PROJECT_DIR$/worknet/company/configs/http.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worknet/course/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/worknet/course/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worknet/course/configs/grpc.toml" beforeDir="false" afterPath="$PROJECT_DIR$/worknet/course/configs/grpc.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worknet/course/configs/http.toml" beforeDir="false" afterPath="$PROJECT_DIR$/worknet/course/configs/http.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worknet/course/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/worknet/course/internal/dao/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worknet/profession/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/worknet/profession/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worknet/profession/configs/grpc.toml" beforeDir="false" afterPath="$PROJECT_DIR$/worknet/profession/configs/grpc.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worknet/profession/configs/http.toml" beforeDir="false" afterPath="$PROJECT_DIR$/worknet/profession/configs/http.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worknet/profession/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/worknet/profession/internal/dao/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worknet/user/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/worknet/user/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worknet/user/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/worknet/user/api/api.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worknet/user/configs/grpc.toml" beforeDir="false" afterPath="$PROJECT_DIR$/worknet/user/configs/grpc.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worknet/user/configs/http.toml" beforeDir="false" afterPath="$PROJECT_DIR$/worknet/user/configs/http.toml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +162,9 @@
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\tool" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\bdms" />
       <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\bdms\discovery" />
@@ -129,7 +244,8 @@
     <MESSAGE value="2020-3-27 更新数据库文件" />
     <MESSAGE value="2020-3-28 一些文件更新" />
     <MESSAGE value="2020-3-28 新增通知置顶功能，并修复排序bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020-3-28 新增通知置顶功能，并修复排序bug" />
+    <MESSAGE value="2020-4-11 pholcus 完善慕课网爬虫规则和配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020-4-11 pholcus 完善慕课网爬虫规则和配置" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

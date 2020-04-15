@@ -38,7 +38,6 @@ const (
 	//课程视频表
 	_courseVideoTable = "sys_course_video"
 
-	//SQL语句
 	//查询是否激活课程数量
 	_queryActivityCourseNumber = "select count(*) AS number from %s where activity = ?"
 

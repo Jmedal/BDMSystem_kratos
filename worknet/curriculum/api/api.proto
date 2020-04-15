@@ -1,0 +1,72 @@
+// 定义项目 API 的 proto 文件 可以同时描述 gRPC 和 HTTP API
+// protobuf 文件参考:
+//  - https://developers.google.com/protocol-buffers/
+syntax = "proto3";
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "google/protobuf/empty.proto";
+
+package service.v1;
+
+option go_package = "api";
+option (gogoproto.goproto_getters_all) = false;
+
+
+message WorknetCurriculumGraphResp {
+
+    //学科名
+    repeated Curriculum nodes = 1 [(gogoproto.jsontag) = "nodes"];
+
+    //关系
+    repeated Link links = 2 [(gogoproto.jsontag) = "links"];
+
+    message Curriculum {
+        int64 id = 1 [(gogoproto.jsontag) = "id"];
+
+        string name = 2 [(gogoproto.jsontag) = "name"];
+    }
+
+    message Link {
+        int64 id = 1 [(gogoproto.jsontag) = "id"];
+
+        int64 source = 2 [(gogoproto.jsontag) = "source"];
+
+        int64 target = 3 [(gogoproto.jsontag) = "target"];
+    }
+}
+
+message WorknetCurriculumCourseResp {
+    //学科名
+    repeated string curriculumName = 1 [(gogoproto.jsontag) = "curriculumName"];
+
+    //课程数量
+    repeated string courseNumber = 2 [(gogoproto.jsontag) = "courseNumber"];
+}
+
+
+service WorknetCurriculum {
+    rpc Ping (.google.protobuf.Empty) returns (.google.protobuf.Empty);
+
+    // `method:"POST"`
+    rpc WorknetCurriculumGraph (.google.protobuf.Empty) returns (WorknetCurriculumGraphResp);
+
+    // `method:"POST"`
+    rpc WorknetCurriculumCourse (.google.protobuf.Empty) returns (WorknetCurriculumCourseResp);
+}
+
+
+message VerifyTokenReq {
+    // 授予的 token
+    string accessToken = 1 [(gogoproto.jsontag) = 'access_token'];
+}
+message VerifyTokenResp {
+    int64 userId = 1 [(gogoproto.jsontag) = 'userId'];
+
+    string randomKey = 2 [(gogoproto.jsontag) = 'randomKey'];
+}
+service Token {
+    // `method:"POST" internal:"true"`
+    rpc Verify (VerifyTokenReq) returns (VerifyTokenResp);
+}
+
+

@@ -29,10 +29,10 @@ const (
 	_queryProfessionSalary = "select name, salary from %s"
 
 	//查询职业大类拥有职业数量
-	_queryProfessionTypeNumber = "select type_name, count(*) as number from %s inner join %s on sys_profession_type.id = sys_profession.type_id  group by sys_profession_type.id"
+	_queryProfessionTypeNumber = "select type_name, count(*) as number from %s inner join %s on sys_profession_type.id = sys_profession.type_id group by sys_profession_type.id"
 
 	//查询职业大类平均薪水情况
-	_queryProfessionTypeSalary = "select type_name, avg(salary) from %s inner join %s on sys_profession_type.id = sys_profession.type_id  group by sys_profession_type.id"
+	_queryProfessionTypeSalary = "select type_name, avg(salary) from %s inner join %s on sys_profession_type.id = sys_profession.type_id group by sys_profession_type.id"
 )
 
 func NewDB() (db *sql.DB, cf func(), err error) {

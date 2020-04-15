@@ -1,7 +1,9 @@
 # BDMSystem_kratos
-基于kratos微服务框架数据分析管理系统
 
-1、安装go
+
+###基于kratos微服务框架数据分析管理系统
+
+#### 1、安装go
 下载go语言安装包；
 环境变量配置：
 GOPATH
@@ -9,11 +11,11 @@ D:\Dev-C\go-workspace
 GOROOT
 D:\Dev-C\go\
 
-2、安装protocbuf
+#### 2、安装protocbuf
 下载protoc-3.11.2-win64.zip解压；
 将文件放入D:\Dev-C\protobuf-3.11.2即可；
 
-3、安装kratos
+#### 3、安装kratos
 下载源码；
 进入文件夹D:\Dev-C\kratos\kratos\tool\kratos；
 在cmd中执行：go build 命令；
@@ -21,35 +23,36 @@ D:\Dev-C\go\
 放入文件夹D:\Dev-C\go-workspace\bin
 完成
 
-4、new demo
+#### 4、new demo
 看教程即可
 一般在D:\Dev-C\go-workspace\src中创建项目等等
 
-环境变量配置
+###环境变量配置
 Path
 D:\Dev-C\go\bin
 D:\Dev-C\go-workspace\bin
 D:\Dev-C\protobuf-3.11.2\bin
 
+###介绍
 api.bm.go 为http的对外接口, BM server即blademaster为热度http框架gin的裁剪.去除了gin中不需要的部分逻辑
 api.bm.go 、apb.pb.go 可以通过kartos tool生成
 (kratos tool可以基于proto生成http&grpc代码，生成缓存回源代码，生成memcache执行代码，生成swagger文档等工具集) bm、 pb 分别为http和grpc的接口。
 
 
-Discovery注册中心
+###Discovery注册中心
+####步骤
+#####1、安装discovery，先git clone下来
+#####2、进入文件夹discovery/cmd/discovery
+#####3、用下面命令进行build，然后生成exe文件
+#####4、把exe文件放入go_workspace/bin中
+#####5、在有discovery-example.toml文件的目录下
+#####6、执行运行命令
 
-安装discovery，先git clone下来
-进入文件夹discovery/cmd/discovery
-用下面命令进行build，然后生成exe文件
-把exe文件放入go_workspace/bin中
-在有discovery-example.toml文件的目录下
-执行运行命令
-
-build
-cd $GOPATH/src
-git clone https://github.com/bilibili/discovery.git
-cd discovery/cmd/discovery
-go build
+####build
+#####cd $GOPATH/src
+#####git clone https://github.com/bilibili/discovery.git
+#####cd discovery/cmd/discovery
+#####go build
 
 运行discovery run
 discovery -conf discovery-example.toml -alsologtostderr
@@ -63,7 +66,7 @@ set DISCOVERY_NODES=127.0.0.1:7171 //设置节点地址命令(环境变量也可
 
 
 
-phoclus 配置
+###phoclus 配置
 
 因为phoclus编译时，依赖gcc编译器
 
@@ -82,3 +85,15 @@ phoclus 配置
 
 可执行文件
 
+
+###服务器端口可用分配记录
+####discovery
+##### http:80
+####token
+##### grpc:5001
+####bdms
+##### http:5001~5100
+##### grpc:5501~5600
+####worknet
+##### http:5101~5200
+##### grpc:5601~5700

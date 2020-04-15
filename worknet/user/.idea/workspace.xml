@@ -1,7 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aac07d9a-4a37-4807-b0d8-1d2a947d8074" name="Default Changelist" comment="" />
+    <list default="true" id="aac07d9a-4a37-4807-b0d8-1d2a947d8074" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../course/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/.idea/curriculum.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/OWNERS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/api/api.bm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/api/api.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/api/api.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/api/client.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/cmd/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/configs/application.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/configs/db.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/configs/grpc.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/configs/http.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/configs/memcache.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/configs/redis.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/dao/dao.bts.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/dao/dao.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/dao/dao_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/dao/db.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/dao/mc.cache.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/dao/mc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/dao/redis.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/dao/wire.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/dao/wire_gen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/di/app.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/di/wire.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/di/wire_gen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/model/model.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/server/grpc/check.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/server/grpc/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/server/http/check.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/server/http/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/server/http/util/DataSecurity.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/service/service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/test/0_db.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/test/1_data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/test/application.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/test/db.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/test/docker-compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/test/grpc.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/test/http.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/test/memcache.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/test/redis.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../course/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/../course/internal/dao/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/api/api.proto" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,12 +72,17 @@
     </option>
   </component>
   <component name="GOROOT" path="$PROJECT_DIR$/../../../../../go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
   </component>
   <component name="ProjectId" id="1Y7N1E20knk5vjtGwZ50LyGUoS7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
@@ -66,6 +127,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

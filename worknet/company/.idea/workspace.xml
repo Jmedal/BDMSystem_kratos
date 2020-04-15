@@ -2,32 +2,66 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af7d4228-d234-43b0-bfdb-ca05fb184fb0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../bdms/message/internal/service/MessageService.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/account/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/account/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/account/api/api.bm.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/account/api/api.bm.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/account/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/account/api/api.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/account/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/account/api/api.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/account/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/account/cmd/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/account/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/account/internal/dao/dao.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/account/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/account/internal/dao/db.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/account/internal/service/accountService.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/account/internal/service/accountService.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/menu/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/menu/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/message/api/api.bm.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/message/api/api.bm.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/message/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/message/api/api.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/message/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/message/api/api.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/message/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/message/api/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/message/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/message/cmd/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/message/configs/grpc.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/message/configs/grpc.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/message/configs/http.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/message/configs/http.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/message/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/message/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/message/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/message/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/message/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/message/internal/dao/dao.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/message/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/message/internal/dao/db.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/message/internal/server/grpc/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/message/internal/server/grpc/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/message/internal/server/http/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/message/internal/server/http/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/message/internal/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/message/internal/service/service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../course/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/.idea/curriculum.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/OWNERS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/api/api.bm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/api/api.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/api/api.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/api/client.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/cmd/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/configs/application.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/configs/db.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/configs/grpc.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/configs/http.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/configs/memcache.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/configs/redis.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/dao/dao.bts.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/dao/dao.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/dao/dao_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/dao/db.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/dao/mc.cache.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/dao/mc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/dao/redis.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/dao/wire.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/dao/wire_gen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/di/app.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/di/wire.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/di/wire_gen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/model/model.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/server/grpc/check.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/server/grpc/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/server/http/check.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/server/http/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/server/http/util/DataSecurity.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/service/curriculumService.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/internal/service/service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/test/0_db.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/test/1_data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/test/application.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/test/db.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/test/docker-compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/test/grpc.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/test/http.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/test/memcache.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum/test/redis.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../profession/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../course/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/../course/internal/dao/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../profession/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../profession/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../profession/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/../profession/internal/dao/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../user/api/api.proto" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
