@@ -151,7 +151,7 @@ var Imooc = &Spider{
 					Score[vScore0] = vScore1
 					Score["评价数"] = vScore2
 					if strings.Contains(vScore2, "人评价") {
-						vScore2 = strings.Split(vScore5, "简介：")[0]
+						vScore2 = strings.Split(vScore2, "人评价")[0]
 					}
 					Score[vScore4] = vScore3
 					Score[vScore6] = vScore5
