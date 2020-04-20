@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67f36049-4dd2-40c7-bacb-767918e1a8e9" name="Default Changelist" comment="2020-4-15">
+    <list default="true" id="67f36049-4dd2-40c7-bacb-767918e1a8e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/bdms.sql" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/bdms.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pholcus/pholcus_pkg/logs/pholcus.log" beforeDir="false" afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/logs/pholcus.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +133,8 @@
     <MESSAGE value="2020-4-15 worknet分析服务完成，并进行服务器上线配置" />
     <MESSAGE value="2020-4-15 配置discovery" />
     <MESSAGE value="2020-4-15 修改规则" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020-4-15 修改规则" />
+    <MESSAGE value="2020-4-15 更新数据库文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020-4-15 更新数据库文件" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
