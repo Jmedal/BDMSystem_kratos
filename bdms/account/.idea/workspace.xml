@@ -2,35 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42dd8a8d-0d2c-4f1a-ba6e-b7577f882d6c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/api.swagger.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../menu/api/api.swagger.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../message/api/api.swagger.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../role/api/api.swagger.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../token/api/api.swagger.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../tool/dome/api/api.swagger.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../worknet/company/api/api.swagger.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../worknet/course/api/api.swagger.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../worknet/curriculum/api/api.swagger.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../worknet/profession/api/api.swagger.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../worknet/user/api/api.swagger.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/client.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../menu/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../menu/api/api.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../menu/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/../menu/api/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../message/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/../message/api/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../role/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/api/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../token/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/../token/api/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tool/dome/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../tool/dome/api/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../worknet/company/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../worknet/company/api/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../worknet/course/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../worknet/course/api/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../worknet/curriculum/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../worknet/curriculum/api/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../worknet/profession/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../worknet/profession/api/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../worknet/user/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../worknet/user/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../worknet/user/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../worknet/user/api/client.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
