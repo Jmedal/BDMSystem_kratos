@@ -1,0 +1,975 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "api.proto",
+        "version": "1"
+    },
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "consumes": [
+        "application/json",
+        "multipart/form-data"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/service.v1.Account/AddUser": {
+            "post": {
+                "summary": "/service.v1.Account/AddUser",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.AddUserResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.AddUserReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Account"
+                ]
+            }
+        },
+        "/service.v1.Account/CheckAccount": {
+            "post": {
+                "summary": "/service.v1.Account/CheckAccount",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.CheckAccountResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.CheckAccountReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Account"
+                ]
+            }
+        },
+        "/service.v1.Account/DeleteUser": {
+            "post": {
+                "summary": "/service.v1.Account/DeleteUser",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.DeleteUserResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.DeleteUserReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Account"
+                ]
+            }
+        },
+        "/service.v1.Account/GetUserName": {
+            "post": {
+                "summary": "/service.v1.Account/GetUserName",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.GetUserNameResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.GetUserNameReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Account"
+                ]
+            }
+        },
+        "/service.v1.Account/GetUserNameOptions": {
+            "post": {
+                "summary": "/service.v1.Account/GetUserNameOptions",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.GetUserNameOptionsResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.google.protobuf.Empty"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Account"
+                ]
+            }
+        },
+        "/service.v1.Account/GetUserPage": {
+            "post": {
+                "summary": "/service.v1.Account/GetUserPage",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.GetUserPageResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.GetUserPageReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Account"
+                ]
+            }
+        },
+        "/service.v1.Account/GetUserRole": {
+            "post": {
+                "summary": "/service.v1.Account/GetUserRole",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.GetUserRoleResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.GetUserRoleReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Account"
+                ]
+            }
+        },
+        "/service.v1.Account/Login": {
+            "post": {
+                "summary": "用户登录",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.LoginResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.LoginReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Account"
+                ]
+            }
+        },
+        "/service.v1.Account/Ping": {
+            "post": {
+                "summary": "/service.v1.Account/Ping",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.google.protobuf.Empty"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.google.protobuf.Empty"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Account"
+                ]
+            }
+        },
+        "/service.v1.Account/SetUserRole": {
+            "post": {
+                "summary": "/service.v1.Account/SetUserRole",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.SetUserRoleResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.SetUserRoleReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Account"
+                ]
+            }
+        },
+        "/service.v1.Account/SetUserStatus": {
+            "post": {
+                "summary": "/service.v1.Account/SetUserStatus",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.SetUserStatusResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.SetUserStatusReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Account"
+                ]
+            }
+        },
+        "/service.v1.Account/UpdateUser": {
+            "post": {
+                "summary": "/service.v1.Account/UpdateUser",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.UpdateUserResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.UpdateUserReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Account"
+                ]
+            }
+        },
+        "/service.v1.Token/Ping": {
+            "get": {
+                "summary": "/service.v1.Token/Ping",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.google.protobuf.Empty"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "service.v1.Token"
+                ]
+            }
+        },
+        "/service.v1.Token/Request": {
+            "post": {
+                "summary": "Request for a token for upload.",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.NewTokenResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.NewTokenReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Token"
+                ]
+            }
+        },
+        "/service.v1.Token/Verify": {
+            "post": {
+                "summary": "/service.v1.Token/Verify",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.VerifyTokenResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.VerifyTokenReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Token"
+                ]
+            }
+        }
+    },
+    "definitions": {
+        ".google.protobuf.Empty": {
+            "type": "object",
+            "properties": {},
+            "description": "A generic empty message that you can re-use to avoid defining duplicated\n empty messages in your APIs. A typical example is to use it as the request\n or the response type of an API method. For instance:\n\n     service Foo {\n       rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty);\n     }\n\n The JSON representation for `Empty` is empty JSON object `{}`."
+        },
+        ".service.v1.AddUserReq": {
+            "type": "object",
+            "properties": {
+                "user": {
+                    "$ref": "#/definitions/.service.v1.User"
+                }
+            },
+            "required": [
+                "user"
+            ]
+        },
+        ".service.v1.AddUserResp": {
+            "type": "object",
+            "properties": {
+                "account": {
+                    "type": "string"
+                },
+                "result": {
+                    "type": "string"
+                }
+            }
+        },
+        ".service.v1.CheckAccountReq": {
+            "type": "object",
+            "properties": {
+                "account": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "account"
+            ]
+        },
+        ".service.v1.CheckAccountResp": {
+            "type": "object",
+            "properties": {
+                "result": {
+                    "type": "string"
+                }
+            }
+        },
+        ".service.v1.DeleteUserReq": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "id"
+            ]
+        },
+        ".service.v1.DeleteUserResp": {
+            "type": "object",
+            "properties": {
+                "result": {
+                    "type": "string"
+                }
+            }
+        },
+        ".service.v1.GetUserNameOptionsResp": {
+            "type": "object",
+            "properties": {
+                "userOptions": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/.service.v1.GetUserNameOptionsResp.UserOption"
+                    }
+                }
+            }
+        },
+        ".service.v1.GetUserNameOptionsResp.UserOption": {
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "integer"
+                },
+                "label": {
+                    "type": "string"
+                }
+            }
+        },
+        ".service.v1.GetUserNameReq": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "id"
+            ]
+        },
+        ".service.v1.GetUserNameResp": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        ".service.v1.GetUserPageReq": {
+            "type": "object",
+            "properties": {
+                "query": {
+                    "type": "string"
+                },
+                "pageNum": {
+                    "type": "integer"
+                },
+                "pageSize": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "pageNum",
+                "pageSize"
+            ]
+        },
+        ".service.v1.GetUserPageResp": {
+            "type": "object",
+            "properties": {
+                "pageNum": {
+                    "type": "integer"
+                },
+                "pageSize": {
+                    "type": "integer"
+                },
+                "total": {
+                    "type": "integer"
+                },
+                "page": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/.service.v1.UserInfo"
+                    }
+                }
+            }
+        },
+        ".service.v1.GetUserRoleReq": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "id"
+            ]
+        },
+        ".service.v1.GetUserRoleResp": {
+            "type": "object",
+            "properties": {
+                "roleId": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".service.v1.LoginReq": {
+            "type": "object",
+            "properties": {
+                "account": {
+                    "type": "string",
+                    "description": "帐号"
+                },
+                "password": {
+                    "type": "string",
+                    "description": "密码"
+                },
+                "save": {
+                    "type": "string",
+                    "description": "保存密码 保存：1，不保存：2"
+                }
+            },
+            "required": [
+                "account",
+                "password",
+                "save"
+            ]
+        },
+        ".service.v1.LoginResp": {
+            "type": "object",
+            "properties": {
+                "access_token": {
+                    "type": "string",
+                    "description": "令牌"
+                },
+                "randomKey": {
+                    "type": "string",
+                    "description": "密钥"
+                },
+                "userInfo": {
+                    "$ref": "#/definitions/.service.v1.UserInfo",
+                    "description": "用户信息"
+                },
+                "result": {
+                    "type": "string",
+                    "description": "结果"
+                }
+            }
+        },
+        ".service.v1.NewTokenReq": {
+            "type": "object",
+            "properties": {
+                "userId": {
+                    "type": "integer"
+                },
+                "operator": {
+                    "type": "string",
+                    "description": "操作人"
+                },
+                "expire": {
+                    "type": "integer",
+                    "description": "过期时间"
+                }
+            },
+            "required": [
+                "userId",
+                "operator",
+                "expire"
+            ]
+        },
+        ".service.v1.NewTokenResp": {
+            "type": "object",
+            "properties": {
+                "access_token": {
+                    "type": "string",
+                    "description": "授予的 token"
+                },
+                "randomKey": {
+                    "type": "string",
+                    "description": "授予token唯一对应的randomKey"
+                }
+            }
+        },
+        ".service.v1.SetUserRoleReq": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "roleId": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "id",
+                "roleId"
+            ]
+        },
+        ".service.v1.SetUserRoleResp": {
+            "type": "object",
+            "properties": {
+                "result": {
+                    "type": "string"
+                }
+            }
+        },
+        ".service.v1.SetUserStatusReq": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "status": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "id",
+                "status"
+            ]
+        },
+        ".service.v1.SetUserStatusResp": {
+            "type": "object",
+            "properties": {
+                "result": {
+                    "type": "string"
+                }
+            }
+        },
+        ".service.v1.UpdateUserReq": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "user": {
+                    "$ref": "#/definitions/.service.v1.User"
+                }
+            },
+            "required": [
+                "id",
+                "user"
+            ]
+        },
+        ".service.v1.UpdateUserResp": {
+            "type": "object",
+            "properties": {
+                "result": {
+                    "type": "string"
+                }
+            }
+        },
+        ".service.v1.User": {
+            "type": "object",
+            "properties": {
+                "avatar": {
+                    "type": "string"
+                },
+                "account": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "birthday": {
+                    "type": "integer"
+                },
+                "sex": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "avatar",
+                "account",
+                "name",
+                "birthday",
+                "sex",
+                "email",
+                "phone"
+            ]
+        },
+        ".service.v1.UserInfo": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "avatar": {
+                    "type": "string"
+                },
+                "account": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "roleId": {
+                    "type": "integer"
+                },
+                "birthday": {
+                    "type": "integer"
+                },
+                "sex": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "integer"
+                },
+                "createTime": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".service.v1.VerifyTokenReq": {
+            "type": "object",
+            "properties": {
+                "access_token": {
+                    "type": "string",
+                    "description": "授予的 token"
+                }
+            }
+        },
+        ".service.v1.VerifyTokenResp": {
+            "type": "object",
+            "properties": {
+                "userId": {
+                    "type": "integer"
+                },
+                "randomKey": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

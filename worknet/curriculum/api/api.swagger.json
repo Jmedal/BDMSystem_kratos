@@ -1,0 +1,248 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "api.proto",
+        "version": "1"
+    },
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "consumes": [
+        "application/json",
+        "multipart/form-data"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/service.v1.Token/Verify": {
+            "post": {
+                "summary": "/service.v1.Token/Verify",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.VerifyTokenResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.VerifyTokenReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Token"
+                ]
+            }
+        },
+        "/service.v1.WorknetCurriculum/Ping": {
+            "get": {
+                "summary": "/service.v1.WorknetCurriculum/Ping",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.google.protobuf.Empty"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "service.v1.WorknetCurriculum"
+                ]
+            }
+        },
+        "/service.v1.WorknetCurriculum/WorknetCurriculumCourse": {
+            "post": {
+                "summary": "/service.v1.WorknetCurriculum/WorknetCurriculumCourse",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetCurriculumCourseResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.google.protobuf.Empty"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetCurriculum"
+                ]
+            }
+        },
+        "/service.v1.WorknetCurriculum/WorknetCurriculumGraph": {
+            "post": {
+                "summary": "/service.v1.WorknetCurriculum/WorknetCurriculumGraph",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetCurriculumGraphResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.google.protobuf.Empty"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetCurriculum"
+                ]
+            }
+        }
+    },
+    "definitions": {
+        ".google.protobuf.Empty": {
+            "type": "object",
+            "properties": {},
+            "description": "A generic empty message that you can re-use to avoid defining duplicated\n empty messages in your APIs. A typical example is to use it as the request\n or the response type of an API method. For instance:\n\n     service Foo {\n       rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty);\n     }\n\n The JSON representation for `Empty` is empty JSON object `{}`."
+        },
+        ".service.v1.VerifyTokenReq": {
+            "type": "object",
+            "properties": {
+                "access_token": {
+                    "type": "string",
+                    "description": "授予的 token"
+                }
+            }
+        },
+        ".service.v1.VerifyTokenResp": {
+            "type": "object",
+            "properties": {
+                "userId": {
+                    "type": "integer"
+                },
+                "randomKey": {
+                    "type": "string"
+                }
+            }
+        },
+        ".service.v1.WorknetCurriculumCourseResp": {
+            "type": "object",
+            "properties": {
+                "curriculumName": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "学科名"
+                },
+                "courseNumber": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "课程数量"
+                }
+            }
+        },
+        ".service.v1.WorknetCurriculumGraphResp": {
+            "type": "object",
+            "properties": {
+                "nodes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/.service.v1.WorknetCurriculumGraphResp.Curriculum"
+                    },
+                    "description": "学科名"
+                },
+                "links": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/.service.v1.WorknetCurriculumGraphResp.Link"
+                    },
+                    "description": "关系"
+                }
+            }
+        },
+        ".service.v1.WorknetCurriculumGraphResp.Curriculum": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        ".service.v1.WorknetCurriculumGraphResp.Link": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "source": {
+                    "type": "integer"
+                },
+                "target": {
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}

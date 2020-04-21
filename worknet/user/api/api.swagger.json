@@ -1,0 +1,335 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "api.proto",
+        "version": "1"
+    },
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "consumes": [
+        "application/json",
+        "multipart/form-data"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/service.v1.Token/Verify": {
+            "post": {
+                "summary": "/service.v1.Token/Verify",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.VerifyTokenResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.VerifyTokenReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Token"
+                ]
+            }
+        },
+        "/service.v1.WorknetUser/Ping": {
+            "get": {
+                "summary": "/service.v1.WorknetUser/Ping",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.google.protobuf.Empty"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "service.v1.WorknetUser"
+                ]
+            }
+        },
+        "/service.v1.WorknetUser/WorknetUserActivity": {
+            "post": {
+                "summary": "/service.v1.WorknetUser/WorknetUserActivity",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetUserActivityResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.google.protobuf.Empty"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetUser"
+                ]
+            }
+        },
+        "/service.v1.WorknetUser/WorknetUserNumber": {
+            "post": {
+                "summary": "/service.v1.WorknetUser/WorknetUserNumber",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetUserNumberResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.google.protobuf.Empty"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetUser"
+                ]
+            }
+        },
+        "/service.v1.WorknetUser/WorknetUserNumberChange": {
+            "post": {
+                "summary": "/service.v1.WorknetUser/WorknetUserNumberChange",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetUserChangeResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.google.protobuf.Empty"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetUser"
+                ]
+            }
+        },
+        "/service.v1.WorknetUser/WorknetUserSex": {
+            "post": {
+                "summary": "/service.v1.WorknetUser/WorknetUserSex",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetUserSexResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.google.protobuf.Empty"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetUser"
+                ]
+            }
+        }
+    },
+    "definitions": {
+        ".google.protobuf.Empty": {
+            "type": "object",
+            "properties": {},
+            "description": "A generic empty message that you can re-use to avoid defining duplicated\n empty messages in your APIs. A typical example is to use it as the request\n or the response type of an API method. For instance:\n\n     service Foo {\n       rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty);\n     }\n\n The JSON representation for `Empty` is empty JSON object `{}`."
+        },
+        ".service.v1.VerifyTokenReq": {
+            "type": "object",
+            "properties": {
+                "access_token": {
+                    "type": "string",
+                    "description": "授予的 token"
+                }
+            }
+        },
+        ".service.v1.VerifyTokenResp": {
+            "type": "object",
+            "properties": {
+                "userId": {
+                    "type": "integer"
+                },
+                "randomKey": {
+                    "type": "string"
+                }
+            }
+        },
+        ".service.v1.WorknetUserActivityResp": {
+            "type": "object",
+            "properties": {
+                "activity": {
+                    "type": "integer",
+                    "description": "激活"
+                },
+                "inactivity": {
+                    "type": "integer",
+                    "description": "未激活"
+                }
+            }
+        },
+        ".service.v1.WorknetUserChangeResp": {
+            "type": "object",
+            "properties": {
+                "time": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "时间"
+                },
+                "commonUser": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "description": "普通用户"
+                },
+                "companyUser": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "description": "公司用户"
+                },
+                "teacherUser": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "description": "老师用户"
+                }
+            }
+        },
+        ".service.v1.WorknetUserNumberResp": {
+            "type": "object",
+            "properties": {
+                "commonUser": {
+                    "type": "integer",
+                    "description": "普通用户"
+                },
+                "companyUser": {
+                    "type": "integer",
+                    "description": "公司用户"
+                },
+                "teacherUser": {
+                    "type": "integer",
+                    "description": "老师用户"
+                }
+            }
+        },
+        ".service.v1.WorknetUserSexResp": {
+            "type": "object",
+            "properties": {
+                "man": {
+                    "type": "integer",
+                    "description": "激活"
+                },
+                "human": {
+                    "type": "integer",
+                    "description": "未激活"
+                }
+            }
+        }
+    }
+}

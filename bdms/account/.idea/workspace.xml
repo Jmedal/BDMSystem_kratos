@@ -2,11 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42dd8a8d-0d2c-4f1a-ba6e-b7577f882d6c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/api/api.swagger.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../menu/api/api.swagger.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../message/api/api.swagger.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../role/api/api.swagger.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../token/api/api.swagger.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tool/dome/api/api.swagger.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../worknet/company/api/api.swagger.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../worknet/course/api/api.swagger.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../worknet/curriculum/api/api.swagger.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../worknet/profession/api/api.swagger.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../worknet/user/api/api.swagger.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../token/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../token/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../token/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../token/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../token/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../token/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../menu/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../menu/api/api.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../menu/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/../menu/api/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/../message/api/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../role/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/../role/api/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../token/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/../token/api/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tool/dome/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../tool/dome/api/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../worknet/company/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../worknet/company/api/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../worknet/course/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../worknet/course/api/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../worknet/curriculum/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../worknet/curriculum/api/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../worknet/profession/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../worknet/profession/api/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../worknet/user/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../worknet/user/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../worknet/user/api/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../worknet/user/api/client.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +53,11 @@
     <option name="indexEntireGoPath" value="false" />
   </component>
   <component name="ProjectId" id="1Y1e0nj0yp6htD6DPN18ZgEpzLx" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="GO_FMT" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -96,6 +123,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="2020-3-26 修改password为非必要传输数据" />
     <option name="LAST_COMMIT_MESSAGE" value="2020-3-26 修改password为非必要传输数据" />
   </component>

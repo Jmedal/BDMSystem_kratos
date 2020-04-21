@@ -1,0 +1,674 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "api.proto",
+        "version": "1"
+    },
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "consumes": [
+        "application/json",
+        "multipart/form-data"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/service.v1.Token/Verify": {
+            "post": {
+                "summary": "/service.v1.Token/Verify",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.VerifyTokenResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.VerifyTokenReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Token"
+                ]
+            }
+        },
+        "/service.v1.WorknetCompany/Ping": {
+            "get": {
+                "summary": "/service.v1.WorknetCompany/Ping",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.google.protobuf.Empty"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "service.v1.WorknetCompany"
+                ]
+            }
+        },
+        "/service.v1.WorknetCompany/WorknetCompanyContestChange": {
+            "post": {
+                "summary": "/service.v1.WorknetCompany/WorknetCompanyContestChange",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetContestChangeResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.WorknetContestChangeReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetCompany"
+                ]
+            }
+        },
+        "/service.v1.WorknetCompany/WorknetCompanyList": {
+            "post": {
+                "summary": "/service.v1.WorknetCompany/WorknetCompanyList",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetCompanyListResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.google.protobuf.Empty"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetCompany"
+                ]
+            }
+        },
+        "/service.v1.WorknetCompany/WorknetCompanyProfessionChange": {
+            "post": {
+                "summary": "/service.v1.WorknetCompany/WorknetCompanyProfessionChange",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetProfessionChangeResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.WorknetProfessionChangeReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetCompany"
+                ]
+            }
+        },
+        "/service.v1.WorknetCompany/WorknetContestApplyNumberRank": {
+            "post": {
+                "summary": "/service.v1.WorknetCompany/WorknetContestApplyNumberRank",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetCompanyRankResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.google.protobuf.Empty"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetCompany"
+                ]
+            }
+        },
+        "/service.v1.WorknetCompany/WorknetContestNumberRank": {
+            "post": {
+                "summary": "/service.v1.WorknetCompany/WorknetContestNumberRank",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetCompanyRankResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.google.protobuf.Empty"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetCompany"
+                ]
+            }
+        },
+        "/service.v1.WorknetCompany/WorknetContestingNumberRank": {
+            "post": {
+                "summary": "/service.v1.WorknetCompany/WorknetContestingNumberRank",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetCompanyRankResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.google.protobuf.Empty"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetCompany"
+                ]
+            }
+        },
+        "/service.v1.WorknetCompany/WorknetCvNumberRank": {
+            "post": {
+                "summary": "/service.v1.WorknetCompany/WorknetCvNumberRank",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetCompanyRankResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.google.protobuf.Empty"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetCompany"
+                ]
+            }
+        },
+        "/service.v1.WorknetCompany/WorknetCvStatusNumber": {
+            "post": {
+                "summary": "/service.v1.WorknetCompany/WorknetCvStatusNumber",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetCvStatusNumberResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.google.protobuf.Empty"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetCompany"
+                ]
+            }
+        },
+        "/service.v1.WorknetCompany/WorknetLocationList": {
+            "post": {
+                "summary": "/service.v1.WorknetCompany/WorknetLocationList",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetLocationListResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.google.protobuf.Empty"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetCompany"
+                ]
+            }
+        },
+        "/service.v1.WorknetCompany/WorknetProfessionNumberRank": {
+            "post": {
+                "summary": "/service.v1.WorknetCompany/WorknetProfessionNumberRank",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetCompanyRankResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.google.protobuf.Empty"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetCompany"
+                ]
+            }
+        }
+    },
+    "definitions": {
+        ".google.protobuf.Empty": {
+            "type": "object",
+            "properties": {},
+            "description": "A generic empty message that you can re-use to avoid defining duplicated\n empty messages in your APIs. A typical example is to use it as the request\n or the response type of an API method. For instance:\n\n     service Foo {\n       rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty);\n     }\n\n The JSON representation for `Empty` is empty JSON object `{}`."
+        },
+        ".service.v1.VerifyTokenReq": {
+            "type": "object",
+            "properties": {
+                "access_token": {
+                    "type": "string",
+                    "description": "授予的 token"
+                }
+            }
+        },
+        ".service.v1.VerifyTokenResp": {
+            "type": "object",
+            "properties": {
+                "userId": {
+                    "type": "integer"
+                },
+                "randomKey": {
+                    "type": "string"
+                }
+            }
+        },
+        ".service.v1.WorknetCompanyListResp": {
+            "type": "object",
+            "properties": {
+                "companyList": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/.service.v1.WorknetCompanyListResp.WorknetCompany"
+                    },
+                    "description": "公司"
+                }
+            }
+        },
+        ".service.v1.WorknetCompanyListResp.WorknetCompany": {
+            "type": "object",
+            "properties": {
+                "companyId": {
+                    "type": "integer"
+                },
+                "companyName": {
+                    "type": "string"
+                }
+            },
+            "description": "公司信息"
+        },
+        ".service.v1.WorknetCompanyRankResp": {
+            "type": "object",
+            "properties": {
+                "companyName": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "公司名"
+                },
+                "number": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "description": "数量"
+                }
+            }
+        },
+        ".service.v1.WorknetContestChangeReq": {
+            "type": "object",
+            "properties": {
+                "companyId": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "description": "公司Id"
+                },
+                "time": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "description": "时间"
+                }
+            },
+            "required": [
+                "companyId",
+                "time"
+            ]
+        },
+        ".service.v1.WorknetContestChangeResp": {
+            "type": "object",
+            "properties": {
+                "time": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "时间"
+                },
+                "contest": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/.service.v1.WorknetContestChangeResp.WorknetContest"
+                    },
+                    "description": "公司招聘新增"
+                }
+            }
+        },
+        ".service.v1.WorknetContestChangeResp.WorknetContest": {
+            "type": "object",
+            "properties": {
+                "companyName": {
+                    "type": "string",
+                    "description": "公司名"
+                },
+                "contestChange": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "description": "新增笔试数量"
+                }
+            }
+        },
+        ".service.v1.WorknetCvStatusNumberResp": {
+            "type": "object",
+            "properties": {
+                "statusNumber": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "description": "公司简历状态数量"
+                }
+            }
+        },
+        ".service.v1.WorknetLocationListResp": {
+            "type": "object",
+            "properties": {
+                "locationList": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/.service.v1.WorknetLocationListResp.LocationInfo"
+                    }
+                }
+            }
+        },
+        ".service.v1.WorknetLocationListResp.LocationInfo": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".service.v1.WorknetProfessionChangeReq": {
+            "type": "object",
+            "properties": {
+                "companyId": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "description": "公司Id"
+                },
+                "time": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "description": "时间"
+                }
+            },
+            "required": [
+                "companyId",
+                "time"
+            ]
+        },
+        ".service.v1.WorknetProfessionChangeResp": {
+            "type": "object",
+            "properties": {
+                "time": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "时间"
+                },
+                "profession": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/.service.v1.WorknetProfessionChangeResp.WorknetProfession"
+                    },
+                    "description": "公司招聘新增"
+                }
+            }
+        },
+        ".service.v1.WorknetProfessionChangeResp.WorknetProfession": {
+            "type": "object",
+            "properties": {
+                "companyName": {
+                    "type": "string",
+                    "description": "公司名"
+                },
+                "professionChange": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "description": "新增招聘数量"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,724 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "api.proto",
+        "version": "1"
+    },
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "consumes": [
+        "application/json",
+        "multipart/form-data"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/service.v1.Token/Verify": {
+            "post": {
+                "summary": "/service.v1.Token/Verify",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.VerifyTokenResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.VerifyTokenReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Token"
+                ]
+            }
+        },
+        "/service.v1.WorknetCourse/Ping": {
+            "get": {
+                "summary": "/service.v1.WorknetCourse/Ping",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.google.protobuf.Empty"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "service.v1.WorknetCourse"
+                ]
+            }
+        },
+        "/service.v1.WorknetCourse/WorknetAverageScoreList": {
+            "post": {
+                "summary": "/service.v1.WorknetCourse/WorknetAverageScoreList",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetAverageScoreListResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.google.protobuf.Empty"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetCourse"
+                ]
+            }
+        },
+        "/service.v1.WorknetCourse/WorknetAverageScoreSection": {
+            "post": {
+                "summary": "/service.v1.WorknetCourse/WorknetAverageScoreSection",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetAverageScoreSectionResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.google.protobuf.Empty"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetCourse"
+                ]
+            }
+        },
+        "/service.v1.WorknetCourse/WorknetCourseActivity": {
+            "post": {
+                "summary": "/service.v1.WorknetCourse/WorknetCourseActivity",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetCourseActivityResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.google.protobuf.Empty"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetCourse"
+                ]
+            }
+        },
+        "/service.v1.WorknetCourse/WorknetCourseClickRank": {
+            "post": {
+                "summary": "/service.v1.WorknetCourse/WorknetCourseClickRank",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetCourseRankResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.WorknetCourseRankReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetCourse"
+                ]
+            }
+        },
+        "/service.v1.WorknetCourse/WorknetCourseList": {
+            "post": {
+                "summary": "/service.v1.WorknetCourse/WorknetCourseList",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetCourseListResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.google.protobuf.Empty"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetCourse"
+                ]
+            }
+        },
+        "/service.v1.WorknetCourse/WorknetCourseNumberChange": {
+            "post": {
+                "summary": "/service.v1.WorknetCourse/WorknetCourseNumberChange",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetCourseChangeResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.WorknetCourseChangeReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetCourse"
+                ]
+            }
+        },
+        "/service.v1.WorknetCourse/WorknetCourseStarsRank": {
+            "post": {
+                "summary": "/service.v1.WorknetCourse/WorknetCourseStarsRank",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetCourseRankResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.WorknetCourseRankReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetCourse"
+                ]
+            }
+        },
+        "/service.v1.WorknetCourse/WorknetCourseVideoRank": {
+            "post": {
+                "summary": "/service.v1.WorknetCourse/WorknetCourseVideoRank",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetCourseRankResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.WorknetCourseRankReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetCourse"
+                ]
+            }
+        },
+        "/service.v1.WorknetCourse/WorknetStudentChange": {
+            "post": {
+                "summary": "/service.v1.WorknetCourse/WorknetStudentChange",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetStudentChangeResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.WorknetStudentChangeReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetCourse"
+                ]
+            }
+        },
+        "/service.v1.WorknetCourse/WorknetStudentFinish": {
+            "post": {
+                "summary": "/service.v1.WorknetCourse/WorknetStudentFinish",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.WorknetStudentFinishResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.WorknetStudentFinishReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.WorknetCourse"
+                ]
+            }
+        }
+    },
+    "definitions": {
+        ".google.protobuf.Empty": {
+            "type": "object",
+            "properties": {},
+            "description": "A generic empty message that you can re-use to avoid defining duplicated\n empty messages in your APIs. A typical example is to use it as the request\n or the response type of an API method. For instance:\n\n     service Foo {\n       rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty);\n     }\n\n The JSON representation for `Empty` is empty JSON object `{}`."
+        },
+        ".service.v1.VerifyTokenReq": {
+            "type": "object",
+            "properties": {
+                "access_token": {
+                    "type": "string",
+                    "description": "授予的 token"
+                }
+            }
+        },
+        ".service.v1.VerifyTokenResp": {
+            "type": "object",
+            "properties": {
+                "userId": {
+                    "type": "integer"
+                },
+                "randomKey": {
+                    "type": "string"
+                }
+            }
+        },
+        ".service.v1.WorknetAverageScoreListResp": {
+            "type": "object",
+            "properties": {
+                "courseName": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "课程名"
+                },
+                "averageScore": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "平均分"
+                }
+            }
+        },
+        ".service.v1.WorknetAverageScoreSectionResp": {
+            "type": "object",
+            "properties": {
+                "courseNumber": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "description": "不同分数区间课程数量"
+                }
+            }
+        },
+        ".service.v1.WorknetCourseActivityResp": {
+            "type": "object",
+            "properties": {
+                "activity": {
+                    "type": "integer",
+                    "description": "激活"
+                },
+                "inactivity": {
+                    "type": "integer",
+                    "description": "未激活"
+                }
+            }
+        },
+        ".service.v1.WorknetCourseChangeReq": {
+            "type": "object",
+            "properties": {
+                "time": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "description": "时间"
+                }
+            },
+            "required": [
+                "time"
+            ]
+        },
+        ".service.v1.WorknetCourseChangeResp": {
+            "type": "object",
+            "properties": {
+                "time": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "时间"
+                },
+                "course": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "description": "课程数量"
+                }
+            }
+        },
+        ".service.v1.WorknetCourseListResp": {
+            "type": "object",
+            "properties": {
+                "courseList": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/.service.v1.WorknetCourseListResp.WorknetCourse"
+                    },
+                    "description": "课程"
+                }
+            }
+        },
+        ".service.v1.WorknetCourseListResp.WorknetCourse": {
+            "type": "object",
+            "properties": {
+                "courseId": {
+                    "type": "integer"
+                },
+                "courseName": {
+                    "type": "string"
+                }
+            },
+            "description": "课程信息"
+        },
+        ".service.v1.WorknetCourseRankReq": {
+            "type": "object",
+            "properties": {
+                "location": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "description": "排行榜位数范围 如 1~15"
+                }
+            },
+            "required": [
+                "location"
+            ]
+        },
+        ".service.v1.WorknetCourseRankResp": {
+            "type": "object",
+            "properties": {
+                "courseName": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "课程名"
+                },
+                "number": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "数量"
+                }
+            }
+        },
+        ".service.v1.WorknetStudentChangeReq": {
+            "type": "object",
+            "properties": {
+                "courseId": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "description": "课程Id"
+                },
+                "time": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "description": "时间"
+                }
+            },
+            "required": [
+                "courseId",
+                "time"
+            ]
+        },
+        ".service.v1.WorknetStudentChangeResp": {
+            "type": "object",
+            "properties": {
+                "time": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "时间"
+                },
+                "student": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/.service.v1.WorknetStudentChangeResp.WorknetCourse"
+                    },
+                    "description": "课程学员新增"
+                }
+            }
+        },
+        ".service.v1.WorknetStudentChangeResp.WorknetCourse": {
+            "type": "object",
+            "properties": {
+                "courseName": {
+                    "type": "string",
+                    "description": "课程名"
+                },
+                "studentChange": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "description": "新增用户数量"
+                }
+            }
+        },
+        ".service.v1.WorknetStudentFinishReq": {
+            "type": "object",
+            "properties": {
+                "courseId": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "description": "课程Id"
+                },
+                "time": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "description": "时间"
+                }
+            },
+            "required": [
+                "courseId",
+                "time"
+            ]
+        },
+        ".service.v1.WorknetStudentFinishResp": {
+            "type": "object",
+            "properties": {
+                "courseName": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "课程"
+                },
+                "finish": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "description": "完成"
+                },
+                "unFinish": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "description": "未完成"
+                }
+            }
+        }
+    }
+}

@@ -43,9 +43,16 @@ func NewClient(cfg *warden.ClientConfig, opts ...grpc.DialOption) (TokenClient, 
 // 生成 gRPC 代码
 //go:generate kratos tool protoc --grpc --bm api.proto
 
+//生成 Swagger文档
+//go:generate kratos tool protoc --swagger api.proto
+
+//读取Swagger文档
+//go:generate kratos tool swagger serve api.swagger.json --flavor=swagger
+// --flavor=[redoc/swagger]
+
 //添加GRPC签名认证
 func addToken() grpc.UnaryClientInterceptor {
-	return func(ctx context.Context, method string, req, resp interface{}, cc *grpc.ClientConn, invoker grpc.UnaryInvoker, opts ...grpc.CallOption, ) error {
+	return func(ctx context.Context, method string, req, resp interface{}, cc *grpc.ClientConn, invoker grpc.UnaryInvoker, opts ...grpc.CallOption) error {
 
 		//将之前放入context中的metadata数据取出，如果没有则新建一个metadata
 		md, ok := metadata.FromOutgoingContext(ctx)

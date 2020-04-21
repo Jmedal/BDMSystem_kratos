@@ -1,0 +1,801 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "api.proto",
+        "version": "1"
+    },
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "consumes": [
+        "application/json",
+        "multipart/form-data"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/service.v1.Account/GetUserName": {
+            "post": {
+                "summary": "/service.v1.Account/GetUserName",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.GetUserNameResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.GetUserNameReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Account"
+                ]
+            }
+        },
+        "/service.v1.Message/AddMessage": {
+            "post": {
+                "summary": "/service.v1.Message/AddMessage",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.AddMessageResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.AddMessageReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Message"
+                ]
+            }
+        },
+        "/service.v1.Message/DeleteMessage": {
+            "post": {
+                "summary": "/service.v1.Message/DeleteMessage",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.DeleteMessageResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.DeleteMessageReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Message"
+                ]
+            }
+        },
+        "/service.v1.Message/DeleteMessageUser": {
+            "post": {
+                "summary": "/service.v1.Message/DeleteMessageUser",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.DeleteMessageUserResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.DeleteMessageUserReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Message"
+                ]
+            }
+        },
+        "/service.v1.Message/GetMessage": {
+            "post": {
+                "summary": "/service.v1.Message/GetMessage",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.GetMessageResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.GetMessageReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Message"
+                ]
+            }
+        },
+        "/service.v1.Message/GetMessageList": {
+            "post": {
+                "summary": "/service.v1.Message/GetMessageList",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.GetMessageListResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.GetMessageListReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Message"
+                ]
+            }
+        },
+        "/service.v1.Message/GetMessagePage": {
+            "post": {
+                "summary": "/service.v1.Message/GetMessagePage",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.GetMessagePageResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.GetMessagePageReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Message"
+                ]
+            }
+        },
+        "/service.v1.Message/Ping": {
+            "get": {
+                "summary": "/service.v1.Message/Ping",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.google.protobuf.Empty"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "service.v1.Message"
+                ]
+            }
+        },
+        "/service.v1.Message/SetMessageIsTop": {
+            "post": {
+                "summary": "/service.v1.Message/SetMessageIsTop",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.SetMessageIsTopResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.SetMessageIsTopReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Message"
+                ]
+            }
+        },
+        "/service.v1.Message/SetMessageUserRead": {
+            "post": {
+                "summary": "/service.v1.Message/SetMessageUserRead",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.SetMessageUserReadResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.SetMessageUserReadReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Message"
+                ]
+            }
+        },
+        "/service.v1.Message/UpdateMessage": {
+            "post": {
+                "summary": "/service.v1.Message/UpdateMessage",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.UpdateMessageResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.UpdateMessageReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Message"
+                ]
+            }
+        },
+        "/service.v1.Token/Verify": {
+            "post": {
+                "summary": "/service.v1.Token/Verify",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.VerifyTokenResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.VerifyTokenReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Token"
+                ]
+            }
+        }
+    },
+    "definitions": {
+        ".google.protobuf.Empty": {
+            "type": "object",
+            "properties": {},
+            "description": "A generic empty message that you can re-use to avoid defining duplicated\n empty messages in your APIs. A typical example is to use it as the request\n or the response type of an API method. For instance:\n\n     service Foo {\n       rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty);\n     }\n\n The JSON representation for `Empty` is empty JSON object `{}`."
+        },
+        ".service.v1.AddMessageReq": {
+            "type": "object",
+            "properties": {
+                "userId": {
+                    "type": "integer"
+                },
+                "message": {
+                    "$ref": "#/definitions/.service.v1.MessageData"
+                },
+                "userList": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "required": [
+                "userId",
+                "message",
+                "userList"
+            ]
+        },
+        ".service.v1.AddMessageResp": {
+            "type": "object",
+            "properties": {
+                "result": {
+                    "type": "string"
+                }
+            }
+        },
+        ".service.v1.DeleteMessageReq": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "description": "通知id"
+                }
+            },
+            "required": [
+                "id"
+            ]
+        },
+        ".service.v1.DeleteMessageResp": {
+            "type": "object",
+            "properties": {
+                "result": {
+                    "type": "string"
+                }
+            }
+        },
+        ".service.v1.DeleteMessageUserReq": {
+            "type": "object",
+            "properties": {
+                "userId": {
+                    "type": "integer",
+                    "description": "用户id"
+                },
+                "messageId": {
+                    "type": "integer",
+                    "description": "通知id"
+                }
+            },
+            "required": [
+                "userId"
+            ]
+        },
+        ".service.v1.DeleteMessageUserResp": {
+            "type": "object",
+            "properties": {
+                "result": {
+                    "type": "string"
+                }
+            }
+        },
+        ".service.v1.GetMessageListReq": {
+            "type": "object",
+            "properties": {
+                "userId": {
+                    "type": "integer",
+                    "description": "用户id"
+                }
+            },
+            "required": [
+                "userId"
+            ]
+        },
+        ".service.v1.GetMessageListResp": {
+            "type": "object",
+            "properties": {
+                "messageList": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/.service.v1.MessageSum"
+                    }
+                }
+            }
+        },
+        ".service.v1.GetMessagePageReq": {
+            "type": "object",
+            "properties": {
+                "query": {
+                    "type": "string"
+                },
+                "pageNum": {
+                    "type": "integer"
+                },
+                "pageSize": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "pageNum",
+                "pageSize"
+            ]
+        },
+        ".service.v1.GetMessagePageResp": {
+            "type": "object",
+            "properties": {
+                "pageNum": {
+                    "type": "integer"
+                },
+                "pageSize": {
+                    "type": "integer"
+                },
+                "total": {
+                    "type": "integer"
+                },
+                "page": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/.service.v1.MessageInfo"
+                    }
+                }
+            }
+        },
+        ".service.v1.GetMessageReq": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "description": "通知id"
+                }
+            },
+            "required": [
+                "id"
+            ]
+        },
+        ".service.v1.GetMessageResp": {
+            "type": "object",
+            "properties": {
+                "messageInfo": {
+                    "$ref": "#/definitions/.service.v1.MessageInfo"
+                }
+            }
+        },
+        ".service.v1.GetUserNameReq": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "id"
+            ]
+        },
+        ".service.v1.GetUserNameResp": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        ".service.v1.MessageData": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "icon": {
+                    "type": "string"
+                },
+                "content": {
+                    "type": "string"
+                },
+                "releaseTime": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "title",
+                "icon",
+                "content",
+                "releaseTime"
+            ]
+        },
+        ".service.v1.MessageInfo": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "publisher": {
+                    "type": "string"
+                },
+                "icon": {
+                    "type": "string"
+                },
+                "content": {
+                    "type": "string"
+                },
+                "releaseTime": {
+                    "type": "integer"
+                },
+                "isTop": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".service.v1.MessageSum": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "publisher": {
+                    "type": "string"
+                },
+                "icon": {
+                    "type": "string"
+                },
+                "releaseTime": {
+                    "type": "integer"
+                },
+                "isTop": {
+                    "type": "integer"
+                },
+                "isRead": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".service.v1.SetMessageIsTopReq": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "isTop": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "id",
+                "isTop"
+            ]
+        },
+        ".service.v1.SetMessageIsTopResp": {
+            "type": "object",
+            "properties": {
+                "result": {
+                    "type": "string"
+                }
+            }
+        },
+        ".service.v1.SetMessageUserReadReq": {
+            "type": "object",
+            "properties": {
+                "userId": {
+                    "type": "integer",
+                    "description": "用户id"
+                },
+                "messageId": {
+                    "type": "integer",
+                    "description": "通知id"
+                }
+            },
+            "required": [
+                "userId",
+                "messageId"
+            ]
+        },
+        ".service.v1.SetMessageUserReadResp": {
+            "type": "object",
+            "properties": {
+                "result": {
+                    "type": "string"
+                }
+            }
+        },
+        ".service.v1.UpdateMessageReq": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "message": {
+                    "$ref": "#/definitions/.service.v1.MessageData"
+                }
+            },
+            "required": [
+                "id",
+                "message"
+            ]
+        },
+        ".service.v1.UpdateMessageResp": {
+            "type": "object",
+            "properties": {
+                "result": {
+                    "type": "string"
+                }
+            }
+        },
+        ".service.v1.VerifyTokenReq": {
+            "type": "object",
+            "properties": {
+                "access_token": {
+                    "type": "string",
+                    "description": "授予的 token"
+                }
+            }
+        },
+        ".service.v1.VerifyTokenResp": {
+            "type": "object",
+            "properties": {
+                "userId": {
+                    "type": "integer"
+                },
+                "randomKey": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

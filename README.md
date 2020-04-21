@@ -86,7 +86,10 @@ set DISCOVERY_NODES=127.0.0.1:7171 //设置节点地址命令(环境变量也可
 可执行文件
 
 ###kratos tool swagger使用
-####kratos tool swagger serve api/api.swagger.json
+####//生成 Swagger文档
+####//go:generate kratos tool protoc --swagger api.proto
+####//读取Swagger文档
+####//go:generate kratos tool swagger serve api.swagger.json --flavor=swagger
 执行命令后，浏览器会自动打开swagger文档地址。
 同时也可以查看更多的 go-swagger官方（https://github.com/go-swagger/go-swagger）参数进行使用。
 

@@ -1,0 +1,783 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "api.proto",
+        "version": "1"
+    },
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "consumes": [
+        "application/json",
+        "multipart/form-data"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/service.v1.Menu/AddMenu": {
+            "post": {
+                "summary": "/service.v1.Menu/AddMenu",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.AddMenuResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.AddMenuReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Menu"
+                ]
+            }
+        },
+        "/service.v1.Menu/DeleteMenu": {
+            "post": {
+                "summary": "/service.v1.Menu/DeleteMenu",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.DeleteMenuResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.DeleteMenuReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Menu"
+                ]
+            }
+        },
+        "/service.v1.Menu/GetAllMenuOptions": {
+            "post": {
+                "summary": "/service.v1.Menu/GetAllMenuOptions",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.GetMenuOptionsResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.google.protobuf.Empty"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Menu"
+                ]
+            }
+        },
+        "/service.v1.Menu/GetChildrenMenuList": {
+            "post": {
+                "summary": "/service.v1.Menu/GetChildrenMenuList",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.GetChildrenMenuListResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.GetChildrenMenuListReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Menu"
+                ]
+            }
+        },
+        "/service.v1.Menu/GetMenuList": {
+            "post": {
+                "summary": "/service.v1.Menu/GetMenuList",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.GetMenuListResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.google.protobuf.Empty"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Menu"
+                ]
+            }
+        },
+        "/service.v1.Menu/GetMenuOptions": {
+            "post": {
+                "summary": "/service.v1.Menu/GetMenuOptions",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.GetMenuOptionsResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.GetMenuOptionsReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Menu"
+                ]
+            }
+        },
+        "/service.v1.Menu/GetMenus": {
+            "post": {
+                "summary": "/service.v1.Menu/GetMenus",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.GetMenusResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.GetMenusReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Menu"
+                ]
+            }
+        },
+        "/service.v1.Menu/Ping": {
+            "get": {
+                "summary": "/service.v1.Menu/Ping",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.google.protobuf.Empty"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "service.v1.Menu"
+                ]
+            }
+        },
+        "/service.v1.Menu/UpdateMenu": {
+            "post": {
+                "summary": "/service.v1.Menu/UpdateMenu",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.UpdateMenuResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.UpdateMenuReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Menu"
+                ]
+            }
+        },
+        "/service.v1.Role/DeleteRoleNullRights": {
+            "post": {
+                "summary": "/service.v1.Role/DeleteRoleNullRights",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.DeleteRoleNullRightsResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.DeleteRoleNullRightsReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Role"
+                ]
+            }
+        },
+        "/service.v1.Role/GetRoleRights": {
+            "post": {
+                "summary": "/service.v1.Role/GetRoleRights",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.GetRoleRightsResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.GetRoleRightsReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Role"
+                ]
+            }
+        },
+        "/service.v1.Token/Verify": {
+            "post": {
+                "summary": "/service.v1.Token/Verify",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.service.v1.VerifyTokenResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.service.v1.VerifyTokenReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "service.v1.Token"
+                ]
+            }
+        }
+    },
+    "definitions": {
+        ".google.protobuf.Empty": {
+            "type": "object",
+            "properties": {},
+            "description": "A generic empty message that you can re-use to avoid defining duplicated\n empty messages in your APIs. A typical example is to use it as the request\n or the response type of an API method. For instance:\n\n     service Foo {\n       rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty);\n     }\n\n The JSON representation for `Empty` is empty JSON object `{}`."
+        },
+        ".service.v1.AddMenuReq": {
+            "type": "object",
+            "properties": {
+                "pid": {
+                    "type": "integer"
+                },
+                "num": {
+                    "type": "integer"
+                },
+                "menuName": {
+                    "type": "string"
+                },
+                "icon": {
+                    "type": "string"
+                },
+                "path": {
+                    "type": "string"
+                },
+                "levels": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "pid",
+                "num",
+                "menuName",
+                "icon",
+                "path",
+                "levels"
+            ]
+        },
+        ".service.v1.AddMenuResp": {
+            "type": "object",
+            "properties": {
+                "result": {
+                    "type": "string"
+                }
+            }
+        },
+        ".service.v1.DeleteMenuReq": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "childrenId": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "required": [
+                "id",
+                "childrenId"
+            ]
+        },
+        ".service.v1.DeleteMenuResp": {
+            "type": "object",
+            "properties": {
+                "result": {
+                    "type": "string"
+                }
+            }
+        },
+        ".service.v1.DeleteRoleNullRightsReq": {
+            "type": "object",
+            "properties": {
+                "menusId": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "required": [
+                "menusId"
+            ]
+        },
+        ".service.v1.DeleteRoleNullRightsResp": {
+            "type": "object",
+            "properties": {
+                "result": {
+                    "type": "string"
+                }
+            }
+        },
+        ".service.v1.GetChildrenMenuListReq": {
+            "type": "object",
+            "properties": {
+                "menuId": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "menuId"
+            ]
+        },
+        ".service.v1.GetChildrenMenuListResp": {
+            "type": "object",
+            "properties": {
+                "menusId": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        ".service.v1.GetMenuListResp": {
+            "type": "object",
+            "properties": {
+                "menuList": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/.service.v1.GetMenuListResp.Menu"
+                    }
+                }
+            }
+        },
+        ".service.v1.GetMenuListResp.Menu": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "pid": {
+                    "type": "integer"
+                },
+                "num": {
+                    "type": "integer"
+                },
+                "menuName": {
+                    "type": "string"
+                },
+                "icon": {
+                    "type": "string"
+                },
+                "path": {
+                    "type": "string"
+                },
+                "levels": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".service.v1.GetMenuOptionsReq": {
+            "type": "object",
+            "properties": {
+                "minLevels": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "minLevels"
+            ]
+        },
+        ".service.v1.GetMenuOptionsResp": {
+            "type": "object",
+            "properties": {
+                "menuOptions": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/.service.v1.GetMenuOptionsResp.MenuOption"
+                    }
+                }
+            }
+        },
+        ".service.v1.GetMenuOptionsResp.MenuOption": {
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "integer"
+                },
+                "label": {
+                    "type": "string"
+                },
+                "children": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/.service.v1.GetMenuOptionsResp.MenuOption"
+                    }
+                }
+            }
+        },
+        ".service.v1.GetMenusReq": {
+            "type": "object",
+            "properties": {
+                "roleId": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "roleId"
+            ]
+        },
+        ".service.v1.GetMenusResp": {
+            "type": "object",
+            "properties": {
+                "menus": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/.service.v1.Menus"
+                    }
+                }
+            }
+        },
+        ".service.v1.GetRoleRightsReq": {
+            "type": "object",
+            "properties": {
+                "roleId": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "roleId"
+            ]
+        },
+        ".service.v1.GetRoleRightsResp": {
+            "type": "object",
+            "properties": {
+                "menusId": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        ".service.v1.Menus": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "menuName": {
+                    "type": "string"
+                },
+                "icon": {
+                    "type": "string"
+                },
+                "path": {
+                    "type": "string"
+                },
+                "children": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/.service.v1.Menus"
+                    }
+                }
+            }
+        },
+        ".service.v1.UpdateMenuReq": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "pid": {
+                    "type": "integer"
+                },
+                "num": {
+                    "type": "integer"
+                },
+                "menuName": {
+                    "type": "string"
+                },
+                "icon": {
+                    "type": "string"
+                },
+                "path": {
+                    "type": "string"
+                },
+                "levels": {
+                    "type": "integer"
+                },
+                "childrenId": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "required": [
+                "id",
+                "pid",
+                "num",
+                "menuName",
+                "icon",
+                "path",
+                "levels",
+                "childrenId"
+            ]
+        },
+        ".service.v1.UpdateMenuResp": {
+            "type": "object",
+            "properties": {
+                "result": {
+                    "type": "string"
+                }
+            }
+        },
+        ".service.v1.VerifyTokenReq": {
+            "type": "object",
+            "properties": {
+                "access_token": {
+                    "type": "string",
+                    "description": "授予的 token"
+                }
+            }
+        },
+        ".service.v1.VerifyTokenResp": {
+            "type": "object",
+            "properties": {
+                "userId": {
+                    "type": "integer"
+                },
+                "randomKey": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
