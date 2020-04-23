@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="67f36049-4dd2-40c7-bacb-767918e1a8e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/account/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/account/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/account/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/account/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/account/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/account/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdms/menu/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/menu/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdms/token/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/token/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worknet/user/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/worknet/user/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

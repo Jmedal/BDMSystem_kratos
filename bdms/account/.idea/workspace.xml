@@ -4,8 +4,11 @@
     <list default="true" id="42dd8a8d-0d2c-4f1a-ba6e-b7577f882d6c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../menu/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../menu/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../token/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../token/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../worknet/course/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../worknet/course/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../worknet/profession/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../worknet/profession/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../worknet/user/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../worknet/user/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
