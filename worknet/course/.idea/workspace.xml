@@ -2,9 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af7d4228-d234-43b0-bfdb-ca05fb184fb0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/menu/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/menu/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bdms/token/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/token/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bdms/account/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../bdms/account/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../imooc/course/api/api.bm.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../imooc/course/api/api.bm.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../imooc/course/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../imooc/course/api/api.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../imooc/course/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../../imooc/course/api/api.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../imooc/course/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../imooc/course/cmd/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../imooc/course/configs/db.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../../imooc/course/configs/db.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../imooc/course/configs/redis.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../../imooc/course/configs/redis.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../imooc/course/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../../imooc/course/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../imooc/course/internal/dao/dao.bts.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../imooc/course/internal/dao/dao.bts.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../imooc/course/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../imooc/course/internal/dao/dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../imooc/course/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../imooc/course/internal/dao/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../imooc/course/internal/dao/mc.cache.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../imooc/course/internal/dao/mc.cache.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../imooc/course/internal/dao/mc.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../imooc/course/internal/dao/mc.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../imooc/course/internal/di/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../imooc/course/internal/di/app.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../imooc/course/internal/di/wire.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../imooc/course/internal/di/wire.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../imooc/course/internal/di/wire_gen.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../imooc/course/internal/di/wire_gen.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../imooc/course/internal/server/grpc/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../imooc/course/internal/server/grpc/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../imooc/course/internal/server/http/check.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../imooc/course/internal/server/http/check.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../imooc/course/internal/server/http/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../imooc/course/internal/server/http/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../imooc/course/internal/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../imooc/course/internal/service/service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../company/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../company/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../user/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user/.idea/workspace.xml" afterDir="false" />
     </list>

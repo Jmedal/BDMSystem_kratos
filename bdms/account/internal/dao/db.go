@@ -150,8 +150,8 @@ func (d *dao) RawUserPage(ctx context.Context, req *pb.GetUserPageReq) (resp *pb
 		return
 	}
 	start := (req.PageNum - 1) * req.PageSize
-	end := start + req.PageSize
-	rows, err := d.db.Query(ctx, sqlUserList, query, start, end)
+	size := resp.PageSize
+	rows, err := d.db.Query(ctx, sqlUserList, query, start, size)
 	if err != nil {
 		log.Error("select user error(%v)", err)
 		return

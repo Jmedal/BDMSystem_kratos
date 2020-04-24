@@ -101,8 +101,8 @@ func (d *dao) RawMessagePage(ctx context.Context, req *pb.GetMessagePageReq) (re
 		return
 	}
 	start := (req.PageNum - 1) * req.PageSize
-	end := start + req.PageSize
-	rows, err := d.db.Query(ctx, sqlMessageList, query, start, end)
+	size := req.PageSize
+	rows, err := d.db.Query(ctx, sqlMessageList, query, start, size)
 	if err != nil {
 		log.Error("select message error(%v)", err)
 		return
