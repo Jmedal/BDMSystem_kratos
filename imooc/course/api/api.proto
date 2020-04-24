@@ -11,18 +11,141 @@ package service.v1;
 option go_package = "api";
 option (gogoproto.goproto_getters_all) = false;
 
+message ImoocCourseScoreSectionResp {
+    //综合评分
+    repeated int64 comprehensive = 1 [(gogoproto.jsontag) = "comprehensive"];
 
-service GrpcTest {
-  rpc Ping(.google.protobuf.Empty) returns (.google.protobuf.Empty);
+    //内容实用
+    repeated int64 utility = 2 [(gogoproto.jsontag) = "utility"];
 
-  // `method:"POST"`
-  rpc GrpcUserInfoTest(.google.protobuf.Empty) returns (.google.protobuf.Empty);
+    //简洁易懂
+    repeated int64 concise = 3 [(gogoproto.jsontag) = "concise"];
+
+    //逻辑清晰
+    repeated int64 logic = 4 [(gogoproto.jsontag) = "logic"];
+}
+
+message ImoocCourseAllNumberResp {
+    //学习总人数
+    int64 allLearnerNumber = 1 [(gogoproto.jsontag) = "allLearnerNumber"];
+
+    //评论总数
+    int64 allEvaluationNumber = 2 [(gogoproto.jsontag) = "allEvaluationNumber"];
+}
+
+message ImoocCourseSectionResp {
+    //类别
+    Lists class = 1 [(gogoproto.jsontag) = "class"];
+
+    //难度
+    Lists difficulty = 2 [(gogoproto.jsontag) = "difficulty"];
+
+    //时长
+    Lists duration = 3 [(gogoproto.jsontag) = "duration"];
+
+    message Lists {
+        //名称
+        repeated string name = 1 [(gogoproto.jsontag) = "name"];
+
+        //数量
+        repeated int64 number = 2 [(gogoproto.jsontag) = "number"];
+    }
+}
+
+message ImoocCourseRankReq {
+    //排行榜位数范围 如 1~15
+    repeated int64 location = 1 [(gogoproto.moretags) = 'form:"location" validate:"required"'];
+}
+
+message ImoocCourseRankResp {
+    //课程名
+    repeated string name = 1 [(gogoproto.jsontag) = "name"];
+
+    //数量
+    repeated string number = 2 [(gogoproto.jsontag) = "number"];
+}
+
+message GetCoursePageReq {
+    string query = 1 [(gogoproto.moretags) = 'form:"query" default:""'];
+
+    int64 pageNum = 2 [(gogoproto.moretags) = 'form:"pageNum" validate:"required"'];
+
+    int64 pageSize = 3 [(gogoproto.moretags) = 'form:"pageSize" validate:"required"'];
+}
+
+message GetCoursePageResp {
+
+    int64 pageNum = 1 [(gogoproto.jsontag) = 'pageNum'];
+
+    int64 pageSize = 2 [(gogoproto.jsontag) = 'pageSize'];
+
+    int64 total = 3 [(gogoproto.jsontag) = 'total'];
+
+    repeated Course courseList = 4 [(gogoproto.jsontag) = 'page'];
+}
+
+message Course {
+    //主键id
+    int32 id = 1 [(gogoproto.jsontag) = "id"];
+    //名称
+    string name = 2 [(gogoproto.jsontag) = "name"];
+    //类别
+    string class = 3 [(gogoproto.jsontag) = "class"];
+    //难度
+    string difficulty = 4 [(gogoproto.jsontag) = "difficulty"];
+    //简介
+    string introduction = 5 [(gogoproto.jsontag) = "introduction"];
+    //描述
+    string description = 6 [(gogoproto.jsontag) = "description"];
+    //学习人数
+    string learnerNumber = 7 [(gogoproto.jsontag) = "learnerNumber"];
+    //路径
+    string path = 8 [(gogoproto.jsontag) = "path"];
+    //时长
+    string duration = 9 [(gogoproto.jsontag) = "duration"];
+    //综合评分
+    string comprehensiveScore = 10 [(gogoproto.jsontag) = "comprehensiveScore"];
+    //内容实用
+    string utilityScore = 11 [(gogoproto.jsontag) = "utilityScore"];
+    //简洁易懂
+    string conciseScore = 12 [(gogoproto.jsontag) = "conciseScore"];
+    //逻辑清晰
+    string logicScore = 13 [(gogoproto.jsontag) = "logicScore"];
+    //评分人数
+    string evaluationNumber = 14 [(gogoproto.jsontag) = "evaluationNumber"];
+    //链接
+    string url = 15 [(gogoproto.jsontag) = "url"];
+    //上级连接
+    string parentUrl = 16 [(gogoproto.jsontag) = "parentUrl"];
+    //数据爬取时间
+    string downloadTime = 17 [(gogoproto.jsontag) = "downloadTime"];
+}
+
+service ImoocCourse {
+    rpc Ping (.google.protobuf.Empty) returns (.google.protobuf.Empty);
+
+    // `method:"POST"`
+    rpc ImoocCourseScore (.google.protobuf.Empty) returns (ImoocCourseScoreSectionResp);
+
+    // `method:"POST"`
+    rpc ImoocCourseAllNumber (.google.protobuf.Empty) returns (ImoocCourseAllNumberResp);
+
+    // `method:"POST"`
+    rpc ImoocCourseSection (.google.protobuf.Empty) returns (ImoocCourseSectionResp);
+
+    // `method:"POST"`
+    rpc ImoocCourseScoreRank (ImoocCourseRankReq) returns (ImoocCourseRankResp);
+
+    // `method:"POST"`
+    rpc ImoocCourseLearnerRank (ImoocCourseRankReq) returns (ImoocCourseRankResp);
+
+    // `method:"POST"`
+    rpc GetCoursePage (GetCoursePageReq) returns (GetCoursePageResp);
 }
 
 
-
 message VerifyTokenReq {
- // 授予的 token
+    // 授予的 token
     string accessToken = 1 [(gogoproto.jsontag) = 'access_token'];
 }
 message VerifyTokenResp {
@@ -30,9 +153,9 @@ message VerifyTokenResp {
 
     string randomKey = 2 [(gogoproto.jsontag) = 'randomKey'];
 }
-service Token{
-  // `method:"POST" internal:"true"`
-  rpc Verify (VerifyTokenReq) returns (VerifyTokenResp);
+service Token {
+    // `method:"POST" internal:"true"`
+    rpc Verify (VerifyTokenReq) returns (VerifyTokenResp);
 }
 
 

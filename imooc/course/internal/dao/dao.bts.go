@@ -16,8 +16,8 @@ package dao
 import (
 	"context"
 
+	"course/internal/model"
 	"github.com/bilibili/kratos/pkg/cache"
-	"grpc-test/internal/model"
 )
 
 // Article get data from cache if miss will call source method, then add to cache.

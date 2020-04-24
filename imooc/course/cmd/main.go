@@ -11,9 +11,9 @@ import (
 	"syscall"
 	"time"
 
+	"course/internal/di"
 	"github.com/bilibili/kratos/pkg/conf/paladin"
 	"github.com/bilibili/kratos/pkg/log"
-	"grpc-test/internal/di"
 )
 
 func initDiscovery(ip, port, appID string) (cancelFunc context.CancelFunc, err error) {
@@ -37,7 +37,7 @@ func main() {
 	flag.Parse()
 	log.Init(nil) // debug flag: log.dir={path}
 	defer log.Close()
-	log.Info("grpc-test start")
+	log.Info("ImoocCourse start")
 	paladin.Init()
 	_, closeFunc, err := di.InitApp()
 	if err != nil {
@@ -56,7 +56,7 @@ func main() {
 		switch s {
 		case syscall.SIGQUIT, syscall.SIGTERM, syscall.SIGINT:
 			closeFunc()
-			log.Info("grpc-test exit")
+			log.Info("ImoocCourse exit")
 			time.Sleep(time.Second)
 			return
 		case syscall.SIGHUP:

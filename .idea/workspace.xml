@@ -4,10 +4,6 @@
     <list default="true" id="67f36049-4dd2-40c7-bacb-767918e1a8e9" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/imooc/course/internal/service/CourseService.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/imooc/course/internal/service/manageService.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/account/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/account/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/account/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/account/internal/dao/db.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdms/message/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/bdms/message/internal/dao/db.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imooc/course/api/api.bm.go" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/api/api.bm.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imooc/course/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/api/api.pb.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imooc/course/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/api/api.proto" afterDir="false" />
@@ -29,11 +25,6 @@
       <change beforePath="$PROJECT_DIR$/imooc/course/internal/server/http/check.go" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/internal/server/http/check.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imooc/course/internal/server/http/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/internal/server/http/server.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imooc/course/internal/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/internal/service/service.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pholcus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pholcus/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pholcus/pholcus_pkg/logs/pholcus.log" beforeDir="false" afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/logs/pholcus.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/worknet/company/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/worknet/company/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/worknet/course/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/worknet/course/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/worknet/user/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/worknet/user/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +130,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/pholcus" />
     </ignored-roots>
-    <MESSAGE value="2020-3-19 （5）" />
     <MESSAGE value="2020-3-19 （6）" />
     <MESSAGE value="2020-3-19 （7）" />
     <MESSAGE value="2020-3-19 （8）" />
@@ -164,7 +154,8 @@
     <MESSAGE value="2020-4-15 更新Readme" />
     <MESSAGE value="2020-4-15 更新README" />
     <MESSAGE value="2020-4-21 使用Swagger接口设计管理工具，并添加README" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020-4-21 使用Swagger接口设计管理工具，并添加README" />
+    <MESSAGE value="2020-4-24 修复分页bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020-4-24 修复分页bug" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

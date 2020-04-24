@@ -2,15 +2,15 @@ package service
 
 import (
 	"context"
+	pb "course/api"
+	"course/internal/dao"
 	"github.com/bilibili/kratos/pkg/conf/paladin"
-	pb "grpc-test/api"
-	"grpc-test/internal/dao"
 
 	"github.com/golang/protobuf/ptypes/empty"
 	"github.com/google/wire"
 )
 
-var Provider = wire.NewSet(New, wire.Bind(new(pb.GrpcTestServer), new(*Service)))
+var Provider = wire.NewSet(New, wire.Bind(new(pb.ImoocCourseServer), new(*Service)))
 
 // Service service.
 type Service struct {

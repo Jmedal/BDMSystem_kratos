@@ -1,14 +1,14 @@
 package grpc
 
 import (
-	pb "grpc-test/api"
+	pb "course/api"
 
 	"github.com/bilibili/kratos/pkg/conf/paladin"
 	"github.com/bilibili/kratos/pkg/net/rpc/warden"
 )
 
 // New new a grpc server.
-func New(svc pb.GrpcTestServer) (ws *warden.Server, err error) {
+func New(svc pb.ImoocCourseServer) (ws *warden.Server, err error) {
 	var (
 		cfg warden.ServerConfig
 		ct  paladin.TOML
@@ -21,7 +21,7 @@ func New(svc pb.GrpcTestServer) (ws *warden.Server, err error) {
 	}
 	ws = warden.NewServer(&cfg)
 	ws.Use(checkToken())
-	pb.RegisterGrpcTestServer(ws.Server(), svc)
+	pb.RegisterImoocCourseServer(ws.Server(), svc)
 	ws, err = ws.Start()
 	return
 }

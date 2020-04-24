@@ -16,44 +16,114 @@ var _ *bm.Context
 var _ context.Context
 var _ binding.StructValidator
 
-var PathGrpcTestPing = "/service.v1.GrpcTest/Ping"
-var PathGrpcTestGrpcUserInfoTest = "/service.v1.GrpcTest/GrpcUserInfoTest"
+var PathImoocCoursePing = "/service.v1.ImoocCourse/Ping"
+var PathImoocCourseImoocCourseScore = "/service.v1.ImoocCourse/ImoocCourseScore"
+var PathImoocCourseImoocCourseAllNumber = "/service.v1.ImoocCourse/ImoocCourseAllNumber"
+var PathImoocCourseImoocCourseSection = "/service.v1.ImoocCourse/ImoocCourseSection"
+var PathImoocCourseImoocCourseScoreRank = "/service.v1.ImoocCourse/ImoocCourseScoreRank"
+var PathImoocCourseImoocCourseLearnerRank = "/service.v1.ImoocCourse/ImoocCourseLearnerRank"
+var PathImoocCourseGetCoursePage = "/service.v1.ImoocCourse/GetCoursePage"
 
 var PathTokenVerify = "/service.v1.Token/Verify"
 
-// GrpcTestBMServer is the server API for GrpcTest service.
-type GrpcTestBMServer interface {
+// ImoocCourseBMServer is the server API for ImoocCourse service.
+type ImoocCourseBMServer interface {
 	Ping(ctx context.Context, req *google_protobuf1.Empty) (resp *google_protobuf1.Empty, err error)
 
 	// `method:"POST"`
-	GrpcUserInfoTest(ctx context.Context, req *google_protobuf1.Empty) (resp *google_protobuf1.Empty, err error)
+	ImoocCourseScore(ctx context.Context, req *google_protobuf1.Empty) (resp *ImoocCourseScoreSectionResp, err error)
+
+	// `method:"POST"`
+	ImoocCourseAllNumber(ctx context.Context, req *google_protobuf1.Empty) (resp *ImoocCourseAllNumberResp, err error)
+
+	// `method:"POST"`
+	ImoocCourseSection(ctx context.Context, req *google_protobuf1.Empty) (resp *ImoocCourseSectionResp, err error)
+
+	// `method:"POST"`
+	ImoocCourseScoreRank(ctx context.Context, req *ImoocCourseRankReq) (resp *ImoocCourseRankResp, err error)
+
+	// `method:"POST"`
+	ImoocCourseLearnerRank(ctx context.Context, req *ImoocCourseRankReq) (resp *ImoocCourseRankResp, err error)
+
+	// `method:"POST"`
+	GetCoursePage(ctx context.Context, req *GetCoursePageReq) (resp *GetCoursePageResp, err error)
 }
 
-var GrpcTestSvc GrpcTestBMServer
+var ImoocCourseSvc ImoocCourseBMServer
 
-func grpcTestPing(c *bm.Context) {
+func imoocCoursePing(c *bm.Context) {
 	p := new(google_protobuf1.Empty)
 	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
 		return
 	}
-	resp, err := GrpcTestSvc.Ping(c, p)
+	resp, err := ImoocCourseSvc.Ping(c, p)
 	c.JSON(resp, err)
 }
 
-func grpcTestGrpcUserInfoTest(c *bm.Context) {
+func imoocCourseImoocCourseScore(c *bm.Context) {
 	p := new(google_protobuf1.Empty)
 	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
 		return
 	}
-	resp, err := GrpcTestSvc.GrpcUserInfoTest(c, p)
+	resp, err := ImoocCourseSvc.ImoocCourseScore(c, p)
 	c.JSON(resp, err)
 }
 
-// RegisterGrpcTestBMServer Register the blademaster route
-func RegisterGrpcTestBMServer(e *bm.Engine, server GrpcTestBMServer) {
-	GrpcTestSvc = server
-	e.GET("/service.v1.GrpcTest/Ping", grpcTestPing)
-	e.POST("/service.v1.GrpcTest/GrpcUserInfoTest", grpcTestGrpcUserInfoTest)
+func imoocCourseImoocCourseAllNumber(c *bm.Context) {
+	p := new(google_protobuf1.Empty)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := ImoocCourseSvc.ImoocCourseAllNumber(c, p)
+	c.JSON(resp, err)
+}
+
+func imoocCourseImoocCourseSection(c *bm.Context) {
+	p := new(google_protobuf1.Empty)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := ImoocCourseSvc.ImoocCourseSection(c, p)
+	c.JSON(resp, err)
+}
+
+func imoocCourseImoocCourseScoreRank(c *bm.Context) {
+	p := new(ImoocCourseRankReq)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := ImoocCourseSvc.ImoocCourseScoreRank(c, p)
+	c.JSON(resp, err)
+}
+
+func imoocCourseImoocCourseLearnerRank(c *bm.Context) {
+	p := new(ImoocCourseRankReq)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := ImoocCourseSvc.ImoocCourseLearnerRank(c, p)
+	c.JSON(resp, err)
+}
+
+func imoocCourseGetCoursePage(c *bm.Context) {
+	p := new(GetCoursePageReq)
+	if err := c.BindWith(p, binding.Default(c.Request.Method, c.Request.Header.Get("Content-Type"))); err != nil {
+		return
+	}
+	resp, err := ImoocCourseSvc.GetCoursePage(c, p)
+	c.JSON(resp, err)
+}
+
+// RegisterImoocCourseBMServer Register the blademaster route
+func RegisterImoocCourseBMServer(e *bm.Engine, server ImoocCourseBMServer) {
+	ImoocCourseSvc = server
+	e.GET("/service.v1.ImoocCourse/Ping", imoocCoursePing)
+	e.POST("/service.v1.ImoocCourse/ImoocCourseScore", imoocCourseImoocCourseScore)
+	e.POST("/service.v1.ImoocCourse/ImoocCourseAllNumber", imoocCourseImoocCourseAllNumber)
+	e.POST("/service.v1.ImoocCourse/ImoocCourseSection", imoocCourseImoocCourseSection)
+	e.POST("/service.v1.ImoocCourse/ImoocCourseScoreRank", imoocCourseImoocCourseScoreRank)
+	e.POST("/service.v1.ImoocCourse/ImoocCourseLearnerRank", imoocCourseImoocCourseLearnerRank)
+	e.POST("/service.v1.ImoocCourse/GetCoursePage", imoocCourseGetCoursePage)
 }
 
 // TokenBMServer is the server API for Token service.

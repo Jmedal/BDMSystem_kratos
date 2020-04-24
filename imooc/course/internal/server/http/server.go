@@ -3,20 +3,20 @@ package http
 import (
 	"net/http"
 
+	pb "course/api"
+	"course/internal/model"
 	"github.com/bilibili/kratos/pkg/conf/paladin"
 	"github.com/bilibili/kratos/pkg/log"
 	bm "github.com/bilibili/kratos/pkg/net/http/blademaster"
-	pb "grpc-test/api"
-	"grpc-test/internal/model"
 )
 
 var (
-	svc         pb.GrpcTestServer
+	svc         pb.ImoocCourseServer
 	tokenClient pb.TokenClient
 )
 
 // New new a bm server.
-func New(s pb.GrpcTestServer) (engine *bm.Engine, err error) {
+func New(s pb.ImoocCourseServer) (engine *bm.Engine, err error) {
 	var (
 		cfg bm.ServerConfig
 		ct  paladin.TOML
@@ -35,7 +35,7 @@ func New(s pb.GrpcTestServer) (engine *bm.Engine, err error) {
 	limiter := bm.NewRateLimiter(nil)
 	engine.Use(limiter.Limit())
 	engine.Use(dataSecurityAction())
-	pb.RegisterGrpcTestBMServer(engine, s)
+	pb.RegisterImoocCourseBMServer(engine, s)
 	initRouter(engine)
 	err = engine.Start()
 	return
@@ -43,7 +43,7 @@ func New(s pb.GrpcTestServer) (engine *bm.Engine, err error) {
 
 func initRouter(e *bm.Engine) {
 	e.Ping(ping)
-	g := e.Group("/grpc-test")
+	g := e.Group("/ImoocCourse")
 	{
 		g.GET("/start", howToStart)
 	}

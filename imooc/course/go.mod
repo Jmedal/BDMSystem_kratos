@@ -1,4 +1,4 @@
-module grpc-test
+module course
 
 go 1.13
 

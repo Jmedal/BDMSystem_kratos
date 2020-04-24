@@ -4,6 +4,8 @@ import (
 	"context"
 	"time"
 
+	pb "course/api"
+	"course/internal/model"
 	"github.com/bilibili/kratos/pkg/cache/memcache"
 	"github.com/bilibili/kratos/pkg/cache/redis"
 	"github.com/bilibili/kratos/pkg/conf/paladin"
@@ -11,7 +13,6 @@ import (
 	"github.com/bilibili/kratos/pkg/sync/pipeline/fanout"
 	xtime "github.com/bilibili/kratos/pkg/time"
 	"github.com/google/wire"
-	"grpc-test/internal/model"
 )
 
 var Provider = wire.NewSet(New, NewDB, NewRedis, NewMC)
@@ -23,6 +24,12 @@ type Dao interface {
 	Ping(ctx context.Context) (err error)
 	// bts: -nullcache=&model.Article{ID:-1} -check_null_code=$!=nil&&$.ID==-1
 	Article(c context.Context, id int64) (*model.Article, error)
+	RawCourseScoreSection(ctx context.Context) (resp *pb.ImoocCourseScoreSectionResp, err error)
+	RawCourseNumber(ctx context.Context) (resp *pb.ImoocCourseAllNumberResp, err error)
+	RawCourseSection(ctx context.Context) (resp *pb.ImoocCourseSectionResp, err error)
+	RawCourseScoreRank(ctx context.Context, req *pb.ImoocCourseRankReq) (resp *pb.ImoocCourseRankResp, err error)
+	RawCourseLearnerRank(ctx context.Context, req *pb.ImoocCourseRankReq) (resp *pb.ImoocCourseRankResp, err error)
+	RawCoursePage(ctx context.Context, req *pb.GetCoursePageReq) (resp *pb.GetCoursePageResp, err error)
 }
 
 // dao dao.

@@ -4,10 +4,10 @@
 package di
 
 import (
-	"grpc-test/internal/dao"
-	"grpc-test/internal/server/grpc"
-	"grpc-test/internal/server/http"
-	"grpc-test/internal/service"
+	"course/internal/dao"
+	"course/internal/server/grpc"
+	"course/internal/server/http"
+	"course/internal/service"
 
 	"github.com/google/wire"
 )

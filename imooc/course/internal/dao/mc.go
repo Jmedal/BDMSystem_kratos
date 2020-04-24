@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
+	"course/internal/model"
 	"github.com/bilibili/kratos/pkg/cache/memcache"
 	"github.com/bilibili/kratos/pkg/conf/paladin"
 	"github.com/bilibili/kratos/pkg/log"
-	"grpc-test/internal/model"
 )
 
 //go:generate kratos tool genmc
