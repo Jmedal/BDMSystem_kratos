@@ -41,7 +41,7 @@ func dataSecurityAction() bm.HandlerFunc {
 		}
 
 		// TODO: get userId,randomKey from some code
-		resp, err := tokenClient.Verify(c, &pb.VerifyTokenReq{AccessToken: token})
+		resp, err := tokenClient.Verify(c, &pb.VerifyTokenReq{AccessToken: token,})
 		if err != nil {
 			renderErrMsg(c, ecode.ServerErr.Code(), "Token server error")
 			return

@@ -5,9 +5,9 @@ package di
 
 import (
 	"curriculum/internal/dao"
+	"curriculum/internal/service"
 	"curriculum/internal/server/grpc"
 	"curriculum/internal/server/http"
-	"curriculum/internal/service"
 
 	"github.com/google/wire"
 )

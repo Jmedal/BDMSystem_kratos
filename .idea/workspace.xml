@@ -1,82 +1,890 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="67f36049-4dd2-40c7-bacb-767918e1a8e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/imooc/course/internal/service/CourseService.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imooc/course/internal/service/manageService.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc/course/api/api.bm.go" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/api/api.bm.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc/course/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/api/api.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc/course/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/api/api.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc/course/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/cmd/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc/course/configs/db.toml" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/configs/db.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc/course/configs/grpc.toml" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/configs/grpc.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc/course/configs/http.toml" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/configs/http.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc/course/configs/redis.toml" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/configs/redis.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc/course/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc/course/internal/dao/dao.bts.go" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/internal/dao/dao.bts.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc/course/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/internal/dao/dao.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc/course/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/internal/dao/db.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc/course/internal/dao/mc.cache.go" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/internal/dao/mc.cache.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc/course/internal/dao/mc.go" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/internal/dao/mc.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc/course/internal/di/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/internal/di/app.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc/course/internal/di/wire.go" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/internal/di/wire.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc/course/internal/di/wire_gen.go" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/internal/di/wire_gen.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc/course/internal/server/grpc/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/internal/server/grpc/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc/course/internal/server/http/check.go" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/internal/server/http/check.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc/course/internal/server/http/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/internal/server/http/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc/course/internal/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/imooc/course/internal/service/service.go" afterDir="false" />
+    <list default="true" id="1b702219-eaf9-4c73-ac5f-83f2b8ad5d30" name="Default Changelist" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/internal/dao/db.go" afterPath="$PROJECT_DIR$/bdms/account/internal/dao/db.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/app.go" afterPath="$PROJECT_DIR$/pholcus/app/app.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/spider/context.go" afterPath="$PROJECT_DIR$/pholcus/app/spider/context.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-04-11 170222/Imooc__0__Course_Info/0-96.csv" afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/text_out/2020-04-11 170222/Imooc__0__Course_Info/0-96.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/BDMSystem_kratos.iml" afterPath="$PROJECT_DIR$/.idea/BDMSystem_kratos.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/.idea/workspace.xml" afterPath="$PROJECT_DIR$/bdms/account/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/CHANGELOG.md" afterPath="$PROJECT_DIR$/bdms/account/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/OWNERS" afterPath="$PROJECT_DIR$/bdms/account/OWNERS" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/README.md" afterPath="$PROJECT_DIR$/bdms/account/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/api/api.bm.go" afterPath="$PROJECT_DIR$/bdms/account/api/api.bm.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/api/api.pb.go" afterPath="$PROJECT_DIR$/bdms/account/api/api.pb.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/api/api.proto" afterPath="$PROJECT_DIR$/bdms/account/api/api.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/api/client.go" afterPath="$PROJECT_DIR$/bdms/account/api/client.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/cmd/main.go" afterPath="$PROJECT_DIR$/bdms/account/cmd/main.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/configs/application.toml" afterPath="$PROJECT_DIR$/bdms/account/configs/application.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/configs/db.toml" afterPath="$PROJECT_DIR$/bdms/account/configs/db.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/configs/grpc.toml" afterPath="$PROJECT_DIR$/bdms/account/configs/grpc.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/configs/http.toml" afterPath="$PROJECT_DIR$/bdms/account/configs/http.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/configs/memcache.toml" afterPath="$PROJECT_DIR$/bdms/account/configs/memcache.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/configs/redis.toml" afterPath="$PROJECT_DIR$/bdms/account/configs/redis.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/go.mod" afterPath="$PROJECT_DIR$/bdms/account/go.mod" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/go.sum" afterPath="$PROJECT_DIR$/bdms/account/go.sum" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/internal/dao/dao.bts.go" afterPath="$PROJECT_DIR$/bdms/account/internal/dao/dao.bts.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/internal/dao/dao.go" afterPath="$PROJECT_DIR$/bdms/account/internal/dao/dao.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/internal/dao/dao_test.go" afterPath="$PROJECT_DIR$/bdms/account/internal/dao/dao_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/internal/dao/mc.cache.go" afterPath="$PROJECT_DIR$/bdms/account/internal/dao/mc.cache.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/internal/dao/mc.go" afterPath="$PROJECT_DIR$/bdms/account/internal/dao/mc.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/internal/dao/redis.go" afterPath="$PROJECT_DIR$/bdms/account/internal/dao/redis.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/internal/dao/wire.go" afterPath="$PROJECT_DIR$/bdms/account/internal/dao/wire.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/internal/dao/wire_gen.go" afterPath="$PROJECT_DIR$/bdms/account/internal/dao/wire_gen.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/internal/di/app.go" afterPath="$PROJECT_DIR$/bdms/account/internal/di/app.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/internal/di/wire.go" afterPath="$PROJECT_DIR$/bdms/account/internal/di/wire.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/internal/di/wire_gen.go" afterPath="$PROJECT_DIR$/bdms/account/internal/di/wire_gen.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/internal/model/model.go" afterPath="$PROJECT_DIR$/bdms/account/internal/model/model.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/internal/server/grpc/check.go" afterPath="$PROJECT_DIR$/bdms/account/internal/server/grpc/check.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/internal/server/grpc/server.go" afterPath="$PROJECT_DIR$/bdms/account/internal/server/grpc/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/internal/server/http/check.go" afterPath="$PROJECT_DIR$/bdms/account/internal/server/http/check.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/internal/server/http/check_test.go" afterPath="$PROJECT_DIR$/bdms/account/internal/server/http/check_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/internal/server/http/server.go" afterPath="$PROJECT_DIR$/bdms/account/internal/server/http/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/internal/server/http/util/DataSecurity.go" afterPath="$PROJECT_DIR$/bdms/account/internal/server/http/util/DataSecurity.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/internal/service/accountService.go" afterPath="$PROJECT_DIR$/bdms/account/internal/service/accountService.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/internal/service/service.go" afterPath="$PROJECT_DIR$/bdms/account/internal/service/service.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/test/0_db.sql" afterPath="$PROJECT_DIR$/bdms/account/test/0_db.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/test/1_data.sql" afterPath="$PROJECT_DIR$/bdms/account/test/1_data.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/test/application.toml" afterPath="$PROJECT_DIR$/bdms/account/test/application.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/test/db.toml" afterPath="$PROJECT_DIR$/bdms/account/test/db.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/test/docker-compose.yaml" afterPath="$PROJECT_DIR$/bdms/account/test/docker-compose.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/test/grpc.toml" afterPath="$PROJECT_DIR$/bdms/account/test/grpc.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/test/http.toml" afterPath="$PROJECT_DIR$/bdms/account/test/http.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/test/memcache.toml" afterPath="$PROJECT_DIR$/bdms/account/test/memcache.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/account/test/redis.toml" afterPath="$PROJECT_DIR$/bdms/account/test/redis.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/bdms.sql" afterPath="$PROJECT_DIR$/bdms/bdms.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/.idea/workspace.xml" afterPath="$PROJECT_DIR$/bdms/menu/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/CHANGELOG.md" afterPath="$PROJECT_DIR$/bdms/menu/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/OWNERS" afterPath="$PROJECT_DIR$/bdms/menu/OWNERS" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/README.md" afterPath="$PROJECT_DIR$/bdms/menu/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/api/api.bm.go" afterPath="$PROJECT_DIR$/bdms/menu/api/api.bm.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/api/api.pb.go" afterPath="$PROJECT_DIR$/bdms/menu/api/api.pb.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/api/api.proto" afterPath="$PROJECT_DIR$/bdms/menu/api/api.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/api/client.go" afterPath="$PROJECT_DIR$/bdms/menu/api/client.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/cmd/main.go" afterPath="$PROJECT_DIR$/bdms/menu/cmd/main.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/configs/application.toml" afterPath="$PROJECT_DIR$/bdms/menu/configs/application.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/configs/db.toml" afterPath="$PROJECT_DIR$/bdms/menu/configs/db.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/configs/grpc.toml" afterPath="$PROJECT_DIR$/bdms/menu/configs/grpc.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/configs/http.toml" afterPath="$PROJECT_DIR$/bdms/menu/configs/http.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/configs/memcache.toml" afterPath="$PROJECT_DIR$/bdms/menu/configs/memcache.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/configs/redis.toml" afterPath="$PROJECT_DIR$/bdms/menu/configs/redis.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/go.mod" afterPath="$PROJECT_DIR$/bdms/menu/go.mod" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/go.sum" afterPath="$PROJECT_DIR$/bdms/menu/go.sum" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/internal/dao/dao.bts.go" afterPath="$PROJECT_DIR$/bdms/menu/internal/dao/dao.bts.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/internal/dao/dao.go" afterPath="$PROJECT_DIR$/bdms/menu/internal/dao/dao.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/internal/dao/dao_test.go" afterPath="$PROJECT_DIR$/bdms/menu/internal/dao/dao_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/internal/dao/db.go" afterPath="$PROJECT_DIR$/bdms/menu/internal/dao/db.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/internal/dao/mc.cache.go" afterPath="$PROJECT_DIR$/bdms/menu/internal/dao/mc.cache.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/internal/dao/mc.go" afterPath="$PROJECT_DIR$/bdms/menu/internal/dao/mc.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/internal/dao/redis.go" afterPath="$PROJECT_DIR$/bdms/menu/internal/dao/redis.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/internal/dao/wire.go" afterPath="$PROJECT_DIR$/bdms/menu/internal/dao/wire.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/internal/dao/wire_gen.go" afterPath="$PROJECT_DIR$/bdms/menu/internal/dao/wire_gen.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/internal/di/app.go" afterPath="$PROJECT_DIR$/bdms/menu/internal/di/app.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/internal/di/wire.go" afterPath="$PROJECT_DIR$/bdms/menu/internal/di/wire.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/internal/di/wire_gen.go" afterPath="$PROJECT_DIR$/bdms/menu/internal/di/wire_gen.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/internal/model/model.go" afterPath="$PROJECT_DIR$/bdms/menu/internal/model/model.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/internal/server/grpc/check.go" afterPath="$PROJECT_DIR$/bdms/menu/internal/server/grpc/check.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/internal/server/grpc/server.go" afterPath="$PROJECT_DIR$/bdms/menu/internal/server/grpc/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/internal/server/http/check.go" afterPath="$PROJECT_DIR$/bdms/menu/internal/server/http/check.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/internal/server/http/server.go" afterPath="$PROJECT_DIR$/bdms/menu/internal/server/http/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/internal/server/http/util/DataSecurity.go" afterPath="$PROJECT_DIR$/bdms/menu/internal/server/http/util/DataSecurity.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/internal/service/MenuService.go" afterPath="$PROJECT_DIR$/bdms/menu/internal/service/MenuService.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/internal/service/service.go" afterPath="$PROJECT_DIR$/bdms/menu/internal/service/service.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/test/0_db.sql" afterPath="$PROJECT_DIR$/bdms/menu/test/0_db.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/test/1_data.sql" afterPath="$PROJECT_DIR$/bdms/menu/test/1_data.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/test/application.toml" afterPath="$PROJECT_DIR$/bdms/menu/test/application.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/test/db.toml" afterPath="$PROJECT_DIR$/bdms/menu/test/db.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/test/docker-compose.yaml" afterPath="$PROJECT_DIR$/bdms/menu/test/docker-compose.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/test/grpc.toml" afterPath="$PROJECT_DIR$/bdms/menu/test/grpc.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/test/http.toml" afterPath="$PROJECT_DIR$/bdms/menu/test/http.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/test/memcache.toml" afterPath="$PROJECT_DIR$/bdms/menu/test/memcache.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/test/redis.toml" afterPath="$PROJECT_DIR$/bdms/menu/test/redis.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/menu/tool/container/Set.go" afterPath="$PROJECT_DIR$/bdms/menu/tool/container/Set.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/CHANGELOG.md" afterPath="$PROJECT_DIR$/bdms/message/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/OWNERS" afterPath="$PROJECT_DIR$/bdms/message/OWNERS" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/README.md" afterPath="$PROJECT_DIR$/bdms/message/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/api/api.bm.go" afterPath="$PROJECT_DIR$/bdms/message/api/api.bm.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/api/api.pb.go" afterPath="$PROJECT_DIR$/bdms/message/api/api.pb.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/api/api.proto" afterPath="$PROJECT_DIR$/bdms/message/api/api.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/api/client.go" afterPath="$PROJECT_DIR$/bdms/message/api/client.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/cmd/main.go" afterPath="$PROJECT_DIR$/bdms/message/cmd/main.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/configs/application.toml" afterPath="$PROJECT_DIR$/bdms/message/configs/application.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/configs/db.toml" afterPath="$PROJECT_DIR$/bdms/message/configs/db.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/configs/grpc.toml" afterPath="$PROJECT_DIR$/bdms/message/configs/grpc.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/configs/http.toml" afterPath="$PROJECT_DIR$/bdms/message/configs/http.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/configs/memcache.toml" afterPath="$PROJECT_DIR$/bdms/message/configs/memcache.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/configs/redis.toml" afterPath="$PROJECT_DIR$/bdms/message/configs/redis.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/go.mod" afterPath="$PROJECT_DIR$/bdms/message/go.mod" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/go.sum" afterPath="$PROJECT_DIR$/bdms/message/go.sum" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/internal/dao/dao.bts.go" afterPath="$PROJECT_DIR$/bdms/message/internal/dao/dao.bts.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/internal/dao/dao.go" afterPath="$PROJECT_DIR$/bdms/message/internal/dao/dao.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/internal/dao/dao_test.go" afterPath="$PROJECT_DIR$/bdms/message/internal/dao/dao_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/internal/dao/db.go" afterPath="$PROJECT_DIR$/bdms/message/internal/dao/db.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/internal/dao/mc.cache.go" afterPath="$PROJECT_DIR$/bdms/message/internal/dao/mc.cache.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/internal/dao/mc.go" afterPath="$PROJECT_DIR$/bdms/message/internal/dao/mc.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/internal/dao/redis.go" afterPath="$PROJECT_DIR$/bdms/message/internal/dao/redis.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/internal/dao/wire.go" afterPath="$PROJECT_DIR$/bdms/message/internal/dao/wire.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/internal/dao/wire_gen.go" afterPath="$PROJECT_DIR$/bdms/message/internal/dao/wire_gen.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/internal/di/app.go" afterPath="$PROJECT_DIR$/bdms/message/internal/di/app.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/internal/di/wire.go" afterPath="$PROJECT_DIR$/bdms/message/internal/di/wire.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/internal/di/wire_gen.go" afterPath="$PROJECT_DIR$/bdms/message/internal/di/wire_gen.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/internal/model/model.go" afterPath="$PROJECT_DIR$/bdms/message/internal/model/model.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/internal/server/grpc/check.go" afterPath="$PROJECT_DIR$/bdms/message/internal/server/grpc/check.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/internal/server/grpc/server.go" afterPath="$PROJECT_DIR$/bdms/message/internal/server/grpc/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/internal/server/http/check.go" afterPath="$PROJECT_DIR$/bdms/message/internal/server/http/check.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/internal/server/http/server.go" afterPath="$PROJECT_DIR$/bdms/message/internal/server/http/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/internal/server/http/util/DataSecurity.go" afterPath="$PROJECT_DIR$/bdms/message/internal/server/http/util/DataSecurity.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/internal/service/MessageService.go" afterPath="$PROJECT_DIR$/bdms/message/internal/service/MessageService.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/internal/service/service.go" afterPath="$PROJECT_DIR$/bdms/message/internal/service/service.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/test/0_db.sql" afterPath="$PROJECT_DIR$/bdms/message/test/0_db.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/test/1_data.sql" afterPath="$PROJECT_DIR$/bdms/message/test/1_data.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/test/application.toml" afterPath="$PROJECT_DIR$/bdms/message/test/application.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/test/db.toml" afterPath="$PROJECT_DIR$/bdms/message/test/db.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/test/docker-compose.yaml" afterPath="$PROJECT_DIR$/bdms/message/test/docker-compose.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/test/grpc.toml" afterPath="$PROJECT_DIR$/bdms/message/test/grpc.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/test/http.toml" afterPath="$PROJECT_DIR$/bdms/message/test/http.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/test/memcache.toml" afterPath="$PROJECT_DIR$/bdms/message/test/memcache.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/message/test/redis.toml" afterPath="$PROJECT_DIR$/bdms/message/test/redis.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/bdms/role/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/CHANGELOG.md" afterPath="$PROJECT_DIR$/bdms/role/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/OWNERS" afterPath="$PROJECT_DIR$/bdms/role/OWNERS" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/README.md" afterPath="$PROJECT_DIR$/bdms/role/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/api/api.bm.go" afterPath="$PROJECT_DIR$/bdms/role/api/api.bm.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/api/api.pb.go" afterPath="$PROJECT_DIR$/bdms/role/api/api.pb.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/api/api.proto" afterPath="$PROJECT_DIR$/bdms/role/api/api.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/api/client.go" afterPath="$PROJECT_DIR$/bdms/role/api/client.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/cmd/main.go" afterPath="$PROJECT_DIR$/bdms/role/cmd/main.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/configs/application.toml" afterPath="$PROJECT_DIR$/bdms/role/configs/application.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/configs/db.toml" afterPath="$PROJECT_DIR$/bdms/role/configs/db.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/configs/grpc.toml" afterPath="$PROJECT_DIR$/bdms/role/configs/grpc.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/configs/http.toml" afterPath="$PROJECT_DIR$/bdms/role/configs/http.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/configs/memcache.toml" afterPath="$PROJECT_DIR$/bdms/role/configs/memcache.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/configs/redis.toml" afterPath="$PROJECT_DIR$/bdms/role/configs/redis.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/go.mod" afterPath="$PROJECT_DIR$/bdms/role/go.mod" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/go.sum" afterPath="$PROJECT_DIR$/bdms/role/go.sum" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/internal/dao/dao.bts.go" afterPath="$PROJECT_DIR$/bdms/role/internal/dao/dao.bts.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/internal/dao/dao.go" afterPath="$PROJECT_DIR$/bdms/role/internal/dao/dao.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/internal/dao/dao_test.go" afterPath="$PROJECT_DIR$/bdms/role/internal/dao/dao_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/internal/dao/db.go" afterPath="$PROJECT_DIR$/bdms/role/internal/dao/db.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/internal/dao/mc.cache.go" afterPath="$PROJECT_DIR$/bdms/role/internal/dao/mc.cache.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/internal/dao/mc.go" afterPath="$PROJECT_DIR$/bdms/role/internal/dao/mc.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/internal/dao/redis.go" afterPath="$PROJECT_DIR$/bdms/role/internal/dao/redis.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/internal/dao/wire.go" afterPath="$PROJECT_DIR$/bdms/role/internal/dao/wire.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/internal/dao/wire_gen.go" afterPath="$PROJECT_DIR$/bdms/role/internal/dao/wire_gen.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/internal/di/app.go" afterPath="$PROJECT_DIR$/bdms/role/internal/di/app.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/internal/di/wire.go" afterPath="$PROJECT_DIR$/bdms/role/internal/di/wire.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/internal/di/wire_gen.go" afterPath="$PROJECT_DIR$/bdms/role/internal/di/wire_gen.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/internal/model/model.go" afterPath="$PROJECT_DIR$/bdms/role/internal/model/model.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/internal/server/grpc/check.go" afterPath="$PROJECT_DIR$/bdms/role/internal/server/grpc/check.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/internal/server/grpc/server.go" afterPath="$PROJECT_DIR$/bdms/role/internal/server/grpc/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/internal/server/http/check.go" afterPath="$PROJECT_DIR$/bdms/role/internal/server/http/check.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/internal/server/http/server.go" afterPath="$PROJECT_DIR$/bdms/role/internal/server/http/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/internal/server/http/util/DataSecurity.go" afterPath="$PROJECT_DIR$/bdms/role/internal/server/http/util/DataSecurity.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/internal/service/roleService.go" afterPath="$PROJECT_DIR$/bdms/role/internal/service/roleService.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/internal/service/service.go" afterPath="$PROJECT_DIR$/bdms/role/internal/service/service.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/test/0_db.sql" afterPath="$PROJECT_DIR$/bdms/role/test/0_db.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/test/1_data.sql" afterPath="$PROJECT_DIR$/bdms/role/test/1_data.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/test/application.toml" afterPath="$PROJECT_DIR$/bdms/role/test/application.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/test/db.toml" afterPath="$PROJECT_DIR$/bdms/role/test/db.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/test/docker-compose.yaml" afterPath="$PROJECT_DIR$/bdms/role/test/docker-compose.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/test/grpc.toml" afterPath="$PROJECT_DIR$/bdms/role/test/grpc.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/test/http.toml" afterPath="$PROJECT_DIR$/bdms/role/test/http.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/test/memcache.toml" afterPath="$PROJECT_DIR$/bdms/role/test/memcache.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/test/redis.toml" afterPath="$PROJECT_DIR$/bdms/role/test/redis.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/role/tool/container/Set.go" afterPath="$PROJECT_DIR$/bdms/role/tool/container/Set.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/.idea/workspace.xml" afterPath="$PROJECT_DIR$/bdms/token/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/CHANGELOG.md" afterPath="$PROJECT_DIR$/bdms/token/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/OWNERS" afterPath="$PROJECT_DIR$/bdms/token/OWNERS" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/README.md" afterPath="$PROJECT_DIR$/bdms/token/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/api/api.pb.go" afterPath="$PROJECT_DIR$/bdms/token/api/api.pb.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/api/api.proto" afterPath="$PROJECT_DIR$/bdms/token/api/api.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/api/client.go" afterPath="$PROJECT_DIR$/bdms/token/api/client.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/cmd/main.go" afterPath="$PROJECT_DIR$/bdms/token/cmd/main.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/configs/application.toml" afterPath="$PROJECT_DIR$/bdms/token/configs/application.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/configs/db.toml" afterPath="$PROJECT_DIR$/bdms/token/configs/db.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/configs/grpc.toml" afterPath="$PROJECT_DIR$/bdms/token/configs/grpc.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/configs/memcache.toml" afterPath="$PROJECT_DIR$/bdms/token/configs/memcache.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/configs/redis.toml" afterPath="$PROJECT_DIR$/bdms/token/configs/redis.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/go.mod" afterPath="$PROJECT_DIR$/bdms/token/go.mod" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/go.sum" afterPath="$PROJECT_DIR$/bdms/token/go.sum" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/internal/dao/dao.bts.go" afterPath="$PROJECT_DIR$/bdms/token/internal/dao/dao.bts.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/internal/dao/dao.go" afterPath="$PROJECT_DIR$/bdms/token/internal/dao/dao.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/internal/dao/dao_test.go" afterPath="$PROJECT_DIR$/bdms/token/internal/dao/dao_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/internal/dao/db.go" afterPath="$PROJECT_DIR$/bdms/token/internal/dao/db.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/internal/dao/mc.cache.go" afterPath="$PROJECT_DIR$/bdms/token/internal/dao/mc.cache.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/internal/dao/mc.go" afterPath="$PROJECT_DIR$/bdms/token/internal/dao/mc.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/internal/dao/redis.go" afterPath="$PROJECT_DIR$/bdms/token/internal/dao/redis.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/internal/dao/redis.token.go" afterPath="$PROJECT_DIR$/bdms/token/internal/dao/redis.token.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/internal/dao/redis.token_test.go" afterPath="$PROJECT_DIR$/bdms/token/internal/dao/redis.token_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/internal/dao/wire.go" afterPath="$PROJECT_DIR$/bdms/token/internal/dao/wire.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/internal/dao/wire_gen.go" afterPath="$PROJECT_DIR$/bdms/token/internal/dao/wire_gen.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/internal/di/app.go" afterPath="$PROJECT_DIR$/bdms/token/internal/di/app.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/internal/di/wire.go" afterPath="$PROJECT_DIR$/bdms/token/internal/di/wire.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/internal/di/wire_gen.go" afterPath="$PROJECT_DIR$/bdms/token/internal/di/wire_gen.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/internal/model/model.go" afterPath="$PROJECT_DIR$/bdms/token/internal/model/model.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/internal/server/grpc/check.go" afterPath="$PROJECT_DIR$/bdms/token/internal/server/grpc/check.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/internal/server/grpc/server.go" afterPath="$PROJECT_DIR$/bdms/token/internal/server/grpc/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/internal/service/service.go" afterPath="$PROJECT_DIR$/bdms/token/internal/service/service.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/internal/service/token.go" afterPath="$PROJECT_DIR$/bdms/token/internal/service/token.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/test/0_db.sql" afterPath="$PROJECT_DIR$/bdms/token/test/0_db.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/test/1_data.sql" afterPath="$PROJECT_DIR$/bdms/token/test/1_data.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/test/application.toml" afterPath="$PROJECT_DIR$/bdms/token/test/application.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/test/db.toml" afterPath="$PROJECT_DIR$/bdms/token/test/db.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/test/docker-compose.yaml" afterPath="$PROJECT_DIR$/bdms/token/test/docker-compose.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/test/grpc.toml" afterPath="$PROJECT_DIR$/bdms/token/test/grpc.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/test/memcache.toml" afterPath="$PROJECT_DIR$/bdms/token/test/memcache.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bdms/token/test/redis.toml" afterPath="$PROJECT_DIR$/bdms/token/test/redis.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/CHANGELOG.md" afterPath="$PROJECT_DIR$/imooc/course/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/OWNERS" afterPath="$PROJECT_DIR$/imooc/course/OWNERS" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/README.md" afterPath="$PROJECT_DIR$/imooc/course/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/api/api.bm.go" afterPath="$PROJECT_DIR$/imooc/course/api/api.bm.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/api/api.pb.go" afterPath="$PROJECT_DIR$/imooc/course/api/api.pb.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/api/api.proto" afterPath="$PROJECT_DIR$/imooc/course/api/api.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/api/api.swagger.json" afterPath="$PROJECT_DIR$/imooc/course/api/api.swagger.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/api/client.go" afterPath="$PROJECT_DIR$/imooc/course/api/client.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/cmd/main.go" afterPath="$PROJECT_DIR$/imooc/course/cmd/main.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/configs/application.toml" afterPath="$PROJECT_DIR$/imooc/course/configs/application.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/configs/db.toml" afterPath="$PROJECT_DIR$/imooc/course/configs/db.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/configs/grpc.toml" afterPath="$PROJECT_DIR$/imooc/course/configs/grpc.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/configs/http.toml" afterPath="$PROJECT_DIR$/imooc/course/configs/http.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/configs/memcache.toml" afterPath="$PROJECT_DIR$/imooc/course/configs/memcache.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/configs/redis.toml" afterPath="$PROJECT_DIR$/imooc/course/configs/redis.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/go.mod" afterPath="$PROJECT_DIR$/imooc/course/go.mod" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/go.sum" afterPath="$PROJECT_DIR$/imooc/course/go.sum" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/internal/dao/dao.bts.go" afterPath="$PROJECT_DIR$/imooc/course/internal/dao/dao.bts.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/internal/dao/dao.go" afterPath="$PROJECT_DIR$/imooc/course/internal/dao/dao.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/internal/dao/dao_test.go" afterPath="$PROJECT_DIR$/imooc/course/internal/dao/dao_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/internal/dao/db.go" afterPath="$PROJECT_DIR$/imooc/course/internal/dao/db.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/internal/dao/mc.cache.go" afterPath="$PROJECT_DIR$/imooc/course/internal/dao/mc.cache.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/internal/dao/mc.go" afterPath="$PROJECT_DIR$/imooc/course/internal/dao/mc.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/internal/dao/redis.go" afterPath="$PROJECT_DIR$/imooc/course/internal/dao/redis.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/internal/dao/wire.go" afterPath="$PROJECT_DIR$/imooc/course/internal/dao/wire.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/internal/dao/wire_gen.go" afterPath="$PROJECT_DIR$/imooc/course/internal/dao/wire_gen.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/internal/di/app.go" afterPath="$PROJECT_DIR$/imooc/course/internal/di/app.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/internal/di/wire.go" afterPath="$PROJECT_DIR$/imooc/course/internal/di/wire.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/internal/di/wire_gen.go" afterPath="$PROJECT_DIR$/imooc/course/internal/di/wire_gen.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/internal/model/model.go" afterPath="$PROJECT_DIR$/imooc/course/internal/model/model.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/internal/server/grpc/check.go" afterPath="$PROJECT_DIR$/imooc/course/internal/server/grpc/check.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/internal/server/grpc/server.go" afterPath="$PROJECT_DIR$/imooc/course/internal/server/grpc/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/internal/server/http/check.go" afterPath="$PROJECT_DIR$/imooc/course/internal/server/http/check.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/internal/server/http/server.go" afterPath="$PROJECT_DIR$/imooc/course/internal/server/http/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/internal/server/http/util/DataSecurity.go" afterPath="$PROJECT_DIR$/imooc/course/internal/server/http/util/DataSecurity.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/internal/service/CourseService.go" afterPath="$PROJECT_DIR$/imooc/course/internal/service/CourseService.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/internal/service/manageService.go" afterPath="$PROJECT_DIR$/imooc/course/internal/service/manageService.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/internal/service/service.go" afterPath="$PROJECT_DIR$/imooc/course/internal/service/service.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/test/0_db.sql" afterPath="$PROJECT_DIR$/imooc/course/test/0_db.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/test/1_data.sql" afterPath="$PROJECT_DIR$/imooc/course/test/1_data.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/test/application.toml" afterPath="$PROJECT_DIR$/imooc/course/test/application.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/test/db.toml" afterPath="$PROJECT_DIR$/imooc/course/test/db.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/test/docker-compose.yaml" afterPath="$PROJECT_DIR$/imooc/course/test/docker-compose.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/test/grpc.toml" afterPath="$PROJECT_DIR$/imooc/course/test/grpc.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/test/http.toml" afterPath="$PROJECT_DIR$/imooc/course/test/http.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/test/memcache.toml" afterPath="$PROJECT_DIR$/imooc/course/test/memcache.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imooc/course/test/redis.toml" afterPath="$PROJECT_DIR$/imooc/course/test/redis.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/.idea/workspace.xml" afterPath="$PROJECT_DIR$/pholcus/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/aid/history/failure.go" afterPath="$PROJECT_DIR$/pholcus/app/aid/history/failure.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/aid/history/history.go" afterPath="$PROJECT_DIR$/pholcus/app/aid/history/history.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/aid/history/success.go" afterPath="$PROJECT_DIR$/pholcus/app/aid/history/success.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/aid/proxy/host.go" afterPath="$PROJECT_DIR$/pholcus/app/aid/proxy/host.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/aid/proxy/proxy.go" afterPath="$PROJECT_DIR$/pholcus/app/aid/proxy/proxy.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/crawler/crawler.go" afterPath="$PROJECT_DIR$/pholcus/app/crawler/crawler.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/crawler/crawlerpool.go" afterPath="$PROJECT_DIR$/pholcus/app/crawler/crawlerpool.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/crawler/spiderqueue.go" afterPath="$PROJECT_DIR$/pholcus/app/crawler/spiderqueue.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/distribute/interface.go" afterPath="$PROJECT_DIR$/pholcus/app/distribute/interface.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/distribute/master_api.go" afterPath="$PROJECT_DIR$/pholcus/app/distribute/master_api.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/distribute/slave_api.go" afterPath="$PROJECT_DIR$/pholcus/app/distribute/slave_api.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/distribute/task.go" afterPath="$PROJECT_DIR$/pholcus/app/distribute/task.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/distribute/taskjar.go" afterPath="$PROJECT_DIR$/pholcus/app/distribute/taskjar.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/downloader/downloader.go" afterPath="$PROJECT_DIR$/pholcus/app/downloader/downloader.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/downloader/downloader_surfer.go" afterPath="$PROJECT_DIR$/pholcus/app/downloader/downloader_surfer.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/downloader/request/request.go" afterPath="$PROJECT_DIR$/pholcus/app/downloader/request/request.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/downloader/request/request_test.go" afterPath="$PROJECT_DIR$/pholcus/app/downloader/request/request_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/downloader/request/temp.go" afterPath="$PROJECT_DIR$/pholcus/app/downloader/request/temp.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/downloader/surfer/agent/agent.go" afterPath="$PROJECT_DIR$/pholcus/app/downloader/surfer/agent/agent.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/downloader/surfer/agent/agent_bsd.go" afterPath="$PROJECT_DIR$/pholcus/app/downloader/surfer/agent/agent_bsd.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/downloader/surfer/agent/agent_linux.go" afterPath="$PROJECT_DIR$/pholcus/app/downloader/surfer/agent/agent_linux.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/downloader/surfer/agent/agent_linux_arm.go" afterPath="$PROJECT_DIR$/pholcus/app/downloader/surfer/agent/agent_linux_arm.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/downloader/surfer/agent/agent_windows.go" afterPath="$PROJECT_DIR$/pholcus/app/downloader/surfer/agent/agent_windows.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/downloader/surfer/example/example.go" afterPath="$PROJECT_DIR$/pholcus/app/downloader/surfer/example/example.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/downloader/surfer/param.go" afterPath="$PROJECT_DIR$/pholcus/app/downloader/surfer/param.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/downloader/surfer/phantom.go" afterPath="$PROJECT_DIR$/pholcus/app/downloader/surfer/phantom.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/downloader/surfer/request.go" afterPath="$PROJECT_DIR$/pholcus/app/downloader/surfer/request.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/downloader/surfer/surf.go" afterPath="$PROJECT_DIR$/pholcus/app/downloader/surfer/surf.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/downloader/surfer/surfer.go" afterPath="$PROJECT_DIR$/pholcus/app/downloader/surfer/surfer.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/downloader/surfer/util.go" afterPath="$PROJECT_DIR$/pholcus/app/downloader/surfer/util.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/pipeline/collector/collector.go" afterPath="$PROJECT_DIR$/pholcus/app/pipeline/collector/collector.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/pipeline/collector/data/data.go" afterPath="$PROJECT_DIR$/pholcus/app/pipeline/collector/data/data.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/pipeline/collector/output_beanstalkd.go" afterPath="$PROJECT_DIR$/pholcus/app/pipeline/collector/output_beanstalkd.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/pipeline/collector/output_csv.go" afterPath="$PROJECT_DIR$/pholcus/app/pipeline/collector/output_csv.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/pipeline/collector/output_data.go" afterPath="$PROJECT_DIR$/pholcus/app/pipeline/collector/output_data.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/pipeline/collector/output_excel.go" afterPath="$PROJECT_DIR$/pholcus/app/pipeline/collector/output_excel.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/pipeline/collector/output_file.go" afterPath="$PROJECT_DIR$/pholcus/app/pipeline/collector/output_file.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/pipeline/collector/output_kafka.go" afterPath="$PROJECT_DIR$/pholcus/app/pipeline/collector/output_kafka.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/pipeline/collector/output_mgo.go" afterPath="$PROJECT_DIR$/pholcus/app/pipeline/collector/output_mgo.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/pipeline/collector/output_mysql.go" afterPath="$PROJECT_DIR$/pholcus/app/pipeline/collector/output_mysql.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/pipeline/collector/output_util.go" afterPath="$PROJECT_DIR$/pholcus/app/pipeline/collector/output_util.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/pipeline/output.go" afterPath="$PROJECT_DIR$/pholcus/app/pipeline/output.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/pipeline/pipeline.go" afterPath="$PROJECT_DIR$/pholcus/app/pipeline/pipeline.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/scheduler/matrix.go" afterPath="$PROJECT_DIR$/pholcus/app/scheduler/matrix.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/scheduler/scheduler.go" afterPath="$PROJECT_DIR$/pholcus/app/scheduler/scheduler.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/spider/common/common.go" afterPath="$PROJECT_DIR$/pholcus/app/spider/common/common.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/spider/common/form.go" afterPath="$PROJECT_DIR$/pholcus/app/spider/common/form.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/spider/parsejs.go" afterPath="$PROJECT_DIR$/pholcus/app/spider/parsejs.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/spider/species.go" afterPath="$PROJECT_DIR$/pholcus/app/spider/species.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/spider/spider.go" afterPath="$PROJECT_DIR$/pholcus/app/spider/spider.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/spider/timer.go" afterPath="$PROJECT_DIR$/pholcus/app/spider/timer.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/app/spider/timer_test.go" afterPath="$PROJECT_DIR$/pholcus/app/spider/timer_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/cmd/pholcus-cmd.go" afterPath="$PROJECT_DIR$/pholcus/cmd/pholcus-cmd.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/beanstalkd/beanstalkd.go" afterPath="$PROJECT_DIR$/pholcus/common/beanstalkd/beanstalkd.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/bytes/bytes.go" afterPath="$PROJECT_DIR$/pholcus/common/bytes/bytes.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/config/config.go" afterPath="$PROJECT_DIR$/pholcus/common/config/config.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/config/fake.go" afterPath="$PROJECT_DIR$/pholcus/common/config/fake.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/config/ini.go" afterPath="$PROJECT_DIR$/pholcus/common/config/ini.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/config/ini_test.go" afterPath="$PROJECT_DIR$/pholcus/common/config/ini_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/config/json.go" afterPath="$PROJECT_DIR$/pholcus/common/config/json.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/config/json_test.go" afterPath="$PROJECT_DIR$/pholcus/common/config/json_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/gc/gc.go" afterPath="$PROJECT_DIR$/pholcus/common/gc/gc.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/array.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/array.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/array_test.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/array_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/bench_array_test.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench_array_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/bench_example_test.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench_example_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/bench_expand_test.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench_expand_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/bench_filter_test.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench_filter_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/bench_iteration_test.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench_iteration_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/bench_property_test.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench_property_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/bench_query_test.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench_query_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/bench_traversal_test.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/bench_traversal_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/doc.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/doc.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/example_test.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/example_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/expand.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/expand.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/expand_test.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/expand_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/filter.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/filter.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/filter_test.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/filter_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/iteration.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/iteration.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/iteration_test.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/iteration_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/manipulation.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/manipulation.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/manipulation_test.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/manipulation_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/property.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/property.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/property_test.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/property_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/query.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/query.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/query_test.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/query_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/traversal.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/traversal.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/traversal_test.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/traversal_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/type.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/type.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/type_test.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/type_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/utilities.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/utilities.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/goquery/utilities_test.go" afterPath="$PROJECT_DIR$/pholcus/common/goquery/utilities_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/kafka/kafka.go" afterPath="$PROJECT_DIR$/pholcus/common/kafka/kafka.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/8bit.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/8bit.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/ASCII.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/ASCII.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/big5-data.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/big5-data.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/big5.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/big5.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/charset.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/charset.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/convert_string.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/convert_string.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/cp51932.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/cp51932.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/entity.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/entity.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/entity_data.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/entity_data.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/euc-jp.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/euc-jp.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/euc-kr-data.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/euc-kr-data.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/euc-kr.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/euc-kr.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/fallback.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/fallback.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/gb18030-data.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/gb18030-data.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/gb18030.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/gb18030.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/gbk-data.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/gbk-data.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/gbk.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/gbk.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/iso2022jp.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/iso2022jp.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/jis0201-data.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/jis0201-data.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/jis0208-data.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/jis0208-data.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/jis0212-data.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/jis0212-data.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/kuten.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/kuten.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/mahoniconv/mahoniconv.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/mahoniconv/mahoniconv.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/mbcs.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/mbcs.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/ms-jis-data.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/ms-jis-data.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/reader.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/reader.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/shiftjis-data.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/shiftjis-data.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/shiftjis.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/shiftjis.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/tcvn3.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/tcvn3.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/translate.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/translate.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/utf16.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/utf16.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/utf8.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/utf8.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mahonia/writer.go" afterPath="$PROJECT_DIR$/pholcus/common/mahonia/writer.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mgo/count.go" afterPath="$PROJECT_DIR$/pholcus/common/mgo/count.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mgo/find.go" afterPath="$PROJECT_DIR$/pholcus/common/mgo/find.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mgo/insert.go" afterPath="$PROJECT_DIR$/pholcus/common/mgo/insert.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mgo/list.go" afterPath="$PROJECT_DIR$/pholcus/common/mgo/list.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mgo/mgo.go" afterPath="$PROJECT_DIR$/pholcus/common/mgo/mgo.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mgo/operator.go" afterPath="$PROJECT_DIR$/pholcus/common/mgo/operator.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mgo/operator_test.go" afterPath="$PROJECT_DIR$/pholcus/common/mgo/operator_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mgo/remove.go" afterPath="$PROJECT_DIR$/pholcus/common/mgo/remove.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mgo/update.go" afterPath="$PROJECT_DIR$/pholcus/common/mgo/update.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mgo/update_all.go" afterPath="$PROJECT_DIR$/pholcus/common/mgo/update_all.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mgo/upsert.go" afterPath="$PROJECT_DIR$/pholcus/common/mgo/upsert.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/mysql/mysql.go" afterPath="$PROJECT_DIR$/pholcus/common/mysql/mysql.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/ping/ping.go" afterPath="$PROJECT_DIR$/pholcus/common/ping/ping.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/ping/ping_test.go" afterPath="$PROJECT_DIR$/pholcus/common/ping/ping_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/pinyin/example_test.go" afterPath="$PROJECT_DIR$/pholcus/common/pinyin/example_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/pinyin/initials_sort.go" afterPath="$PROJECT_DIR$/pholcus/common/pinyin/initials_sort.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/pinyin/phonetic_symbol.go" afterPath="$PROJECT_DIR$/pholcus/common/pinyin/phonetic_symbol.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/pinyin/pinyin.go" afterPath="$PROJECT_DIR$/pholcus/common/pinyin/pinyin.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/pinyin/pinyin_dict.go" afterPath="$PROJECT_DIR$/pholcus/common/pinyin/pinyin_dict.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/pool/pool.go" afterPath="$PROJECT_DIR$/pholcus/common/pool/pool.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/queue/queue.go" afterPath="$PROJECT_DIR$/pholcus/common/queue/queue.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/session/sess_cookie.go" afterPath="$PROJECT_DIR$/pholcus/common/session/sess_cookie.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/session/sess_cookie_test.go" afterPath="$PROJECT_DIR$/pholcus/common/session/sess_cookie_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/session/sess_file.go" afterPath="$PROJECT_DIR$/pholcus/common/session/sess_file.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/session/sess_mem.go" afterPath="$PROJECT_DIR$/pholcus/common/session/sess_mem.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/session/sess_mem_test.go" afterPath="$PROJECT_DIR$/pholcus/common/session/sess_mem_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/session/sess_test.go" afterPath="$PROJECT_DIR$/pholcus/common/session/sess_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/session/sess_utils.go" afterPath="$PROJECT_DIR$/pholcus/common/session/sess_utils.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/session/session.go" afterPath="$PROJECT_DIR$/pholcus/common/session/session.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/simplejson/simplejson.go" afterPath="$PROJECT_DIR$/pholcus/common/simplejson/simplejson.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/util/util.go" afterPath="$PROJECT_DIR$/pholcus/common/util/util.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/websocket/client.go" afterPath="$PROJECT_DIR$/pholcus/common/websocket/client.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/websocket/hybi.go" afterPath="$PROJECT_DIR$/pholcus/common/websocket/hybi.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/websocket/server.go" afterPath="$PROJECT_DIR$/pholcus/common/websocket/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/websocket/websocket.go" afterPath="$PROJECT_DIR$/pholcus/common/websocket/websocket.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/xlsx/cell.go" afterPath="$PROJECT_DIR$/pholcus/common/xlsx/cell.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/xlsx/col.go" afterPath="$PROJECT_DIR$/pholcus/common/xlsx/col.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/xlsx/date.go" afterPath="$PROJECT_DIR$/pholcus/common/xlsx/date.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/xlsx/doc.go" afterPath="$PROJECT_DIR$/pholcus/common/xlsx/doc.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/xlsx/file.go" afterPath="$PROJECT_DIR$/pholcus/common/xlsx/file.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/xlsx/hsl.go" afterPath="$PROJECT_DIR$/pholcus/common/xlsx/hsl.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/xlsx/lib.go" afterPath="$PROJECT_DIR$/pholcus/common/xlsx/lib.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/xlsx/reftable.go" afterPath="$PROJECT_DIR$/pholcus/common/xlsx/reftable.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/xlsx/row.go" afterPath="$PROJECT_DIR$/pholcus/common/xlsx/row.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/xlsx/sheet.go" afterPath="$PROJECT_DIR$/pholcus/common/xlsx/sheet.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/xlsx/style.go" afterPath="$PROJECT_DIR$/pholcus/common/xlsx/style.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/xlsx/templates.go" afterPath="$PROJECT_DIR$/pholcus/common/xlsx/templates.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/xlsx/theme.go" afterPath="$PROJECT_DIR$/pholcus/common/xlsx/theme.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/xlsx/write.go" afterPath="$PROJECT_DIR$/pholcus/common/xlsx/write.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/xlsx/xmlContentTypes.go" afterPath="$PROJECT_DIR$/pholcus/common/xlsx/xmlContentTypes.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/xlsx/xmlSharedStrings.go" afterPath="$PROJECT_DIR$/pholcus/common/xlsx/xmlSharedStrings.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/xlsx/xmlStyle.go" afterPath="$PROJECT_DIR$/pholcus/common/xlsx/xmlStyle.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/xlsx/xmlTheme.go" afterPath="$PROJECT_DIR$/pholcus/common/xlsx/xmlTheme.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/xlsx/xmlWorkbook.go" afterPath="$PROJECT_DIR$/pholcus/common/xlsx/xmlWorkbook.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/common/xlsx/xmlWorksheet.go" afterPath="$PROJECT_DIR$/pholcus/common/xlsx/xmlWorksheet.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/config/config.go" afterPath="$PROJECT_DIR$/pholcus/config/config.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/config/setting.go" afterPath="$PROJECT_DIR$/pholcus/config/setting.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/doc.go" afterPath="$PROJECT_DIR$/pholcus/doc.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/example_main.go" afterPath="$PROJECT_DIR$/pholcus/example_main.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/exec/exec.go" afterPath="$PROJECT_DIR$/pholcus/exec/exec.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/exec/exec_darwin.go" afterPath="$PROJECT_DIR$/pholcus/exec/exec_darwin.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/exec/exec_freebsd.go" afterPath="$PROJECT_DIR$/pholcus/exec/exec_freebsd.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/exec/exec_linux.go" afterPath="$PROJECT_DIR$/pholcus/exec/exec_linux.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/exec/exec_windows.go" afterPath="$PROJECT_DIR$/pholcus/exec/exec_windows.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/go.mod" afterPath="$PROJECT_DIR$/pholcus/go.mod" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/go.sum" afterPath="$PROJECT_DIR$/pholcus/go.sum" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/gui/client.go" afterPath="$PROJECT_DIR$/pholcus/gui/client.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/gui/logview.go" afterPath="$PROJECT_DIR$/pholcus/gui/logview.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/gui/model/guispider.go" afterPath="$PROJECT_DIR$/pholcus/gui/model/guispider.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/gui/offline.go" afterPath="$PROJECT_DIR$/pholcus/gui/offline.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/gui/pholcus-gui.go" afterPath="$PROJECT_DIR$/pholcus/gui/pholcus-gui.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/gui/runmode.go" afterPath="$PROJECT_DIR$/pholcus/gui/runmode.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/gui/server.go" afterPath="$PROJECT_DIR$/pholcus/gui/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/gui/var.go" afterPath="$PROJECT_DIR$/pholcus/gui/var.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/logs/logs.go" afterPath="$PROJECT_DIR$/pholcus/logs/logs.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/logs/logs/conn.go" afterPath="$PROJECT_DIR$/pholcus/logs/logs/conn.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/logs/logs/conn_test.go" afterPath="$PROJECT_DIR$/pholcus/logs/logs/conn_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/logs/logs/console.go" afterPath="$PROJECT_DIR$/pholcus/logs/logs/console.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/logs/logs/console_test.go" afterPath="$PROJECT_DIR$/pholcus/logs/logs/console_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/logs/logs/file.go" afterPath="$PROJECT_DIR$/pholcus/logs/logs/file.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/logs/logs/file_test.go" afterPath="$PROJECT_DIR$/pholcus/logs/logs/file_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/logs/logs/log.go" afterPath="$PROJECT_DIR$/pholcus/logs/logs/log.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/logs/logs/smtp.go" afterPath="$PROJECT_DIR$/pholcus/logs/logs/smtp.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/logs/logs/smtp_test.go" afterPath="$PROJECT_DIR$/pholcus/logs/logs/smtp_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/pholcus_lib/imooc.go" afterPath="$PROJECT_DIR$/pholcus/pholcus_lib/imooc.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/pholcus_pkg/cache/js" afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/cache/js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/pholcus_pkg/config.ini" afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/config.ini" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/pholcus_pkg/logs/pholcus.log" afterPath="$PROJECT_DIR$/pholcus/pholcus_pkg/logs/pholcus.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/runtime/cache/cache.go" afterPath="$PROJECT_DIR$/pholcus/runtime/cache/cache.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/runtime/status/status.go" afterPath="$PROJECT_DIR$/pholcus/runtime/status/status.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/web/bindata_assetfs.go" afterPath="$PROJECT_DIR$/pholcus/web/bindata_assetfs.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/web/bindata_assetfs_usage.go" afterPath="$PROJECT_DIR$/pholcus/web/bindata_assetfs_usage.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/web/httpController.go" afterPath="$PROJECT_DIR$/pholcus/web/httpController.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/web/logsocketController.go" afterPath="$PROJECT_DIR$/pholcus/web/logsocketController.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/web/pholcus-web.go" afterPath="$PROJECT_DIR$/pholcus/web/pholcus-web.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/web/router.go" afterPath="$PROJECT_DIR$/pholcus/web/router.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pholcus/web/websocketController.go" afterPath="$PROJECT_DIR$/pholcus/web/websocketController.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/container/Set.go" afterPath="$PROJECT_DIR$/tool/container/Set.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/CHANGELOG.md" afterPath="$PROJECT_DIR$/tool/dome/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/OWNERS" afterPath="$PROJECT_DIR$/tool/dome/OWNERS" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/README.md" afterPath="$PROJECT_DIR$/tool/dome/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/api/api.bm.go" afterPath="$PROJECT_DIR$/tool/dome/api/api.bm.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/api/api.pb.go" afterPath="$PROJECT_DIR$/tool/dome/api/api.pb.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/api/api.proto" afterPath="$PROJECT_DIR$/tool/dome/api/api.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/api/client.go" afterPath="$PROJECT_DIR$/tool/dome/api/client.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/cmd/main.go" afterPath="$PROJECT_DIR$/tool/dome/cmd/main.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/configs/application.toml" afterPath="$PROJECT_DIR$/tool/dome/configs/application.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/configs/db.toml" afterPath="$PROJECT_DIR$/tool/dome/configs/db.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/configs/grpc.toml" afterPath="$PROJECT_DIR$/tool/dome/configs/grpc.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/configs/http.toml" afterPath="$PROJECT_DIR$/tool/dome/configs/http.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/configs/memcache.toml" afterPath="$PROJECT_DIR$/tool/dome/configs/memcache.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/configs/redis.toml" afterPath="$PROJECT_DIR$/tool/dome/configs/redis.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/go.mod" afterPath="$PROJECT_DIR$/tool/dome/go.mod" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/go.sum" afterPath="$PROJECT_DIR$/tool/dome/go.sum" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/internal/dao/dao.bts.go" afterPath="$PROJECT_DIR$/tool/dome/internal/dao/dao.bts.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/internal/dao/dao.go" afterPath="$PROJECT_DIR$/tool/dome/internal/dao/dao.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/internal/dao/dao_test.go" afterPath="$PROJECT_DIR$/tool/dome/internal/dao/dao_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/internal/dao/db.go" afterPath="$PROJECT_DIR$/tool/dome/internal/dao/db.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/internal/dao/mc.cache.go" afterPath="$PROJECT_DIR$/tool/dome/internal/dao/mc.cache.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/internal/dao/mc.go" afterPath="$PROJECT_DIR$/tool/dome/internal/dao/mc.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/internal/dao/redis.go" afterPath="$PROJECT_DIR$/tool/dome/internal/dao/redis.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/internal/dao/wire.go" afterPath="$PROJECT_DIR$/tool/dome/internal/dao/wire.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/internal/dao/wire_gen.go" afterPath="$PROJECT_DIR$/tool/dome/internal/dao/wire_gen.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/internal/di/app.go" afterPath="$PROJECT_DIR$/tool/dome/internal/di/app.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/internal/di/wire.go" afterPath="$PROJECT_DIR$/tool/dome/internal/di/wire.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/internal/di/wire_gen.go" afterPath="$PROJECT_DIR$/tool/dome/internal/di/wire_gen.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/internal/model/model.go" afterPath="$PROJECT_DIR$/tool/dome/internal/model/model.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/internal/server/grpc/check.go" afterPath="$PROJECT_DIR$/tool/dome/internal/server/grpc/check.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/internal/server/grpc/server.go" afterPath="$PROJECT_DIR$/tool/dome/internal/server/grpc/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/internal/server/http/check.go" afterPath="$PROJECT_DIR$/tool/dome/internal/server/http/check.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/internal/server/http/server.go" afterPath="$PROJECT_DIR$/tool/dome/internal/server/http/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/internal/server/http/util/DataSecurity.go" afterPath="$PROJECT_DIR$/tool/dome/internal/server/http/util/DataSecurity.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/internal/service/service.go" afterPath="$PROJECT_DIR$/tool/dome/internal/service/service.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/test/0_db.sql" afterPath="$PROJECT_DIR$/tool/dome/test/0_db.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/test/1_data.sql" afterPath="$PROJECT_DIR$/tool/dome/test/1_data.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/test/application.toml" afterPath="$PROJECT_DIR$/tool/dome/test/application.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/test/db.toml" afterPath="$PROJECT_DIR$/tool/dome/test/db.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/test/docker-compose.yaml" afterPath="$PROJECT_DIR$/tool/dome/test/docker-compose.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/test/grpc.toml" afterPath="$PROJECT_DIR$/tool/dome/test/grpc.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/test/http.toml" afterPath="$PROJECT_DIR$/tool/dome/test/http.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/test/memcache.toml" afterPath="$PROJECT_DIR$/tool/dome/test/memcache.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/dome/test/redis.toml" afterPath="$PROJECT_DIR$/tool/dome/test/redis.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/go.mod" afterPath="$PROJECT_DIR$/tool/go.mod" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/go.sum" afterPath="$PROJECT_DIR$/tool/go.sum" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tool/http/security/DataSecurity.go" afterPath="$PROJECT_DIR$/tool/http/security/DataSecurity.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/.idea/workspace.xml" afterPath="$PROJECT_DIR$/worknet/company/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/CHANGELOG.md" afterPath="$PROJECT_DIR$/worknet/company/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/OWNERS" afterPath="$PROJECT_DIR$/worknet/company/OWNERS" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/README.md" afterPath="$PROJECT_DIR$/worknet/company/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/api/api.bm.go" afterPath="$PROJECT_DIR$/worknet/company/api/api.bm.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/api/api.pb.go" afterPath="$PROJECT_DIR$/worknet/company/api/api.pb.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/api/api.proto" afterPath="$PROJECT_DIR$/worknet/company/api/api.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/api/client.go" afterPath="$PROJECT_DIR$/worknet/company/api/client.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/cmd/main.go" afterPath="$PROJECT_DIR$/worknet/company/cmd/main.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/configs/application.toml" afterPath="$PROJECT_DIR$/worknet/company/configs/application.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/configs/db.toml" afterPath="$PROJECT_DIR$/worknet/company/configs/db.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/configs/grpc.toml" afterPath="$PROJECT_DIR$/worknet/company/configs/grpc.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/configs/http.toml" afterPath="$PROJECT_DIR$/worknet/company/configs/http.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/configs/memcache.toml" afterPath="$PROJECT_DIR$/worknet/company/configs/memcache.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/configs/redis.toml" afterPath="$PROJECT_DIR$/worknet/company/configs/redis.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/go.mod" afterPath="$PROJECT_DIR$/worknet/company/go.mod" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/go.sum" afterPath="$PROJECT_DIR$/worknet/company/go.sum" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/internal/dao/dao.bts.go" afterPath="$PROJECT_DIR$/worknet/company/internal/dao/dao.bts.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/internal/dao/dao.go" afterPath="$PROJECT_DIR$/worknet/company/internal/dao/dao.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/internal/dao/dao_test.go" afterPath="$PROJECT_DIR$/worknet/company/internal/dao/dao_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/internal/dao/db.go" afterPath="$PROJECT_DIR$/worknet/company/internal/dao/db.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/internal/dao/mc.cache.go" afterPath="$PROJECT_DIR$/worknet/company/internal/dao/mc.cache.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/internal/dao/mc.go" afterPath="$PROJECT_DIR$/worknet/company/internal/dao/mc.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/internal/dao/redis.go" afterPath="$PROJECT_DIR$/worknet/company/internal/dao/redis.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/internal/dao/wire.go" afterPath="$PROJECT_DIR$/worknet/company/internal/dao/wire.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/internal/dao/wire_gen.go" afterPath="$PROJECT_DIR$/worknet/company/internal/dao/wire_gen.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/internal/di/app.go" afterPath="$PROJECT_DIR$/worknet/company/internal/di/app.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/internal/di/wire.go" afterPath="$PROJECT_DIR$/worknet/company/internal/di/wire.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/internal/di/wire_gen.go" afterPath="$PROJECT_DIR$/worknet/company/internal/di/wire_gen.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/internal/model/model.go" afterPath="$PROJECT_DIR$/worknet/company/internal/model/model.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/internal/server/grpc/check.go" afterPath="$PROJECT_DIR$/worknet/company/internal/server/grpc/check.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/internal/server/grpc/server.go" afterPath="$PROJECT_DIR$/worknet/company/internal/server/grpc/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/internal/server/http/check.go" afterPath="$PROJECT_DIR$/worknet/company/internal/server/http/check.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/internal/server/http/server.go" afterPath="$PROJECT_DIR$/worknet/company/internal/server/http/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/internal/server/http/util/DataSecurity.go" afterPath="$PROJECT_DIR$/worknet/company/internal/server/http/util/DataSecurity.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/internal/service/companyContestService.go" afterPath="$PROJECT_DIR$/worknet/company/internal/service/companyContestService.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/internal/service/companyProfessionService.go" afterPath="$PROJECT_DIR$/worknet/company/internal/service/companyProfessionService.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/internal/service/service.go" afterPath="$PROJECT_DIR$/worknet/company/internal/service/service.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/test/0_db.sql" afterPath="$PROJECT_DIR$/worknet/company/test/0_db.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/test/1_data.sql" afterPath="$PROJECT_DIR$/worknet/company/test/1_data.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/test/application.toml" afterPath="$PROJECT_DIR$/worknet/company/test/application.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/test/db.toml" afterPath="$PROJECT_DIR$/worknet/company/test/db.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/test/docker-compose.yaml" afterPath="$PROJECT_DIR$/worknet/company/test/docker-compose.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/test/grpc.toml" afterPath="$PROJECT_DIR$/worknet/company/test/grpc.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/test/http.toml" afterPath="$PROJECT_DIR$/worknet/company/test/http.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/test/memcache.toml" afterPath="$PROJECT_DIR$/worknet/company/test/memcache.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/company/test/redis.toml" afterPath="$PROJECT_DIR$/worknet/company/test/redis.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/.idea/workspace.xml" afterPath="$PROJECT_DIR$/worknet/course/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/CHANGELOG.md" afterPath="$PROJECT_DIR$/worknet/course/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/OWNERS" afterPath="$PROJECT_DIR$/worknet/course/OWNERS" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/README.md" afterPath="$PROJECT_DIR$/worknet/course/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/api/api.bm.go" afterPath="$PROJECT_DIR$/worknet/course/api/api.bm.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/api/api.pb.go" afterPath="$PROJECT_DIR$/worknet/course/api/api.pb.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/api/api.proto" afterPath="$PROJECT_DIR$/worknet/course/api/api.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/api/client.go" afterPath="$PROJECT_DIR$/worknet/course/api/client.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/cmd/main.go" afterPath="$PROJECT_DIR$/worknet/course/cmd/main.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/configs/application.toml" afterPath="$PROJECT_DIR$/worknet/course/configs/application.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/configs/db.toml" afterPath="$PROJECT_DIR$/worknet/course/configs/db.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/configs/grpc.toml" afterPath="$PROJECT_DIR$/worknet/course/configs/grpc.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/configs/http.toml" afterPath="$PROJECT_DIR$/worknet/course/configs/http.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/configs/memcache.toml" afterPath="$PROJECT_DIR$/worknet/course/configs/memcache.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/configs/redis.toml" afterPath="$PROJECT_DIR$/worknet/course/configs/redis.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/go.mod" afterPath="$PROJECT_DIR$/worknet/course/go.mod" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/go.sum" afterPath="$PROJECT_DIR$/worknet/course/go.sum" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/internal/dao/dao.bts.go" afterPath="$PROJECT_DIR$/worknet/course/internal/dao/dao.bts.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/internal/dao/dao.go" afterPath="$PROJECT_DIR$/worknet/course/internal/dao/dao.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/internal/dao/dao_test.go" afterPath="$PROJECT_DIR$/worknet/course/internal/dao/dao_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/internal/dao/db.go" afterPath="$PROJECT_DIR$/worknet/course/internal/dao/db.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/internal/dao/mc.cache.go" afterPath="$PROJECT_DIR$/worknet/course/internal/dao/mc.cache.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/internal/dao/mc.go" afterPath="$PROJECT_DIR$/worknet/course/internal/dao/mc.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/internal/dao/redis.go" afterPath="$PROJECT_DIR$/worknet/course/internal/dao/redis.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/internal/dao/wire.go" afterPath="$PROJECT_DIR$/worknet/course/internal/dao/wire.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/internal/dao/wire_gen.go" afterPath="$PROJECT_DIR$/worknet/course/internal/dao/wire_gen.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/internal/di/app.go" afterPath="$PROJECT_DIR$/worknet/course/internal/di/app.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/internal/di/wire.go" afterPath="$PROJECT_DIR$/worknet/course/internal/di/wire.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/internal/di/wire_gen.go" afterPath="$PROJECT_DIR$/worknet/course/internal/di/wire_gen.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/internal/model/model.go" afterPath="$PROJECT_DIR$/worknet/course/internal/model/model.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/internal/server/grpc/check.go" afterPath="$PROJECT_DIR$/worknet/course/internal/server/grpc/check.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/internal/server/grpc/server.go" afterPath="$PROJECT_DIR$/worknet/course/internal/server/grpc/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/internal/server/http/check.go" afterPath="$PROJECT_DIR$/worknet/course/internal/server/http/check.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/internal/server/http/server.go" afterPath="$PROJECT_DIR$/worknet/course/internal/server/http/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/internal/server/http/util/DataSecurity.go" afterPath="$PROJECT_DIR$/worknet/course/internal/server/http/util/DataSecurity.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/internal/service/courseActivityService.go" afterPath="$PROJECT_DIR$/worknet/course/internal/service/courseActivityService.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/internal/service/courseRankService.go" afterPath="$PROJECT_DIR$/worknet/course/internal/service/courseRankService.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/internal/service/courseStudyService.go" afterPath="$PROJECT_DIR$/worknet/course/internal/service/courseStudyService.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/internal/service/service.go" afterPath="$PROJECT_DIR$/worknet/course/internal/service/service.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/test/0_db.sql" afterPath="$PROJECT_DIR$/worknet/course/test/0_db.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/test/1_data.sql" afterPath="$PROJECT_DIR$/worknet/course/test/1_data.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/test/application.toml" afterPath="$PROJECT_DIR$/worknet/course/test/application.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/test/db.toml" afterPath="$PROJECT_DIR$/worknet/course/test/db.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/test/docker-compose.yaml" afterPath="$PROJECT_DIR$/worknet/course/test/docker-compose.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/test/grpc.toml" afterPath="$PROJECT_DIR$/worknet/course/test/grpc.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/test/http.toml" afterPath="$PROJECT_DIR$/worknet/course/test/http.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/test/memcache.toml" afterPath="$PROJECT_DIR$/worknet/course/test/memcache.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/course/test/redis.toml" afterPath="$PROJECT_DIR$/worknet/course/test/redis.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/CHANGELOG.md" afterPath="$PROJECT_DIR$/worknet/curriculum/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/OWNERS" afterPath="$PROJECT_DIR$/worknet/curriculum/OWNERS" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/README.md" afterPath="$PROJECT_DIR$/worknet/curriculum/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/api/api.bm.go" afterPath="$PROJECT_DIR$/worknet/curriculum/api/api.bm.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/api/api.pb.go" afterPath="$PROJECT_DIR$/worknet/curriculum/api/api.pb.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/api/api.proto" afterPath="$PROJECT_DIR$/worknet/curriculum/api/api.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/api/client.go" afterPath="$PROJECT_DIR$/worknet/curriculum/api/client.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/cmd/main.go" afterPath="$PROJECT_DIR$/worknet/curriculum/cmd/main.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/configs/application.toml" afterPath="$PROJECT_DIR$/worknet/curriculum/configs/application.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/configs/db.toml" afterPath="$PROJECT_DIR$/worknet/curriculum/configs/db.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/configs/grpc.toml" afterPath="$PROJECT_DIR$/worknet/curriculum/configs/grpc.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/configs/http.toml" afterPath="$PROJECT_DIR$/worknet/curriculum/configs/http.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/configs/memcache.toml" afterPath="$PROJECT_DIR$/worknet/curriculum/configs/memcache.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/configs/redis.toml" afterPath="$PROJECT_DIR$/worknet/curriculum/configs/redis.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/go.mod" afterPath="$PROJECT_DIR$/worknet/curriculum/go.mod" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/go.sum" afterPath="$PROJECT_DIR$/worknet/curriculum/go.sum" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/internal/dao/dao.bts.go" afterPath="$PROJECT_DIR$/worknet/curriculum/internal/dao/dao.bts.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/internal/dao/dao.go" afterPath="$PROJECT_DIR$/worknet/curriculum/internal/dao/dao.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/internal/dao/dao_test.go" afterPath="$PROJECT_DIR$/worknet/curriculum/internal/dao/dao_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/internal/dao/db.go" afterPath="$PROJECT_DIR$/worknet/curriculum/internal/dao/db.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/internal/dao/mc.cache.go" afterPath="$PROJECT_DIR$/worknet/curriculum/internal/dao/mc.cache.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/internal/dao/mc.go" afterPath="$PROJECT_DIR$/worknet/curriculum/internal/dao/mc.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/internal/dao/redis.go" afterPath="$PROJECT_DIR$/worknet/curriculum/internal/dao/redis.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/internal/dao/wire.go" afterPath="$PROJECT_DIR$/worknet/curriculum/internal/dao/wire.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/internal/dao/wire_gen.go" afterPath="$PROJECT_DIR$/worknet/curriculum/internal/dao/wire_gen.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/internal/di/app.go" afterPath="$PROJECT_DIR$/worknet/curriculum/internal/di/app.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/internal/di/wire.go" afterPath="$PROJECT_DIR$/worknet/curriculum/internal/di/wire.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/internal/di/wire_gen.go" afterPath="$PROJECT_DIR$/worknet/curriculum/internal/di/wire_gen.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/internal/model/model.go" afterPath="$PROJECT_DIR$/worknet/curriculum/internal/model/model.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/internal/server/grpc/check.go" afterPath="$PROJECT_DIR$/worknet/curriculum/internal/server/grpc/check.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/internal/server/grpc/server.go" afterPath="$PROJECT_DIR$/worknet/curriculum/internal/server/grpc/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/internal/server/http/check.go" afterPath="$PROJECT_DIR$/worknet/curriculum/internal/server/http/check.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/internal/server/http/server.go" afterPath="$PROJECT_DIR$/worknet/curriculum/internal/server/http/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/internal/server/http/util/DataSecurity.go" afterPath="$PROJECT_DIR$/worknet/curriculum/internal/server/http/util/DataSecurity.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/internal/service/curriculumService.go" afterPath="$PROJECT_DIR$/worknet/curriculum/internal/service/curriculumService.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/internal/service/service.go" afterPath="$PROJECT_DIR$/worknet/curriculum/internal/service/service.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/test/0_db.sql" afterPath="$PROJECT_DIR$/worknet/curriculum/test/0_db.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/test/1_data.sql" afterPath="$PROJECT_DIR$/worknet/curriculum/test/1_data.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/test/application.toml" afterPath="$PROJECT_DIR$/worknet/curriculum/test/application.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/test/db.toml" afterPath="$PROJECT_DIR$/worknet/curriculum/test/db.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/test/docker-compose.yaml" afterPath="$PROJECT_DIR$/worknet/curriculum/test/docker-compose.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/test/grpc.toml" afterPath="$PROJECT_DIR$/worknet/curriculum/test/grpc.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/test/http.toml" afterPath="$PROJECT_DIR$/worknet/curriculum/test/http.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/test/memcache.toml" afterPath="$PROJECT_DIR$/worknet/curriculum/test/memcache.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/curriculum/test/redis.toml" afterPath="$PROJECT_DIR$/worknet/curriculum/test/redis.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/.idea/workspace.xml" afterPath="$PROJECT_DIR$/worknet/profession/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/CHANGELOG.md" afterPath="$PROJECT_DIR$/worknet/profession/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/OWNERS" afterPath="$PROJECT_DIR$/worknet/profession/OWNERS" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/README.md" afterPath="$PROJECT_DIR$/worknet/profession/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/api/api.bm.go" afterPath="$PROJECT_DIR$/worknet/profession/api/api.bm.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/api/api.pb.go" afterPath="$PROJECT_DIR$/worknet/profession/api/api.pb.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/api/api.proto" afterPath="$PROJECT_DIR$/worknet/profession/api/api.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/api/client.go" afterPath="$PROJECT_DIR$/worknet/profession/api/client.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/cmd/main.go" afterPath="$PROJECT_DIR$/worknet/profession/cmd/main.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/configs/application.toml" afterPath="$PROJECT_DIR$/worknet/profession/configs/application.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/configs/db.toml" afterPath="$PROJECT_DIR$/worknet/profession/configs/db.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/configs/grpc.toml" afterPath="$PROJECT_DIR$/worknet/profession/configs/grpc.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/configs/http.toml" afterPath="$PROJECT_DIR$/worknet/profession/configs/http.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/configs/memcache.toml" afterPath="$PROJECT_DIR$/worknet/profession/configs/memcache.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/configs/redis.toml" afterPath="$PROJECT_DIR$/worknet/profession/configs/redis.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/go.mod" afterPath="$PROJECT_DIR$/worknet/profession/go.mod" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/go.sum" afterPath="$PROJECT_DIR$/worknet/profession/go.sum" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/internal/dao/dao.bts.go" afterPath="$PROJECT_DIR$/worknet/profession/internal/dao/dao.bts.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/internal/dao/dao.go" afterPath="$PROJECT_DIR$/worknet/profession/internal/dao/dao.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/internal/dao/dao_test.go" afterPath="$PROJECT_DIR$/worknet/profession/internal/dao/dao_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/internal/dao/db.go" afterPath="$PROJECT_DIR$/worknet/profession/internal/dao/db.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/internal/dao/mc.cache.go" afterPath="$PROJECT_DIR$/worknet/profession/internal/dao/mc.cache.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/internal/dao/mc.go" afterPath="$PROJECT_DIR$/worknet/profession/internal/dao/mc.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/internal/dao/redis.go" afterPath="$PROJECT_DIR$/worknet/profession/internal/dao/redis.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/internal/dao/wire.go" afterPath="$PROJECT_DIR$/worknet/profession/internal/dao/wire.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/internal/dao/wire_gen.go" afterPath="$PROJECT_DIR$/worknet/profession/internal/dao/wire_gen.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/internal/di/app.go" afterPath="$PROJECT_DIR$/worknet/profession/internal/di/app.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/internal/di/wire.go" afterPath="$PROJECT_DIR$/worknet/profession/internal/di/wire.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/internal/di/wire_gen.go" afterPath="$PROJECT_DIR$/worknet/profession/internal/di/wire_gen.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/internal/model/model.go" afterPath="$PROJECT_DIR$/worknet/profession/internal/model/model.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/internal/server/grpc/check.go" afterPath="$PROJECT_DIR$/worknet/profession/internal/server/grpc/check.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/internal/server/grpc/server.go" afterPath="$PROJECT_DIR$/worknet/profession/internal/server/grpc/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/internal/server/http/check.go" afterPath="$PROJECT_DIR$/worknet/profession/internal/server/http/check.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/internal/server/http/server.go" afterPath="$PROJECT_DIR$/worknet/profession/internal/server/http/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/internal/server/http/util/DataSecurity.go" afterPath="$PROJECT_DIR$/worknet/profession/internal/server/http/util/DataSecurity.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/internal/service/professionService.go" afterPath="$PROJECT_DIR$/worknet/profession/internal/service/professionService.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/internal/service/service.go" afterPath="$PROJECT_DIR$/worknet/profession/internal/service/service.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/test/0_db.sql" afterPath="$PROJECT_DIR$/worknet/profession/test/0_db.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/test/1_data.sql" afterPath="$PROJECT_DIR$/worknet/profession/test/1_data.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/test/application.toml" afterPath="$PROJECT_DIR$/worknet/profession/test/application.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/test/db.toml" afterPath="$PROJECT_DIR$/worknet/profession/test/db.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/test/docker-compose.yaml" afterPath="$PROJECT_DIR$/worknet/profession/test/docker-compose.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/test/grpc.toml" afterPath="$PROJECT_DIR$/worknet/profession/test/grpc.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/test/http.toml" afterPath="$PROJECT_DIR$/worknet/profession/test/http.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/test/memcache.toml" afterPath="$PROJECT_DIR$/worknet/profession/test/memcache.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/profession/test/redis.toml" afterPath="$PROJECT_DIR$/worknet/profession/test/redis.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/.idea/workspace.xml" afterPath="$PROJECT_DIR$/worknet/user/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/CHANGELOG.md" afterPath="$PROJECT_DIR$/worknet/user/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/OWNERS" afterPath="$PROJECT_DIR$/worknet/user/OWNERS" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/README.md" afterPath="$PROJECT_DIR$/worknet/user/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/api/api.bm.go" afterPath="$PROJECT_DIR$/worknet/user/api/api.bm.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/api/api.pb.go" afterPath="$PROJECT_DIR$/worknet/user/api/api.pb.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/api/api.proto" afterPath="$PROJECT_DIR$/worknet/user/api/api.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/api/client.go" afterPath="$PROJECT_DIR$/worknet/user/api/client.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/cmd/main.go" afterPath="$PROJECT_DIR$/worknet/user/cmd/main.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/configs/application.toml" afterPath="$PROJECT_DIR$/worknet/user/configs/application.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/configs/db.toml" afterPath="$PROJECT_DIR$/worknet/user/configs/db.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/configs/grpc.toml" afterPath="$PROJECT_DIR$/worknet/user/configs/grpc.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/configs/http.toml" afterPath="$PROJECT_DIR$/worknet/user/configs/http.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/configs/memcache.toml" afterPath="$PROJECT_DIR$/worknet/user/configs/memcache.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/configs/redis.toml" afterPath="$PROJECT_DIR$/worknet/user/configs/redis.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/go.mod" afterPath="$PROJECT_DIR$/worknet/user/go.mod" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/go.sum" afterPath="$PROJECT_DIR$/worknet/user/go.sum" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/internal/dao/dao.bts.go" afterPath="$PROJECT_DIR$/worknet/user/internal/dao/dao.bts.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/internal/dao/dao.go" afterPath="$PROJECT_DIR$/worknet/user/internal/dao/dao.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/internal/dao/dao_test.go" afterPath="$PROJECT_DIR$/worknet/user/internal/dao/dao_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/internal/dao/db.go" afterPath="$PROJECT_DIR$/worknet/user/internal/dao/db.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/internal/dao/mc.cache.go" afterPath="$PROJECT_DIR$/worknet/user/internal/dao/mc.cache.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/internal/dao/mc.go" afterPath="$PROJECT_DIR$/worknet/user/internal/dao/mc.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/internal/dao/redis.go" afterPath="$PROJECT_DIR$/worknet/user/internal/dao/redis.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/internal/dao/wire.go" afterPath="$PROJECT_DIR$/worknet/user/internal/dao/wire.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/internal/dao/wire_gen.go" afterPath="$PROJECT_DIR$/worknet/user/internal/dao/wire_gen.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/internal/di/app.go" afterPath="$PROJECT_DIR$/worknet/user/internal/di/app.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/internal/di/wire.go" afterPath="$PROJECT_DIR$/worknet/user/internal/di/wire.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/internal/di/wire_gen.go" afterPath="$PROJECT_DIR$/worknet/user/internal/di/wire_gen.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/internal/model/model.go" afterPath="$PROJECT_DIR$/worknet/user/internal/model/model.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/internal/server/grpc/check.go" afterPath="$PROJECT_DIR$/worknet/user/internal/server/grpc/check.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/internal/server/grpc/server.go" afterPath="$PROJECT_DIR$/worknet/user/internal/server/grpc/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/internal/server/http/check.go" afterPath="$PROJECT_DIR$/worknet/user/internal/server/http/check.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/internal/server/http/server.go" afterPath="$PROJECT_DIR$/worknet/user/internal/server/http/server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/internal/server/http/util/DataSecurity.go" afterPath="$PROJECT_DIR$/worknet/user/internal/server/http/util/DataSecurity.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/internal/service/UserService.go" afterPath="$PROJECT_DIR$/worknet/user/internal/service/UserService.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/internal/service/service.go" afterPath="$PROJECT_DIR$/worknet/user/internal/service/service.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/test/0_db.sql" afterPath="$PROJECT_DIR$/worknet/user/test/0_db.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/test/1_data.sql" afterPath="$PROJECT_DIR$/worknet/user/test/1_data.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/test/application.toml" afterPath="$PROJECT_DIR$/worknet/user/test/application.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/test/db.toml" afterPath="$PROJECT_DIR$/worknet/user/test/db.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/test/docker-compose.yaml" afterPath="$PROJECT_DIR$/worknet/user/test/docker-compose.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/test/grpc.toml" afterPath="$PROJECT_DIR$/worknet/user/test/grpc.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/test/http.toml" afterPath="$PROJECT_DIR$/worknet/user/test/http.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/test/memcache.toml" afterPath="$PROJECT_DIR$/worknet/user/test/memcache.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worknet/user/test/redis.toml" afterPath="$PROJECT_DIR$/worknet/user/test/redis.toml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
+  <component name="GOROOT" url="file://E:/../go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="urls">
       <list>
-        <option value="Go File" />
+        <option value="file://E:" />
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="$PROJECT_DIR$/../../../go" />
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
   </component>
-  <component name="GoLibraries">
-    <option name="indexEntireGoPath" value="false" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectId" id="1ZLt1m2K752Aj8QSNC0xLum1V9u" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectId" id="1oFBM0K7hFleTcGt6zUarjTbQpy" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="BDMSystem_kratos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BDMSystem_kratos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BDMSystem_kratos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BDMSystem_kratos" type="462c0819:PsiDirectoryNode" />
+              <item name="bdms" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DefaultGoTemplateProperty" value="Go File" />
-    <property name="GO_FMT" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
-    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
-    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="configurable..is.expanded" value="false" />
+    <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/bdms" />
-    <property name="settings.editor.selected.configurable" value="go.vgo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
+    <property name="aspect.path.notification.shown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\tool" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\bdms" />
-      <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\bdms\discovery" />
-      <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\tool" />
-      <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\tool\http\security" />
-      <recent name="D:\Dev-C\go_workspace\src\BDMSystem_kratos\tool\http_tool" />
+      <recent name="C:\go\go_workspace\src\BDMSystem_kratos\rl\finance" />
+      <recent name="C:\go\go_workspace\src\BDMSystem_kratos\rl" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -92,73 +900,157 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="TestRequestUploadToken in token/internal/dao" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="BDMSystem_kratos" />
-      <working_directory value="$PROJECT_DIR$/bdms/token/internal/dao" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="token/internal/dao" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestRequestUploadToken$" />
-      <method v="2" />
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Go Test.TestRequestUploadToken in token/internal/dao" />
-      </list>
-    </recent_temporary>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <created>1651223797423</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651223797423</updated>
+      <workItem from="1651223798686" duration="21000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="21000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <ignored-roots>
-      <path value="$PROJECT_DIR$/pholcus" />
-    </ignored-roots>
-    <MESSAGE value="2020-3-19 （6）" />
-    <MESSAGE value="2020-3-19 （7）" />
-    <MESSAGE value="2020-3-19 （8）" />
-    <MESSAGE value="2020-3-19 （9）" />
-    <MESSAGE value="2020-3-20 修改README" />
-    <MESSAGE value="2020-3-20 添加Role模块" />
-    <MESSAGE value="2020-3-20 更新修改" />
-    <MESSAGE value="2020-3-22 添加角色、权限（完成）模块 和 用户模块（未完成）" />
-    <MESSAGE value="2020-3-23 用户模块（完成）" />
-    <MESSAGE value="2020-3-24 权限管理 全部完成" />
-    <MESSAGE value="2020-3-25 更新sql文件" />
-    <MESSAGE value="2020-3-25 添加通知模块，修复菜单模块bug，更新数据库文件" />
-    <MESSAGE value="2020-3-27 添加通知模块，修复菜单模块bug，更新数据库文件" />
-    <MESSAGE value="2020-3-27 更新数据库文件" />
-    <MESSAGE value="2020-3-28 一些文件更新" />
-    <MESSAGE value="2020-3-28 新增通知置顶功能，并修复排序bug" />
-    <MESSAGE value="2020-4-11 pholcus 完善慕课网爬虫规则和配置" />
-    <MESSAGE value="2020-4-15 worknet分析服务完成，并进行服务器上线配置" />
-    <MESSAGE value="2020-4-15 配置discovery" />
-    <MESSAGE value="2020-4-15 修改规则" />
-    <MESSAGE value="2020-4-15 更新数据库文件" />
-    <MESSAGE value="2020-4-15 更新Readme" />
-    <MESSAGE value="2020-4-15 更新README" />
-    <MESSAGE value="2020-4-21 使用Swagger接口设计管理工具，并添加README" />
-    <MESSAGE value="2020-4-24 修复分页bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020-4-24 修复分页bug" />
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
-    <proxy>https://mirrors.aliyun.com/goproxy/</proxy>
+    <environment>
+      <map>
+        <entry key="GOPROXY" value="https://goproxy.cn/" />
+      </map>
+    </environment>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
   </component>
 </project>

@@ -28,7 +28,6 @@ func New(d dao.Dao) (s *Service, cf func(), err error) {
 	err = paladin.Watch("application.toml", s.ac)
 	return
 }
-
 // Ping ping the resource.
 func (s *Service) Ping(ctx context.Context, e *empty.Empty) (*empty.Empty, error) {
 	return &empty.Empty{}, s.dao.Ping(ctx)

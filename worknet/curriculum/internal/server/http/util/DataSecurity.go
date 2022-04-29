@@ -7,6 +7,7 @@ import (
 	"fmt"
 )
 
+
 //解析校验加密数据
 func Read(data []byte, randomKey string) (decodeData []byte, err error) {
 

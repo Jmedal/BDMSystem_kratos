@@ -152,7 +152,6 @@ service Menu {
     // `method:"POST"`
     rpc GetAllMenuOptions (.google.protobuf.Empty) returns (GetMenuOptionsResp);
 
-    //获取子菜单列表：用于删除角色权限（菜单）时，关联删除子权限（菜单）。
     // `method:"POST"`
     rpc GetChildrenMenuList (GetChildrenMenuListReq) returns (GetChildrenMenuListResp);
 }

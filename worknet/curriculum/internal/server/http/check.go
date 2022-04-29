@@ -2,8 +2,6 @@ package http
 
 import (
 	"bytes"
-	pb "curriculum/api"
-	"curriculum/internal/server/http/util"
 	"encoding/json"
 	"github.com/bilibili/kratos/pkg/ecode"
 	"github.com/bilibili/kratos/pkg/log"
@@ -11,6 +9,8 @@ import (
 	"github.com/bilibili/kratos/pkg/net/http/blademaster/render"
 	"github.com/bilibili/kratos/pkg/net/rpc/warden"
 	xtime "github.com/bilibili/kratos/pkg/time"
+	pb "curriculum/api"
+	"curriculum/internal/server/http/util"
 	"io/ioutil"
 	"net/http"
 	"time"
@@ -41,7 +41,7 @@ func dataSecurityAction() bm.HandlerFunc {
 		}
 
 		// TODO: get userId,randomKey from some code
-		resp, err := tokenClient.Verify(c, &pb.VerifyTokenReq{AccessToken: token})
+		resp, err := tokenClient.Verify(c, &pb.VerifyTokenReq{AccessToken: token,})
 		if err != nil {
 			renderErrMsg(c, ecode.ServerErr.Code(), "Token server error")
 			return

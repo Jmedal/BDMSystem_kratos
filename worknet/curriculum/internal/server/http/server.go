@@ -3,11 +3,11 @@ package http
 import (
 	"net/http"
 
-	pb "curriculum/api"
-	"curriculum/internal/model"
 	"github.com/bilibili/kratos/pkg/conf/paladin"
 	"github.com/bilibili/kratos/pkg/log"
 	bm "github.com/bilibili/kratos/pkg/net/http/blademaster"
+	pb "curriculum/api"
+	"curriculum/internal/model"
 )
 
 var (

@@ -28,7 +28,7 @@ func checkToken() grpc.UnaryServerInterceptor {
 		}
 
 		var (
-			appKey string
+			appKey    string
 
 			appSecret string
 		)

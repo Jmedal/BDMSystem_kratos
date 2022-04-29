@@ -19,9 +19,9 @@ import (
 	"context"
 	"fmt"
 
-	"course/internal/model"
 	"github.com/bilibili/kratos/pkg/cache/memcache"
 	"github.com/bilibili/kratos/pkg/log"
+	"course/internal/model"
 )
 
 var _ _mc

@@ -132,6 +132,7 @@ message VerifyTokenResp {
 
     string randomKey = 2 [(gogoproto.jsontag) = 'randomKey'];
 }
+
 service Token {
     // `method:"POST" internal:"true"`
     rpc Verify (VerifyTokenReq) returns (VerifyTokenResp);

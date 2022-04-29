@@ -11,9 +11,9 @@ import (
 	"syscall"
 	"time"
 
-	"course/internal/di"
 	"github.com/bilibili/kratos/pkg/conf/paladin"
 	"github.com/bilibili/kratos/pkg/log"
+	"course/internal/di"
 )
 
 func initDiscovery(ip, port, appID string) (cancelFunc context.CancelFunc, err error) {

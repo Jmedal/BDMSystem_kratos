@@ -30,7 +30,7 @@ func New(d dao.Dao) (s *Service, cf func(), err error) {
 }
 
 //TestService
-func (s *Service) GrpcUserInfoTest(ctx context.Context, e *empty.Empty) (*empty.Empty, error) {
+func (s *Service)GrpcUserInfoTest(ctx context.Context, e *empty.Empty) (*empty.Empty, error){
 	return &empty.Empty{}, nil
 }
 

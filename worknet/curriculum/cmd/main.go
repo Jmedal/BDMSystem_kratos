@@ -33,6 +33,7 @@ func initDiscovery(ip, port, appID string) (cancelFunc context.CancelFunc, err e
 	return dis.Register(context.Background(), ins)
 }
 
+
 func main() {
 	flag.Parse()
 	log.Init(nil) // debug flag: log.dir={path}

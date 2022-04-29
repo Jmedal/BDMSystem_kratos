@@ -2,35 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a039113f-6350-4119-975e-f139a746d65b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../imooc/course/internal/service/CourseService.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../imooc/course/internal/service/manageService.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bdms/account/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bdms/account/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../imooc/course/api/api.bm.go" beforeDir="false" afterPath="$PROJECT_DIR$/../imooc/course/api/api.bm.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../imooc/course/api/api.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/../imooc/course/api/api.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../imooc/course/api/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../imooc/course/api/api.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../imooc/course/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../imooc/course/cmd/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../imooc/course/configs/db.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../imooc/course/configs/db.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../imooc/course/configs/grpc.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../imooc/course/configs/grpc.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../imooc/course/configs/http.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../imooc/course/configs/http.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../imooc/course/configs/redis.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../imooc/course/configs/redis.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../imooc/course/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../imooc/course/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../imooc/course/internal/dao/dao.bts.go" beforeDir="false" afterPath="$PROJECT_DIR$/../imooc/course/internal/dao/dao.bts.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../imooc/course/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/../imooc/course/internal/dao/dao.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../imooc/course/internal/dao/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/../imooc/course/internal/dao/db.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../imooc/course/internal/dao/mc.cache.go" beforeDir="false" afterPath="$PROJECT_DIR$/../imooc/course/internal/dao/mc.cache.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../imooc/course/internal/dao/mc.go" beforeDir="false" afterPath="$PROJECT_DIR$/../imooc/course/internal/dao/mc.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../imooc/course/internal/di/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/../imooc/course/internal/di/app.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../imooc/course/internal/di/wire.go" beforeDir="false" afterPath="$PROJECT_DIR$/../imooc/course/internal/di/wire.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../imooc/course/internal/di/wire_gen.go" beforeDir="false" afterPath="$PROJECT_DIR$/../imooc/course/internal/di/wire_gen.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../imooc/course/internal/server/grpc/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/../imooc/course/internal/server/grpc/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../imooc/course/internal/server/http/check.go" beforeDir="false" afterPath="$PROJECT_DIR$/../imooc/course/internal/server/http/check.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../imooc/course/internal/server/http/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/../imooc/course/internal/server/http/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../imooc/course/internal/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/../imooc/course/internal/service/service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pholcus_lib/imooc.go" beforeDir="false" afterPath="$PROJECT_DIR$/pholcus_lib/imooc.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../worknet/company/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../worknet/company/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../worknet/course/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../worknet/course/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../worknet/user/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../worknet/user/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pholcus_pkg/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pholcus_pkg/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pholcus_pkg/history/history__y__Imooc__0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pholcus_pkg/history/history__y__中关村手机__0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pholcus_pkg/history/history__y__中国新闻网__0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pholcus_pkg/history/history__y__经典示例-赶集网企业名录__0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pholcus_pkg/history/history__y__羁绊动漫__0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pholcus_pkg/logs/pholcus.log" beforeDir="false" afterPath="$PROJECT_DIR$/pholcus_pkg/logs/pholcus.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pholcus_pkg/text_out/2020-03-08 114330/经典示例-赶集网企业名录__0__输出结果/0-93.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pholcus_pkg/text_out/2020-03-08 152258/中国新闻网__0__新闻内容/0-392.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pholcus_pkg/text_out/2020-03-09 195502/中关村手机__0__获取结果/0-1000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pholcus_pkg/text_out/2020-03-09 195502/中关村手机__0__获取结果/1000-2000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pholcus_pkg/text_out/2020-03-09 195502/中关村手机__0__获取结果/2000-3000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pholcus_pkg/text_out/2020-03-09 195502/中关村手机__0__获取结果/3000-4000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pholcus_pkg/text_out/2020-03-09 195502/中关村手机__0__获取结果/4000-5000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pholcus_pkg/text_out/2020-03-09 195502/中关村手机__0__获取结果/5000-6000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pholcus_pkg/text_out/2020-03-09 195502/中关村手机__0__获取结果/6000-7000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pholcus_pkg/text_out/2020-03-09 195502/中关村手机__0__获取结果/7000-7239.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pholcus_pkg/text_out/2020-03-09 225448/羁绊动漫__0__news/0-104.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pholcus_pkg/text_out/2020-03-09 235022/Imooc__0__课程详细信息/0-864.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pholcus_pkg/text_out/2020-03-10 101306/中关村手机__0__获取结果/0-390.csv" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

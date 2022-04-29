@@ -11,7 +11,7 @@ import (
 func New(svc pb.GrpcTestServer) (ws *warden.Server, err error) {
 	var (
 		cfg warden.ServerConfig
-		ct  paladin.TOML
+		ct paladin.TOML
 	)
 	if err = paladin.Get("grpc.toml").Unmarshal(&ct); err != nil {
 		return
