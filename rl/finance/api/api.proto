@@ -1,0 +1,267 @@
+// 定义项目 API 的 proto 文件 可以同时描述 gRPC 和 HTTP API
+// protobuf 文件参考:
+//  - https://developers.google.com/protocol-buffers/
+syntax = "proto3";
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "google/protobuf/empty.proto";
+
+package service.v1;
+
+option go_package = "api";
+option (gogoproto.goproto_getters_all) = false;
+
+message ProjectData {
+    string name = 1 [(gogoproto.moretags) = 'form:"name" validate:"required"'];
+
+    string development = 2 [(gogoproto.moretags) = 'form:"development" validate:"required"'];
+
+    string construction = 3 [(gogoproto.moretags) = 'form:"construction" validate:"required"'];
+
+    string schedule = 4 [(gogoproto.moretags) = 'form:"schedule" default:""'];
+
+    double contract = 5 [(gogoproto.moretags) = 'form:"contract" validate:"required"'];
+
+    int64 signTime = 6 [(gogoproto.moretags) = 'form:"signTime" validate:"required"'];
+
+    double prepayment = 7 [(gogoproto.moretags) = 'form:"prepayment" validate:"required"'];
+
+    string progress = 8 [(gogoproto.moretags) = 'form:"progress" default:""'];
+
+    double judge = 9 [(gogoproto.moretags) = 'form:"judge" validate:"required"'];
+
+    string remark = 10 [(gogoproto.moretags) = 'form:"remark" default:""'];
+
+    string state = 11 [(gogoproto.moretags) = 'form:"state" validate:"required"'];
+}
+
+message AddProjectReq {
+    int64 userId = 1 [(gogoproto.moretags) = 'form:"userId" validate:"required"'];
+
+    ProjectData project = 2 [(gogoproto.moretags) = 'form:"project" validate:"required"'];
+}
+
+message AddProjectResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+message UpdateProjectReq {
+    int64 id = 1 [(gogoproto.moretags) = 'form:"id" validate:"required"'];
+
+    ProjectData project = 2 [(gogoproto.moretags) = 'form:"project" validate:"required"'];
+}
+
+message UpdateProjectResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+message TerminationProjectReq {
+    //项目id
+    int64 id = 1 [(gogoproto.moretags) = 'form:"id" validate:"required"'];
+}
+
+message TerminationProjectResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+message RestartProjectReq {
+    //项目id
+    int64 id = 1 [(gogoproto.moretags) = 'form:"id" validate:"required"'];
+}
+
+message RestartProjectResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+message GetProjectPageReq {
+    string query = 1 [(gogoproto.moretags) = 'form:"query" default:""'];
+
+    int64 pageNum = 2 [(gogoproto.moretags) = 'form:"pageNum" validate:"required"'];
+
+    int64 pageSize = 3 [(gogoproto.moretags) = 'form:"pageSize" validate:"required"'];
+}
+
+
+message GetProjectPageResp {
+    int64 pageNum = 1 [(gogoproto.jsontag) = 'pageNum'];
+
+    int64 pageSize = 2 [(gogoproto.jsontag) = 'pageSize'];
+
+    int64 total = 3 [(gogoproto.jsontag) = 'total'];
+
+    repeated ProjectInfo projectList = 4 [(gogoproto.jsontag) = 'page'];
+}
+
+message ProjectInfo {
+    int64 id = 1 [(gogoproto.jsontag) = 'id'];
+
+    string name = 2 [(gogoproto.jsontag) = 'name'];
+
+    string development = 3 [(gogoproto.jsontag) = 'development'];
+
+    string construction = 4 [(gogoproto.jsontag) = 'construction'];
+
+    string schedule = 5 [(gogoproto.jsontag) = 'schedule'];
+
+    double contract = 6 [(gogoproto.jsontag) = 'contract'];
+
+    int64 signTime = 7 [(gogoproto.jsontag) = 'signTime'];
+
+    double prepayment = 8 [(gogoproto.jsontag) = 'prepayment'];
+
+    string progress = 9 [(gogoproto.jsontag) = 'progress'];
+
+    double judge = 10 [(gogoproto.jsontag) = 'judge'];
+
+    string remark = 11 [(gogoproto.jsontag) = 'remark'];
+
+    double transfer = 12 [(gogoproto.jsontag) = 'transfer'];
+
+    int64 transferTimes = 13 [(gogoproto.jsontag) = 'transferTimes'];
+
+    double expense = 14 [(gogoproto.jsontag) = 'expense'];
+
+    int64 expenseTimes = 15 [(gogoproto.jsontag) = 'expenseTimes'];
+
+    string state = 16 [(gogoproto.jsontag) = 'state'];
+
+    string createUser = 17 [(gogoproto.jsontag) = 'createUserId'];
+
+    int64 createTime = 18 [(gogoproto.jsontag) = 'createTime'];
+}
+
+
+message BillData {
+    int64 projectId = 1 [(gogoproto.moretags) = 'form:"projectId" validate:"required"'];
+
+    int64 time = 2 [(gogoproto.moretags) = 'form:"time" validate:"required"'];
+
+    double amount = 3 [(gogoproto.moretags) = 'form:"amount" validate:"required"'];
+
+    string direction = 4 [(gogoproto.moretags) = 'form:"direction" validate:"required"'];
+
+    string type = 5[(gogoproto.moretags) = 'form:"type" validate:"required"'];
+
+    string state = 6[(gogoproto.moretags) = 'form:"type" validate:"required"'];
+}
+
+message AddBillReq {
+    BillData bill = 1  [(gogoproto.moretags) = 'form:"bill" validate:"required"'];
+}
+
+message AddBillResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+message UpdateBillReq {
+    int64 id = 1 [(gogoproto.moretags) = 'form:"id" validate:"required"'];
+
+    BillData bill = 2  [(gogoproto.moretags) = 'form:"bill" validate:"required"'];
+}
+
+message UpdateBillResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+message DeleteBillReq {
+    //账目id
+    int64 id = 1 [(gogoproto.moretags) = 'form:"id" validate:"required"'];
+}
+
+message DeleteBillResp {
+    string result = 1 [(gogoproto.jsontag) = 'result'];
+}
+
+message GetBillPageReq {
+    //项目id
+    int64 projectId = 1 [(gogoproto.moretags) = 'form:"projectId" validate:"required"'];
+
+    string query = 2 [(gogoproto.moretags) = 'form:"query" default:""'];
+
+    int64 pageNum = 3 [(gogoproto.moretags) = 'form:"pageNum" validate:"required"'];
+
+    int64 pageSize = 4 [(gogoproto.moretags) = 'form:"pageSize" validate:"required"'];
+}
+
+message GetBillPageResp {
+    int64 pageNum = 1 [(gogoproto.jsontag) = 'pageNum'];
+
+    int64 pageSize = 2 [(gogoproto.jsontag) = 'pageSize'];
+
+    int64 total = 3 [(gogoproto.jsontag) = 'total'];
+
+    repeated BillInfo billList = 4 [(gogoproto.jsontag) = 'page'];
+}
+
+message BillInfo {
+    int64 id = 1 [(gogoproto.jsontag) = 'id'];
+
+    int64 time = 2 [(gogoproto.jsontag) = 'time'];
+
+    double amount = 3 [(gogoproto.jsontag) = 'amount'];
+
+    string direction = 4 [(gogoproto.jsontag) = 'direction'];
+
+    string type = 5 [(gogoproto.jsontag) = 'type'];
+}
+
+
+service Finance {
+  rpc Ping(.google.protobuf.Empty) returns (.google.protobuf.Empty);
+
+  // `method:"POST"`
+  rpc GetProjectPage(GetProjectPageReq) returns (GetProjectPageResp);
+
+  // `method:"POST"`
+  rpc AddProject(AddProjectReq) returns (AddProjectResp);
+
+  // `method:"POST"`
+  rpc UpdateProject(UpdateProjectReq) returns (UpdateProjectResp);
+
+  // `method:"POST"`
+  rpc TerminationProject(TerminationProjectReq) returns (TerminationProjectResp);
+
+  // `method:"POST"`
+  rpc RestartProject(RestartProjectReq) returns (RestartProjectResp);
+
+  // `method:"POST"`
+  rpc GetBillPage(GetBillPageReq) returns (GetBillPageResp);
+
+  // `method:"POST"`
+  rpc AddBill(AddBillReq) returns (AddBillResp);
+
+  // `method:"POST"`
+  rpc UpdateBill(UpdateBillReq) returns (UpdateBillResp);
+
+  // `method:"POST"`
+  rpc DeleteBill(DeleteBillReq) returns (DeleteBillResp);
+}
+
+message GetUserNameReq{
+    int64 id = 1 [(gogoproto.moretags) = 'form:"id" validate:"required"'];
+}
+
+message GetUserNameResp{
+    string name = 1 [(gogoproto.jsontag) = 'name'];
+}
+
+service Account {
+    // `method:"POST"`
+    rpc GetUserName(GetUserNameReq) returns (GetUserNameResp);
+}
+
+message VerifyTokenReq {
+ // 授予的 token
+    string accessToken = 1 [(gogoproto.jsontag) = 'access_token'];
+}
+message VerifyTokenResp {
+    int64 userId = 1 [(gogoproto.jsontag) = 'userId'];
+
+    string randomKey = 2 [(gogoproto.jsontag) = 'randomKey'];
+}
+service Token{
+  // `method:"POST" internal:"true"`
+  rpc Verify (VerifyTokenReq) returns (VerifyTokenResp);
+}
+
+
